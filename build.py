@@ -88,7 +88,7 @@ PRIVACY_TEXT = {
               "of its developer, the person or company shown as the seller on the app’s App Store page, who is responsible "
               "for this policy (“we”). This policy explains what happens to information in the app, on this website and "
               "in messages to support.",
-        summary="In short: the app collects no data. Everything it saves stays on your iPhone.",
+        summary="In short: the app collects no data. Everything it saves stays on your iPhone, unless a grown-up saves a backup copy somewhere else.",
         sections=[
             ("Data the app collects", ["None. The app does not collect, transmit, sell or share any personal data. It contains no "
                                        "advertising, analytics, accounts, tracking or third-party SDKs, and it does not connect "
@@ -98,8 +98,9 @@ PRIVACY_TEXT = {
                 "results of the Workshop of the day, which workshops were solved with a hint, ants bought with stars, found secrets "
                 "and how far their hints have opened, tutorial status), the names of players added on this device, and the sound, "
                 "haptics and read-aloud settings are stored locally on your device using Apple’s standard app storage.",
-                "Player names are optional; you can keep the default “Player 2” and so on. This data never leaves the device "
-                "through the app. It may be included in your own device backups under Apple’s terms."]),
+                "Player names are optional; you can keep the default “Player 2” and so on. The app never sends this data anywhere. "
+                "It may be included in your own device backups under Apple’s terms, and in a backup copy that a grown-up saves "
+                "(see “Backup copy”)."]),
             ("Reading aloud", ["When reading aloud is on, the app speaks the puzzle instructions with the speech synthesizer built "
                                "into iOS on the device. No text or audio leaves the device, and the app never uses the microphone."]),
             ("Motion sensor", ["Only while the result of a solved workshop is on the screen, the app reads the iPhone’s motion "
@@ -116,6 +117,14 @@ PRIVACY_TEXT = {
                 "to another player and delete that one (a grown-up confirms it). The player who is playing now cannot be "
                 "deleted. Deleting the app removes all players and all data from your device.",
                 "The app never sends us your data, so there is nothing from the app for us to keep, look up or delete."]),
+            ("Backup copy", [
+                "In Settings → Backup copy, after passing the parental gate, a grown-up can save every player’s progress, the "
+                "players’ names and the sound, haptics and read-aloud settings as one file. The file goes wherever the grown-up "
+                "chooses in the Files window, for example on this iPhone or in iCloud Drive under Apple’s terms. The app never "
+                "sends the file anywhere and keeps no copy of its own, and we never receive it.",
+                "Restoring a copy, also behind the parental gate, replaces all players and their progress on the device with the "
+                "ones in the file. Deleting the app does not delete a saved copy: delete the file in Files when you no longer "
+                "need it."]),
             ("Messages to support", [
                 "If you write to us, we receive your e-mail address and anything you include (for example, a screenshot). "
                 "We use it only to answer you, share it with no one, and delete the correspondence within 12 months after the "
@@ -128,7 +137,7 @@ PRIVACY_TEXT = {
                 "including children under 13. There are no ads, no purchases for real money, no accounts, no chat and no "
                 "social media links. The ant shop uses only stars earned in the game.",
                 "Pages outside the game, such as this policy and the support page, open only after a grown-up passes a "
-                "parental gate. Because the app collects no personal information, there is no data collection for a parent "
+                "parental gate, and so do saving and restoring a backup copy. Because the app collects no personal information, there is no data collection for a parent "
                 "to consent to."]),
             ("Your rights", [f"Privacy laws such as the EU General Data Protection Regulation (GDPR) give you the right to ask what "
                              f"personal data we hold about you, and to have it corrected or deleted. The app gives us none; the "
@@ -144,7 +153,7 @@ PRIVACY_TEXT = {
               "торгова назва її розробника, тобто особи чи компанії, зазначеної як продавець на сторінці застосунку в App Store, "
               "яка відповідає за цю політику («ми»). Ця політика пояснює, що відбувається з інформацією в застосунку, на цьому "
               "сайті та в листах до підтримки.",
-        summary="Коротко: застосунок не збирає жодних даних. Усе, що він зберігає, залишається на вашому iPhone.",
+        summary="Коротко: застосунок не збирає жодних даних. Усе, що він зберігає, залишається на вашому iPhone, якщо тільки дорослий не збереже резервну копію деінде.",
         sections=[
             ("Які дані збирає застосунок", ["Жодних. Застосунок не збирає, не передає, не продає й не розкриває жодних персональних "
                                             "даних. У ньому немає реклами, аналітики, облікових записів, відстеження та сторонніх "
@@ -154,8 +163,9 @@ PRIVACY_TEXT = {
                 "результати цеху дня, позначки про цехи, розв’язані з підказкою, куплені за зірки мурашки, знайдені секрети й "
                 "відкриті до них підказки, стан навчання), імена гравців, доданих на цьому пристрої, а також налаштування звуку, "
                 "вібрації та читання вголос зберігаються локально стандартними засобами iOS.",
-                "Імена вказувати не обов’язково: можна залишити «Гравець 2» тощо. Застосунок не передає ці дані за межі пристрою. "
-                "Вони можуть потрапити до ваших резервних копій пристрою відповідно до умов Apple."]),
+                "Імена вказувати не обов’язково: можна залишити «Гравець 2» тощо. Застосунок нікуди не надсилає ці дані. "
+                "Вони можуть потрапити до ваших резервних копій пристрою відповідно до умов Apple, а також до резервної копії, "
+                "яку збереже дорослий (див. «Резервна копія»)."]),
             ("Читання вголос", ["Коли читання вголос увімкнено, застосунок озвучує завдання вбудованим синтезатором мовлення iOS на "
                                 "самому пристрої. Текст і звук не виходять за межі пристрою; мікрофон застосунок не використовує."]),
             ("Датчик руху", ["Лише поки на екрані результат розв’язаного цеху, застосунок зчитує дані датчика руху iPhone на самому "
@@ -173,6 +183,13 @@ PRIVACY_TEXT = {
                 "який зараз грає, видалити не можна. Видалення застосунку стирає всіх гравців і всі дані з пристрою.",
                 "Застосунок ніколи не надсилає нам ваших даних, тому з застосунку на нашому боці немає чого зберігати, шукати чи "
                 "видаляти."]),
+            ("Резервна копія", [
+                "У розділі «Налаштування» → «Резервна копія», після батьківської перевірки, дорослий може зберегти прогрес усіх "
+                "гравців, їхні імена та налаштування звуку, вібрації й читання вголос в одному файлі. Файл потрапляє туди, куди "
+                "дорослий вибере у вікні «Файли», наприклад на цей iPhone або в iCloud Drive відповідно до умов Apple. Застосунок "
+                "нікуди не надсилає файл і не зберігає власної копії, а ми ніколи його не отримуємо.",
+                "Відновлення копії, теж після батьківської перевірки, замінює всіх гравців і їхній прогрес на пристрої тими, що є "
+                "у файлі. Видалення застосунку не видаляє збережену копію: видаліть файл у «Файлах», коли він більше не потрібен."]),
             ("Листи до підтримки", [
                 "Якщо ви нам напишете, ми отримаємо вашу адресу електронної пошти та все, що ви додасте до листа (наприклад, знімок "
                 "екрана). Ми використовуємо ці дані лише для відповіді, нікому їх не передаємо й видаляємо листування протягом "
@@ -185,7 +202,7 @@ PRIVACY_TEXT = {
                 "років. У ній немає реклами, покупок за справжні гроші, облікових записів, чату та посилань на соціальні мережі. "
                 "У крамниці мурашок можна платити лише зірками, заробленими в грі.",
                 "Сторінки поза грою, як-от ця політика та сторінка підтримки, відкриваються лише після того, як дорослий пройде "
-                "батьківську перевірку. Застосунок не збирає персональної інформації, тож немає збору даних, на який батьки мали б "
+                "батьківську перевірку; так само захищені збереження й відновлення резервної копії. Застосунок не збирає персональної інформації, тож немає збору даних, на який батьки мали б "
                 "давати згоду."]),
             ("Ваші права", [f"Законодавство про захист персональних даних, зокрема Загальний регламент ЄС про захист даних (GDPR), "
                             f"дає вам право дізнатися, які ваші персональні дані ми маємо, і вимагати їх виправлення чи видалення. "
@@ -202,7 +219,7 @@ PRIVACY_TEXT = {
               "торговое имя её разработчика, то есть человека или компании, указанных продавцом на странице приложения в App Store, "
               "которые отвечают за эту политику («мы»). Эта политика объясняет, что происходит с информацией в приложении, на этом "
               "сайте и в письмах в поддержку.",
-        summary="Коротко: приложение не собирает никаких данных. Всё, что оно сохраняет, остаётся на вашем iPhone.",
+        summary="Коротко: приложение не собирает никаких данных. Всё, что оно сохраняет, остаётся на вашем iPhone, если только взрослый не сохранит резервную копию в другом месте.",
         sections=[
             ("Какие данные собирает приложение", ["Никаких. Приложение не собирает, не передаёт, не продаёт и не раскрывает "
                                                   "персональные данные. В нём нет рекламы, аналитики, аккаунтов, отслеживания и "
@@ -212,8 +229,9 @@ PRIVACY_TEXT = {
                 "результаты цеха дня, отметки о цехах, решённых с подсказкой, купленные за звёзды муравьи, найденные секреты и "
                 "открытые к ним подсказки, состояние обучения), имена игроков, добавленных на этом устройстве, и настройки звука, "
                 "вибрации и чтения вслух хранятся локально стандартными средствами iOS.",
-                "Имена указывать не обязательно: можно оставить «Игрок 2» и т. д. Приложение не передаёт эти данные за пределы "
-                "устройства. Они могут попасть в ваши резервные копии устройства в соответствии с условиями Apple."]),
+                "Имена указывать не обязательно: можно оставить «Игрок 2» и т. д. Приложение никуда не отправляет эти данные. "
+                "Они могут попасть в ваши резервные копии устройства в соответствии с условиями Apple, а также в резервную копию, "
+                "которую сохранит взрослый (см. «Резервная копия»)."]),
             ("Чтение вслух", ["Когда чтение вслух включено, приложение озвучивает задания встроенным синтезатором речи iOS на самом "
                               "устройстве. Текст и звук не покидают устройство; микрофон приложение не использует."]),
             ("Датчик движения", ["Только пока на экране результат решённого цеха, приложение считывает данные датчика движения iPhone "
@@ -232,6 +250,14 @@ PRIVACY_TEXT = {
                 "Игрока, который сейчас играет, удалить нельзя. Удаление приложения стирает всех игроков и все данные с устройства.",
                 "Приложение никогда не отправляет нам ваши данные, поэтому из приложения на нашей стороне нечего хранить, искать "
                 "или удалять."]),
+            ("Резервная копия", [
+                "В разделе «Настройки» → «Резервная копия», после родительской проверки, взрослый может сохранить прогресс всех "
+                "игроков, их имена и настройки звука, вибрации и чтения вслух в одном файле. Файл попадает туда, куда взрослый "
+                "выберет в окне «Файлы», например на этот iPhone или в iCloud Drive в соответствии с условиями Apple. Приложение "
+                "никуда не отправляет файл и не хранит собственной копии, а мы никогда его не получаем.",
+                "Восстановление копии, тоже после родительской проверки, заменяет всех игроков и их прогресс на устройстве теми, "
+                "что есть в файле. Удаление приложения не удаляет сохранённую копию: удалите файл в «Файлах», когда он больше не "
+                "нужен."]),
             ("Письма в поддержку", [
                 "Если вы нам напишете, мы получим ваш адрес электронной почты и всё, что вы приложите к письму (например, снимок "
                 "экрана). Мы используем эти данные только для ответа, никому их не передаём и удаляем переписку в течение "
@@ -244,7 +270,7 @@ PRIVACY_TEXT = {
                 "лет. В ней нет рекламы, покупок за реальные деньги, аккаунтов, чата и ссылок на соцсети. В магазине муравьёв "
                 "платят только звёздами, заработанными в игре.",
                 "Страницы вне игры, например эта политика и страница поддержки, открываются только после того, как взрослый "
-                "пройдёт родительскую проверку. Приложение не собирает персональную информацию, поэтому нет сбора данных, на "
+                "пройдёт родительскую проверку; так же защищены сохранение и восстановление резервной копии. Приложение не собирает персональную информацию, поэтому нет сбора данных, на "
                 "который родители должны были бы давать согласие."]),
             ("Ваши права", [f"Законодательство о защите персональных данных, например Общий регламент ЕС по защите данных (GDPR), "
                             f"даёт вам право узнать, какие ваши персональные данные у нас есть, и потребовать их исправления или "
@@ -268,6 +294,7 @@ SUPPORT_TEXT = {
             ("How do I start a workshop over?", "Tap Restart. To replay the tutorial, open Settings → Replay tutorial."),
             ("I’m stuck. What can I do?", "Tap Undo to take back the last signal, or tap Hint to see the next signal. A workshop solved with a hint earns one star; tap Restart and solve it on your own for more. The workshop of the day has no hint."),
             ("Can several people play on one iPhone?", "Yes. Add players in Settings → Players. Each player has their own stars, records and ants."),
+            ("How do I keep progress safe or move it to another iPhone?", "Ask a grown-up to open Settings → Backup copy → Save a copy and keep the file in Files, for example in iCloud Drive. On the other iPhone, or if the game ever starts from scratch, use Restore from a copy. Restoring replaces the progress on that iPhone."),
             ("Are there ads or in-app purchases?", "No. There are no ads and no purchases for real money. Ants in the shop are bought with stars earned in the game."),
             ("Does the game collect data?", "No. There are no analytics, accounts or tracking. See the <a href=\"{privacy}\">Privacy Policy</a>."),
             ("Which devices are supported?", "iPhone with iOS 18 or later. The game works without the internet."),
@@ -282,6 +309,7 @@ SUPPORT_TEXT = {
             ("Як почати цех заново?", "Натисніть «Заново». Щоб повторити навчання, відкрийте «Налаштування» → «Повторити навчання»."),
             ("Не виходить розв’язати. Що робити?", "Натисніть «Скасувати», щоб скасувати останній сигнал, або «Підказка», щоб побачити наступний сигнал. За цех, розв’язаний із підказкою, нараховується лише одна зірка; натисніть «Заново» й розв’яжіть його самостійно, щоб отримати більше. У цеху дня підказки немає."),
             ("Чи можуть грати кілька людей на одному iPhone?", "Так. Додайте гравців у «Налаштування» → «Гравці». У кожного свої зірки, рекорди й мурашки."),
+            ("Як зберегти прогрес або перенести його на інший iPhone?", "Попросіть дорослого відкрити «Налаштування» → «Резервна копія» → «Зберегти копію» й покласти файл у «Файли», наприклад в iCloud Drive. На іншому iPhone або якщо гра колись почнеться з нуля, натисніть «Відновити з копії». Відновлення замінює прогрес на тому iPhone."),
             ("Чи є реклама або покупки в застосунку?", "Ні. Реклами й покупок за справжні гроші немає. Мурашок у крамниці купують за зірки, зароблені в грі."),
             ("Чи збирає гра дані?", "Ні: ні аналітики, ні облікових записів, ні відстеження. Докладніше — у <a href=\"{privacy}\">політиці конфіденційності</a>."),
             ("Які пристрої підтримуються?", "iPhone з iOS 18 або новішою. Гра працює без інтернету."),
@@ -296,6 +324,7 @@ SUPPORT_TEXT = {
             ("Как начать цех заново?", "Нажмите «Заново». Чтобы повторить обучение, откройте «Настройки» → «Повторить обучение»."),
             ("Не получается решить. Что делать?", "Нажмите «Отменить», чтобы отменить последний сигнал, или «Подсказка», чтобы увидеть следующий сигнал. За цех, решённый с подсказкой, даётся одна звезда; нажмите «Заново» и решите его сами, чтобы получить больше. В цехе дня подсказки нет."),
             ("Могут ли играть несколько человек на одном iPhone?", "Да. Добавьте игроков в «Настройки» → «Игроки». У каждого свои звёзды, рекорды и муравьи."),
+            ("Как сберечь прогресс или перенести его на другой iPhone?", "Попросите взрослого открыть «Настройки» → «Резервная копия» → «Сохранить копию» и положить файл в «Файлы», например в iCloud Drive. На другом iPhone или если игра когда-нибудь начнётся с нуля, нажмите «Восстановить из копии». Восстановление заменяет прогресс на том iPhone."),
             ("Есть ли реклама или покупки в приложении?", "Нет. Рекламы и покупок за реальные деньги нет. Муравьёв в магазине покупают за звёзды, заработанные в игре."),
             ("Собирает ли игра данные?", "Нет: ни аналитики, ни аккаунтов, ни отслеживания. Подробнее — в <a href=\"{privacy}\">политике конфиденциальности</a>."),
             ("Какие устройства поддерживаются?", "iPhone с iOS 18 или новее. Игра работает без интернета."),
