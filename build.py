@@ -14,7 +14,7 @@ import os
 LANGS = [("en", "English"), ("uk", "Українська"), ("ru", "Русский")]
 EMAIL = "exceptiongames@icloud.com"
 MAIL = f'<a href="mailto:{EMAIL}">{EMAIL}</a>'
-UPDATED = {"en": "October 11, 2026", "uk": "11 жовтня 2026 р.", "ru": "11 октября 2026 г."}
+UPDATED = {"en": "October 12, 2026", "uk": "12 жовтня 2026 р.", "ru": "12 октября 2026 г."}
 
 # Page paths, relative to the site root, without the language folder.
 HOME, GAME, PRIVACY, SUPPORT = "", "living-factory/", "living-factory/privacy-policy/", "living-factory/support/"
@@ -115,7 +115,8 @@ PRIVACY_TEXT = {
             ("Keeping and deleting data", [
                 "Data stays on your iPhone until you delete it. To remove one player’s progress, open Settings → Players, switch "
                 "to another player and delete that one (a grown-up confirms it). The player who is playing now cannot be "
-                "deleted. Deleting the app removes all players and all data from your device.",
+                "deleted. If a backup copy was restored earlier, the progress kept from before it may still include that "
+                "player (see “Backup copy”). Deleting the app removes all players and all data from your device.",
                 "The app never sends us your data, so there is nothing from the app for us to keep, look up or delete."]),
             ("Backup copy", [
                 "In Settings → Backup copy, after passing the parental gate, a grown-up can save every player’s progress, the "
@@ -124,7 +125,14 @@ PRIVACY_TEXT = {
                 "sends the file anywhere and keeps no copy of its own, and we never receive it.",
                 "Restoring a copy, also behind the parental gate, replaces all players and their progress on the device with the "
                 "ones in the file. Deleting the app does not delete a saved copy: delete the file in Files when you no longer "
-                "need it."]),
+                "need it.",
+                "Before a restore replaces anything, the app keeps the progress that was on the device (all players, their "
+                "names and the settings) in its own storage on this iPhone. A grown-up can then return it with Settings → "
+                "Backup copy → Bring back the previous progress, behind the parental gate. Only one such state is kept, and a "
+                "later restore can replace it. To tell whether anyone has played since a restore, the app also remembers what "
+                "the restored file wrote. Both stay on the device and are never sent anywhere; deleting the app removes them. "
+                "The kept progress does not change later: if a player is deleted, they stay in it, and bringing it back "
+                "returns every player it holds."]),
             ("Messages to support", [
                 "If you write to us, we receive your e-mail address and anything you include (for example, a screenshot). "
                 "We use it only to answer you, share it with no one, and delete the correspondence within 12 months after the "
@@ -180,7 +188,8 @@ PRIVACY_TEXT = {
             ("Зберігання та видалення даних", [
                 "Дані залишаються на вашому iPhone, доки ви їх не видалите. Щоб видалити прогрес одного гравця, відкрийте "
                 "«Налаштування» → «Гравці», перейдіть на іншого гравця й видаліть потрібного (дорослий підтверджує дію). Гравця, "
-                "який зараз грає, видалити не можна. Видалення застосунку стирає всіх гравців і всі дані з пристрою.",
+                "який зараз грає, видалити не можна. Якщо раніше відновлювали резервну копію, прогрес, збережений перед "
+                "відновленням, може й далі містити цього гравця (див. «Резервна копія»). Видалення застосунку стирає всіх гравців і всі дані з пристрою.",
                 "Застосунок ніколи не надсилає нам ваших даних, тому з застосунку на нашому боці немає чого зберігати, шукати чи "
                 "видаляти."]),
             ("Резервна копія", [
@@ -189,7 +198,14 @@ PRIVACY_TEXT = {
                 "дорослий вибере у вікні «Файли», наприклад на цей iPhone або в iCloud Drive відповідно до умов Apple. Застосунок "
                 "нікуди не надсилає файл і не зберігає власної копії, а ми ніколи його не отримуємо.",
                 "Відновлення копії, теж після батьківської перевірки, замінює всіх гравців і їхній прогрес на пристрої тими, що є "
-                "у файлі. Видалення застосунку не видаляє збережену копію: видаліть файл у «Файлах», коли він більше не потрібен."]),
+                "у файлі. Видалення застосунку не видаляє збережену копію: видаліть файл у «Файлах», коли він більше не потрібен.",
+                "Перш ніж відновлення щось замінить, застосунок зберігає прогрес, що був на пристрої (усіх гравців, їхні імена "
+                "та налаштування), у власному сховищі на цьому iPhone. Так дорослий зможе повернути його: «Налаштування» → "
+                "«Резервна копія» → «Повернути попередній прогрес», після батьківської перевірки. Зберігається лише один такий "
+                "стан, і наступне відновлення може його замінити. Щоб знати, чи хтось грав після відновлення, застосунок також "
+                "пам’ятає, що саме записав відновлений файл. Ці дані залишаються на пристрої й нікуди не надсилаються; видалення "
+                "застосунку стирає їх. Збережений прогрес потім не змінюється: якщо видалити гравця, у ньому він залишиться, а "
+                "повернення прогресу поверне всіх гравців, які в ньому є."]),
             ("Листи до підтримки", [
                 "Якщо ви нам напишете, ми отримаємо вашу адресу електронної пошти та все, що ви додасте до листа (наприклад, знімок "
                 "екрана). Ми використовуємо ці дані лише для відповіді, нікому їх не передаємо й видаляємо листування протягом "
@@ -247,7 +263,9 @@ PRIVACY_TEXT = {
             ("Хранение и удаление данных", [
                 "Данные остаются на вашем iPhone, пока вы их не удалите. Чтобы удалить прогресс одного игрока, откройте "
                 "«Настройки» → «Игроки», переключитесь на другого игрока и удалите нужного (взрослый подтверждает действие). "
-                "Игрока, который сейчас играет, удалить нельзя. Удаление приложения стирает всех игроков и все данные с устройства.",
+                "Игрока, который сейчас играет, удалить нельзя. Если раньше восстанавливали резервную копию, прогресс, "
+                "сохранённый перед восстановлением, может по-прежнему содержать этого игрока (см. «Резервная копия»). "
+                "Удаление приложения стирает всех игроков и все данные с устройства.",
                 "Приложение никогда не отправляет нам ваши данные, поэтому из приложения на нашей стороне нечего хранить, искать "
                 "или удалять."]),
             ("Резервная копия", [
@@ -257,7 +275,14 @@ PRIVACY_TEXT = {
                 "никуда не отправляет файл и не хранит собственной копии, а мы никогда его не получаем.",
                 "Восстановление копии, тоже после родительской проверки, заменяет всех игроков и их прогресс на устройстве теми, "
                 "что есть в файле. Удаление приложения не удаляет сохранённую копию: удалите файл в «Файлах», когда он больше не "
-                "нужен."]),
+                "нужен.",
+                "Прежде чем восстановление что-то заменит, приложение сохраняет прогресс, который был на устройстве (всех "
+                "игроков, их имена и настройки), в собственном хранилище на этом iPhone. Так взрослый сможет вернуть его: "
+                "«Настройки» → «Резервная копия» → «Вернуть прежний прогресс», после родительской проверки. Хранится только одно "
+                "такое состояние, и следующее восстановление может его заменить. Чтобы знать, играл ли кто-нибудь после "
+                "восстановления, приложение также запоминает, что именно записал восстановленный файл. Эти данные остаются на "
+                "устройстве и никуда не отправляются; удаление приложения стирает их. Сохранённый прогресс потом не меняется: "
+                "если удалить игрока, в нём он останется, а возврат прогресса вернёт всех игроков, которые в нём есть."]),
             ("Письма в поддержку", [
                 "Если вы нам напишете, мы получим ваш адрес электронной почты и всё, что вы приложите к письму (например, снимок "
                 "экрана). Мы используем эти данные только для ответа, никому их не передаём и удаляем переписку в течение "
@@ -294,7 +319,7 @@ SUPPORT_TEXT = {
             ("How do I start a workshop over?", "Tap Restart. To replay the tutorial, open Settings → Replay tutorial."),
             ("I’m stuck. What can I do?", "Tap Undo to take back the last signal, or tap Hint to see the next signal. A workshop solved with a hint earns one star; tap Restart and solve it on your own for more. The workshop of the day has no hint."),
             ("Can several people play on one iPhone?", "Yes. Add players in Settings → Players. Each player has their own stars, records and ants."),
-            ("How do I keep progress safe or move it to another iPhone?", "Ask a grown-up to open Settings → Backup copy → Save a copy and keep the file in Files, for example in iCloud Drive. On the other iPhone, or if the game ever starts from scratch, use Restore from a copy. Restoring replaces the progress on that iPhone."),
+            ("How do I keep progress safe or move it to another iPhone?", "Ask a grown-up to open Settings → Backup copy → Save a copy and keep the file in Files, for example in iCloud Drive. On the other iPhone, or if the game ever starts from scratch, use Restore from a copy. Restoring replaces the progress on that iPhone. If a grown-up picked the wrong file, Bring back the previous progress in the same place returns what was there before."),
             ("Are there ads or in-app purchases?", "No. There are no ads and no purchases for real money. Ants in the shop are bought with stars earned in the game."),
             ("Does the game collect data?", "No. There are no analytics, accounts or tracking. See the <a href=\"{privacy}\">Privacy Policy</a>."),
             ("Which devices are supported?", "iPhone with iOS 18 or later. The game works without the internet."),
@@ -309,7 +334,7 @@ SUPPORT_TEXT = {
             ("Як почати цех заново?", "Натисніть «Заново». Щоб повторити навчання, відкрийте «Налаштування» → «Повторити навчання»."),
             ("Не виходить розв’язати. Що робити?", "Натисніть «Скасувати», щоб скасувати останній сигнал, або «Підказка», щоб побачити наступний сигнал. За цех, розв’язаний із підказкою, нараховується лише одна зірка; натисніть «Заново» й розв’яжіть його самостійно, щоб отримати більше. У цеху дня підказки немає."),
             ("Чи можуть грати кілька людей на одному iPhone?", "Так. Додайте гравців у «Налаштування» → «Гравці». У кожного свої зірки, рекорди й мурашки."),
-            ("Як зберегти прогрес або перенести його на інший iPhone?", "Попросіть дорослого відкрити «Налаштування» → «Резервна копія» → «Зберегти копію» й покласти файл у «Файли», наприклад в iCloud Drive. На іншому iPhone або якщо гра колись почнеться з нуля, натисніть «Відновити з копії». Відновлення замінює прогрес на тому iPhone."),
+            ("Як зберегти прогрес або перенести його на інший iPhone?", "Попросіть дорослого відкрити «Налаштування» → «Резервна копія» → «Зберегти копію» й покласти файл у «Файли», наприклад в iCloud Drive. На іншому iPhone або якщо гра колись почнеться з нуля, натисніть «Відновити з копії». Відновлення замінює прогрес на тому iPhone. Якщо дорослий вибрав не той файл, «Повернути попередній прогрес» там само поверне те, що було раніше."),
             ("Чи є реклама або покупки в застосунку?", "Ні. Реклами й покупок за справжні гроші немає. Мурашок у крамниці купують за зірки, зароблені в грі."),
             ("Чи збирає гра дані?", "Ні: ні аналітики, ні облікових записів, ні відстеження. Докладніше — у <a href=\"{privacy}\">політиці конфіденційності</a>."),
             ("Які пристрої підтримуються?", "iPhone з iOS 18 або новішою. Гра працює без інтернету."),
@@ -324,7 +349,7 @@ SUPPORT_TEXT = {
             ("Как начать цех заново?", "Нажмите «Заново». Чтобы повторить обучение, откройте «Настройки» → «Повторить обучение»."),
             ("Не получается решить. Что делать?", "Нажмите «Отменить», чтобы отменить последний сигнал, или «Подсказка», чтобы увидеть следующий сигнал. За цех, решённый с подсказкой, даётся одна звезда; нажмите «Заново» и решите его сами, чтобы получить больше. В цехе дня подсказки нет."),
             ("Могут ли играть несколько человек на одном iPhone?", "Да. Добавьте игроков в «Настройки» → «Игроки». У каждого свои звёзды, рекорды и муравьи."),
-            ("Как сберечь прогресс или перенести его на другой iPhone?", "Попросите взрослого открыть «Настройки» → «Резервная копия» → «Сохранить копию» и положить файл в «Файлы», например в iCloud Drive. На другом iPhone или если игра когда-нибудь начнётся с нуля, нажмите «Восстановить из копии». Восстановление заменяет прогресс на том iPhone."),
+            ("Как сберечь прогресс или перенести его на другой iPhone?", "Попросите взрослого открыть «Настройки» → «Резервная копия» → «Сохранить копию» и положить файл в «Файлы», например в iCloud Drive. На другом iPhone или если игра когда-нибудь начнётся с нуля, нажмите «Восстановить из копии». Восстановление заменяет прогресс на том iPhone. Если взрослый выбрал не тот файл, «Вернуть прежний прогресс» там же вернёт то, что было раньше."),
             ("Есть ли реклама или покупки в приложении?", "Нет. Рекламы и покупок за реальные деньги нет. Муравьёв в магазине покупают за звёзды, заработанные в игре."),
             ("Собирает ли игра данные?", "Нет: ни аналитики, ни аккаунтов, ни отслеживания. Подробнее — в <a href=\"{privacy}\">политике конфиденциальности</a>."),
             ("Какие устройства поддерживаются?", "iPhone с iOS 18 или новее. Игра работает без интернета."),
