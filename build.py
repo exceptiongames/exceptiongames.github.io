@@ -5,16 +5,38 @@ Run `python3 build.py` from this folder after changing any text, then commit the
 generated HTML together with this file. Standard library only.
 
 Languages: English is the main one (the App Store links point to it), Ukrainian
-is the second, Russian the third. Each page lives at <page>/ (English),
-<page>/uk/ and <page>/ru/.
+is the second, Russian the third, then German, Japanese, Korean and Chinese
+(Simplified and Traditional; owner decision of October 12, 2026). Each page lives
+at <page>/ (English) and <page>/<folder>/ for the others (uk, ru, de, ja, ko,
+zh-hans, zh-hant). Every non-English page says that the English version applies
+if a translation differs (owner decision A of October 14, 2026).
 """
 import html
 import os
 
-LANGS = [("en", "English"), ("uk", "Українська"), ("ru", "Русский")]
+# (code for lang and hreflang, name in the switcher). The folder is the code in lower case.
+LANGS = [("en", "English"), ("uk", "Українська"), ("ru", "Русский"), ("de", "Deutsch"), ("ja", "日本語"),
+         ("ko", "한국어"), ("zh-Hans", "简体中文"), ("zh-Hant", "繁體中文")]
 EMAIL = "exceptiongames@icloud.com"
 MAIL = f'<a href="mailto:{EMAIL}">{EMAIL}</a>'
-UPDATED = {"en": "October 12, 2026", "uk": "12 жовтня 2026 р.", "ru": "12 октября 2026 г."}
+UPDATED = {"en": "October 14, 2026", "uk": "14 жовтня 2026 р.", "ru": "14 октября 2026 г.", "de": "14. Oktober 2026",
+           "ja": "2026年10月14日", "ko": "2026년 10월 14일", "zh-Hans": "2026年10月14日", "zh-Hant": "2026年10月14日"}
+
+# "Skip to content" and the translation note at the foot of every non-English page; {en} is the link to the
+# English version of the same page.
+SKIP = {"en": "Skip to content", "uk": "До змісту", "ru": "К содержанию", "de": "Zum Inhalt", "ja": "本文へ移動",
+        "ko": "본문으로 건너뛰기", "zh-Hans": "跳到正文", "zh-Hant": "跳到正文"}
+TRANSLATION_NOTE = {
+    "uk": "Це переклад. Якщо він розходиться з {en}, діє англійська версія.",
+    "ru": "Это перевод. Если он расходится с {en}, действует английская версия.",
+    "de": "Dies ist eine Übersetzung. Weicht sie von der {en} ab, gilt die englische Fassung.",
+    "ja": "このページは翻訳です。{en}と内容が異なる場合は、英語版が優先されます。",
+    "ko": "이 페이지는 번역본입니다. {en}과 내용이 다를 경우 영어판이 우선합니다.",
+    "zh-Hans": "本页为译文。如与{en}不一致，以英文版为准。",
+    "zh-Hant": "本頁為譯文。如與{en}不一致，以英文版為準。",
+}
+ENGLISH_VERSION = {"uk": "англійською версією", "ru": "английской версией", "de": "englischen Fassung",
+                   "ja": "英語版", "ko": "영어판", "zh-Hans": "英文版", "zh-Hant": "英文版"}
 
 # Page paths, relative to the site root, without the language folder.
 HOME, GAME, PRIVACY, SUPPORT = "", "living-factory/", "living-factory/privacy-policy/", "living-factory/support/"
@@ -26,6 +48,16 @@ UI = {
                lang="Мова", footer="exception games"),
     "ru": dict(game="Живая фабрика", privacy="Политика конфиденциальности", nav_privacy="Конфиденциальность", support="Поддержка", nav="Главное меню",
                lang="Язык", footer="exception games"),
+    "de": dict(game="Lebendige Fabrik", privacy="Datenschutzerklärung", nav_privacy="Datenschutz", support="Support", nav="Hauptmenü",
+               lang="Sprache", footer="exception games"),
+    "ja": dict(game="いきいき工場", privacy="プライバシーポリシー", nav_privacy="プライバシー", support="サポート", nav="メインメニュー",
+               lang="言語", footer="exception games"),
+    "ko": dict(game="살아 있는 공장", privacy="개인정보 처리방침", nav_privacy="개인정보", support="지원", nav="주 메뉴",
+               lang="언어", footer="exception games"),
+    "zh-Hans": dict(game="活力工厂", privacy="隐私政策", nav_privacy="隐私", support="支持", nav="主菜单",
+                    lang="语言", footer="exception games"),
+    "zh-Hant": dict(game="活力工廠", privacy="隱私權政策", nav_privacy="隱私權", support="支援", nav="主選單",
+                    lang="語言", footer="exception games"),
 }
 
 # ---------------------------------------------------------------- texts
@@ -43,6 +75,26 @@ HOME_TEXT = {
                desc="exception games — независимый разработчик небольших спокойных игр для iPhone.",
                lead="Независимый разработчик небольших спокойных игр для iPhone.",
                card="Логическая головоломка про муравьиную колонию для iPhone."),
+    "de": dict(title="exception games",
+               desc="exception games ist ein unabhängiger Entwickler kleiner, ruhiger Spiele für das iPhone.",
+               lead="Ein unabhängiger Entwickler kleiner, ruhiger Spiele für das iPhone.",
+               card="Ein Logikrätsel um eine Ameisenkolonie für das iPhone."),
+    "ja": dict(title="exception games",
+               desc="exception games は、iPhone 向けの小さくて穏やかなゲームを作るインディー開発者です。",
+               lead="iPhone 向けの小さくて穏やかなゲームを作るインディー開発者です。",
+               card="アリのコロニーを舞台にした iPhone 向けロジックパズル。"),
+    "ko": dict(title="exception games",
+               desc="exception games는 iPhone용 작고 차분한 게임을 만드는 독립 개발자입니다.",
+               lead="iPhone용 작고 차분한 게임을 만드는 독립 개발자입니다.",
+               card="개미 군락을 무대로 한 iPhone용 논리 퍼즐."),
+    "zh-Hans": dict(title="exception games",
+                    desc="exception games 是一家为 iPhone 制作小巧、安静游戏的独立开发者。",
+                    lead="为 iPhone 制作小巧、安静游戏的独立开发者。",
+                    card="一款关于蚁群的 iPhone 逻辑解谜游戏。"),
+    "zh-Hant": dict(title="exception games",
+                    desc="exception games 是一家為 iPhone 製作小巧、安靜遊戲的獨立開發者。",
+                    lead="為 iPhone 製作小巧、安靜遊戲的獨立開發者。",
+                    card="一款以蟻群為主題的 iPhone 邏輯解謎遊戲。"),
 }
 
 GAME_TEXT = {
@@ -76,6 +128,57 @@ GAME_TEXT = {
             "Без рекламы, без покупок за реальные деньги, без аккаунтов и без таймера. Интернет не нужен.",
         ],
         facts="iPhone · iOS 18 или новее · 43 языка"),
+    "de": dict(
+        lead="Ein Logikrätsel um eine Ameisenkolonie für das iPhone von exception games.",
+        body=[
+            "Senden Sie Signale durch Zeilen und Spalten, ziehen Sie über Erde und Blätter und führen Sie jede Ameise zu "
+            "ihrem Nest. Fünfzig von Hand gebaute Werkhallen in vier Kapiteln, jeden Tag eine neue Werkhalle des Tages "
+            "und in jeder Werkhalle ein verstecktes Geheimnis.",
+            "Für die ganze Familie gemacht: ein Tipp, wenn es nicht weitergeht, eine Einführung Schritt für Schritt in "
+            "jedes neue Feld, vorgelesene Aufgaben für Kinder, die noch nicht lesen können, und mehrere Spieler auf einem iPhone.",
+            "Keine Werbung, keine Käufe mit echtem Geld, keine Konten, kein Zeitdruck. Kein Internet nötig.",
+        ],
+        facts="iPhone · iOS 18 oder neuer · 43 Sprachen"),
+    "ja": dict(
+        lead="exception games による、アリのコロニーを舞台にした iPhone 向けロジックパズル。",
+        body=[
+            "行と列に合図を送り、土や葉っぱの上を進ませて、すべてのアリを巣穴へ導きましょう。"
+            "4つの章に50の手作りの作業場、毎日新しい「今日の作業場」、そしてどの作業場にも秘密がひとつ隠れています。",
+            "家族みんなのために作りました。行き詰まったときのヒント、新しいマスが出るたびの一歩ずつの紹介、"
+            "まだ字が読めない子どものための説明の読み上げ、そして1台の iPhone で複数のプレイヤーが遊べます。",
+            "広告なし、現実のお金での購入なし、アカウントなし、時間制限なし。インターネットは必要ありません。",
+        ],
+        facts="iPhone · iOS 18 以降 · 43 言語"),
+    "ko": dict(
+        lead="exception games가 만든, 개미 군락을 무대로 한 iPhone용 논리 퍼즐.",
+        body=[
+            "행과 열을 따라 신호를 보내고, 흙과 나뭇잎 위를 지나 모든 개미를 개미굴로 이끄세요. "
+            "네 장에 걸친 직접 만든 작업장 50개, 매일 새로 열리는 오늘의 작업장, 그리고 작업장마다 숨은 비밀이 하나씩 있습니다.",
+            "온 가족을 위해 만들었습니다. 막혔을 때 쓰는 힌트, 새로운 칸이 나올 때마다 하나씩 알려 주는 안내, "
+            "아직 글을 읽지 못하는 아이를 위한 설명 읽어 주기, 그리고 iPhone 한 대로 여러 플레이어가 함께할 수 있습니다.",
+            "광고, 실제 돈으로 하는 구매, 계정, 시간 제한이 없습니다. 인터넷도 필요 없습니다.",
+        ],
+        facts="iPhone · iOS 18 이상 · 43개 언어"),
+    "zh-Hans": dict(
+        lead="exception games 出品的一款关于蚁群的 iPhone 逻辑解谜游戏。",
+        body=[
+            "沿着行和列发出信号，让蚂蚁走过泥土和叶子，把每只蚂蚁带回蚁窝。"
+            "四章共五十个精心设计的车间，每天都有新的今日车间，每个车间里还藏着一个秘密。",
+            "为全家人设计：卡关时有提示，每种新格子都有循序渐进的介绍，为还不识字的孩子朗读说明，"
+            "一台 iPhone 可供多位玩家使用。",
+            "没有广告，没有真实货币购买，没有账户，没有计时。无需联网。",
+        ],
+        facts="iPhone · iOS 18 或更高版本 · 43 种语言"),
+    "zh-Hant": dict(
+        lead="exception games 推出的一款以蟻群為主題的 iPhone 邏輯解謎遊戲。",
+        body=[
+            "沿著橫列和直行發出訊號，讓螞蟻走過泥土和葉子，把每隻螞蟻帶回蟻窩。"
+            "四章共五十個精心設計的工坊，每天都有新的今日工坊，每個工坊裡還藏著一個祕密。",
+            "為全家人設計：卡關時有提示，每種新格子都有循序漸進的介紹，為還不識字的孩子朗讀說明，"
+            "一台 iPhone 可供多位玩家使用。",
+            "沒有廣告，沒有真實金錢購買，沒有帳號，沒有計時。不需要連網。",
+        ],
+        facts="iPhone · iOS 18 或以上版本 · 43 種語言"),
 }
 
 # Each section is (heading, [paragraphs]). Paragraph strings may contain HTML.
@@ -95,7 +198,7 @@ PRIVACY_TEXT = {
                                        "to the internet."]),
             ("Data stored on your device", [
                 "Game progress (current workshop, unfinished games with undo history, completed workshops, best results and stars, "
-                "results of the Workshop of the day, which workshops were solved with a hint, ants bought with stars, found secrets "
+                "results of the Workshop of the day, which workshops were solved with a hint, ants bought with stars or won for a perfect chapter, found secrets "
                 "and how far their hints have opened, tutorial status), the names of players added on this device, and the sound, "
                 "haptics and read-aloud settings are stored locally on your device using Apple’s standard app storage.",
                 "Player names are optional; you can keep the default “Player 2” and so on. The app never sends this data anywhere. "
@@ -168,7 +271,7 @@ PRIVACY_TEXT = {
                                             "SDK, і він не підключається до інтернету."]),
             ("Що зберігається на пристрої", [
                 "Прогрес гри (поточний цех, незавершені партії з історією скасування, пройдені цехи, найкращі результати та зірки, "
-                "результати цеху дня, позначки про цехи, розв’язані з підказкою, куплені за зірки мурашки, знайдені секрети й "
+                "результати цеху дня, позначки про цехи, розв’язані з підказкою, мурашки, куплені за зірки або здобуті за ідеально пройдений розділ, знайдені секрети й "
                 "відкриті до них підказки, стан навчання), імена гравців, доданих на цьому пристрої, а також налаштування звуку, "
                 "вібрації та читання вголос зберігаються локально стандартними засобами iOS.",
                 "Імена вказувати не обов’язково: можна залишити «Гравець 2» тощо. Застосунок нікуди не надсилає ці дані. "
@@ -242,7 +345,7 @@ PRIVACY_TEXT = {
                                                   "сторонних SDK; приложение не подключается к интернету."]),
             ("Что хранится на устройстве", [
                 "Прогресс игры (текущий цех, незавершённые партии с историей отмены, пройденные цеха, лучшие результаты и звёзды, "
-                "результаты цеха дня, отметки о цехах, решённых с подсказкой, купленные за звёзды муравьи, найденные секреты и "
+                "результаты цеха дня, отметки о цехах, решённых с подсказкой, муравьи, купленные за звёзды или полученные за идеально пройденную главу, найденные секреты и "
                 "открытые к ним подсказки, состояние обучения), имена игроков, добавленных на этом устройстве, и настройки звука, "
                 "вибрации и чтения вслух хранятся локально стандартными средствами iOS.",
                 "Имена указывать не обязательно: можно оставить «Игрок 2» и т. д. Приложение никуда не отправляет эти данные. "
@@ -306,6 +409,344 @@ PRIVACY_TEXT = {
                            "дата вступления в силу вверху изменится."]),
             ("Контакты", [f"exception games · {MAIL}"]),
         ]),
+    "de": dict(
+        effective="Gültig ab",
+        intro="Lebendige Fabrik („die App“) ist ein Logikrätsel um eine Ameisenkolonie für das iPhone. exception games ist "
+              "der Handelsname ihres Entwicklers, also der Person oder des Unternehmens, die auf der App-Store-Seite der App "
+              "als Verkäufer angegeben ist und für diese Erklärung verantwortlich ist („wir“). Diese Erklärung beschreibt, was "
+              "mit Informationen in der App, auf dieser Website und in Nachrichten an den Support geschieht.",
+        summary="Kurz gesagt: Die App erfasst keine Daten. Alles, was sie speichert, bleibt auf Ihrem iPhone, es sei denn, ein Erwachsener speichert eine Sicherungskopie an einem anderen Ort.",
+        sections=[
+            ("Welche Daten die App erfasst", ["Keine. Die App erfasst, überträgt, verkauft oder teilt keine personenbezogenen "
+                                              "Daten. Sie enthält keine Werbung, keine Analyse, keine Konten, kein Tracking und "
+                                              "keine SDKs von Dritten, und sie verbindet sich nicht mit dem Internet."]),
+            ("Auf dem Gerät gespeicherte Daten", [
+                "Der Spielfortschritt (aktuelle Werkhalle, unvollendete Spiele mit ihrem Rückgängig-Verlauf, gelöste Werkhallen, "
+                "beste Ergebnisse und Sterne, Ergebnisse der Werkhalle des Tages, welche Werkhallen mit einem Tipp gelöst wurden, "
+                "Ameisen, die mit Sternen gekauft oder für ein perfektes Kapitel gewonnen wurden, gefundene Geheimnisse und wie "
+                "weit ihre Hinweise geöffnet sind, Stand der Einführung), die Namen der auf diesem Gerät hinzugefügten Spieler "
+                "sowie die Einstellungen für Ton, Haptik und Vorlesen werden lokal auf Ihrem Gerät gespeichert, im üblichen "
+                "App-Speicher von Apple.",
+                "Spielernamen sind freiwillig; Sie können die Vorgabe „Spieler 2“ usw. beibehalten. Die App sendet diese Daten "
+                "nirgendwohin. Sie können in Ihren eigenen Gerätebackups nach den Bedingungen von Apple enthalten sein und in "
+                "einer Sicherungskopie, die ein Erwachsener speichert (siehe „Sicherungskopie“)."]),
+            ("Vorlesen", ["Wenn das Vorlesen eingeschaltet ist, spricht die App die Aufgaben mit der in iOS eingebauten "
+                          "Sprachausgabe auf dem Gerät. Weder Text noch Ton verlassen das Gerät, und die App verwendet nie das Mikrofon."]),
+            ("Bewegungssensor", ["Nur solange das Ergebnis einer gelösten Werkhalle auf dem Bildschirm steht, liest die App den "
+                                 "Bewegungssensor des iPhone auf dem Gerät, um spielerische Bewegungen zu erkennen, die versteckte "
+                                 "Geheimnisse aufdecken, etwa ein sanftes Schütteln oder das Umdrehen des Telefons. Die Messwerte "
+                                 "werden weder gespeichert noch gesendet. Die App verwendet keinen Standort, keine Kamera, keine "
+                                 "Kontakte und keine Fotos."]),
+            ("Dritte", [
+                "Die App teilt keine Daten mit anderen: Sie enthält keinen Code von Dritten und spricht mit keinen Servern. "
+                "Downloads, Updates und Gerätebackups wickelt Apple nach seiner eigenen Datenschutzrichtlinie ab.",
+                "Wenn Sie in den iOS-Einstellungen zugestimmt haben, Analysedaten mit App-Entwicklern zu teilen, kann Apple uns "
+                "anonyme Absturzberichte und zusammengefasste Statistiken geben, die Sie nicht identifizieren."]),
+            ("Aufbewahren und Löschen von Daten", [
+                "Die Daten bleiben auf Ihrem iPhone, bis Sie sie löschen. Um den Fortschritt eines Spielers zu entfernen, öffnen "
+                "Sie Einstellungen → Spieler, wechseln zu einem anderen Spieler und löschen diesen (ein Erwachsener bestätigt das). "
+                "Der Spieler, der gerade spielt, kann nicht gelöscht werden. Wurde früher eine Sicherungskopie wiederhergestellt, "
+                "kann der davor aufbewahrte Fortschritt diesen Spieler noch enthalten (siehe „Sicherungskopie“). Wenn Sie die App "
+                "löschen, werden alle Spieler und alle Daten von Ihrem Gerät entfernt.",
+                "Die App sendet uns nie Ihre Daten, daher gibt es aus der App bei uns nichts aufzubewahren, nachzuschlagen oder "
+                "zu löschen."]),
+            ("Sicherungskopie", [
+                "Unter Einstellungen → Sicherungskopie kann ein Erwachsener nach der Elternabfrage den Fortschritt aller Spieler, "
+                "ihre Namen und die Einstellungen für Ton, Haptik und Vorlesen als eine Datei speichern. Die Datei kommt dorthin, "
+                "wo der Erwachsene sie im Fenster „Dateien“ ablegt, zum Beispiel auf dieses iPhone oder in iCloud Drive nach den "
+                "Bedingungen von Apple. Die App sendet die Datei nirgendwohin und behält keine eigene Kopie, und wir erhalten sie nie.",
+                "Das Wiederherstellen einer Kopie, ebenfalls nach der Elternabfrage, ersetzt alle Spieler und ihren Fortschritt "
+                "auf dem Gerät durch die aus der Datei. Das Löschen der App löscht keine gespeicherte Kopie: Löschen Sie die Datei "
+                "in „Dateien“, wenn Sie sie nicht mehr brauchen.",
+                "Bevor eine Wiederherstellung etwas ersetzt, bewahrt die App den Fortschritt, der auf dem Gerät war (alle Spieler, "
+                "ihre Namen und die Einstellungen), in ihrem eigenen Speicher auf diesem iPhone auf. Ein Erwachsener kann ihn dann "
+                "nach der Elternabfrage mit Einstellungen → Sicherungskopie → Früheren Fortschritt zurückholen wiederherstellen. Es "
+                "wird nur ein solcher Stand aufbewahrt, und eine spätere Wiederherstellung kann ihn ersetzen. Um zu erkennen, ob "
+                "seit einer Wiederherstellung jemand gespielt hat, merkt sich die App außerdem, was die wiederhergestellte Datei "
+                "geschrieben hat. Beides bleibt auf dem Gerät und wird nie gesendet; das Löschen der App entfernt beides. Der "
+                "aufbewahrte Fortschritt ändert sich später nicht: Wird ein Spieler gelöscht, bleibt er darin, und das Zurückholen "
+                "bringt alle Spieler zurück, die er enthält."]),
+            ("Nachrichten an den Support", [
+                "Wenn Sie uns schreiben, erhalten wir Ihre E-Mail-Adresse und alles, was Sie mitschicken (zum Beispiel einen "
+                "Screenshot). Wir verwenden das nur, um Ihnen zu antworten, geben es an niemanden weiter und löschen den "
+                "Schriftverkehr innerhalb von 12 Monaten, nachdem die Frage geklärt ist, oder auf Wunsch früher. E-Mails werden "
+                "über iCloud Mail von Apple zugestellt. Bitte lassen Sie einen Erwachsenen schreiben, kein Kind."]),
+            ("Diese Website", ["Diese Website verwendet keine Cookies und keine Analyse. Sie wird bei GitHub Pages gehostet; "
+                               "GitHub kann die IP-Adressen der Besucher aus Sicherheitsgründen nach der GitHub-Datenschutzerklärung "
+                               "protokollieren."]),
+            ("Kinder", [
+                "Das Spiel ist für Kinder und Familien gemacht. Es erfasst wissentlich keine Informationen von irgendjemandem, auch "
+                "nicht von Kindern unter 13 Jahren. Es gibt keine Werbung, keine Käufe mit echtem Geld, keine Konten, keinen Chat "
+                "und keine Links zu sozialen Netzwerken. Im Ameisenladen zählen nur Sterne, die im Spiel verdient wurden.",
+                "Seiten außerhalb des Spiels, wie diese Erklärung und die Support-Seite, öffnen sich erst, nachdem ein Erwachsener "
+                "die Elternabfrage gelöst hat; dasselbe gilt für das Speichern und Wiederherstellen einer Sicherungskopie. Da die "
+                "App keine personenbezogenen Daten erfasst, gibt es keine Datenerhebung, in die Eltern einwilligen müssten."]),
+            ("Ihre Rechte", [f"Datenschutzgesetze wie die EU-Datenschutz-Grundverordnung (DSGVO) geben Ihnen das Recht zu erfahren, "
+                             f"welche personenbezogenen Daten wir über Sie haben, und sie berichtigen oder löschen zu lassen. Die App "
+                             f"gibt uns keine; die einzigen Daten, die wir haben können, sind Ihre Nachrichten an den Support. Um danach "
+                             f"zu fragen oder sie löschen zu lassen, schreiben Sie an {MAIL}. Sie können sich auch bei Ihrer "
+                             f"Datenschutzaufsichtsbehörde beschweren."]),
+            ("Änderungen", ["Wenn eine künftige Version den Umgang mit Daten ändert, wird diese Seite vor dem Erscheinen dieser "
+                            "Version aktualisiert und das Datum oben geändert."]),
+            ("Kontakt", [f"exception games · {MAIL}"]),
+        ]),
+    "ja": dict(
+        effective="発効日",
+        intro="いきいき工場（以下「本アプリ」）は、アリのコロニーを舞台にした iPhone 向けのロジックパズルゲームです。"
+              "exception games は、その開発者、すなわち App Store の本アプリのページに販売元として表示される個人または会社の"
+              "屋号であり、本ポリシーに責任を負います（以下「当方」）。本ポリシーでは、本アプリ、このウェブサイト、および"
+              "サポートへのメッセージで、情報がどのように扱われるかを説明します。",
+        summary="要するに、本アプリはデータを一切収集しません。保存されるものはすべてお使いの iPhone に残ります。ただし、大人がバックアップを別の場所に保存した場合を除きます。",
+        sections=[
+            ("本アプリが収集するデータ", ["ありません。本アプリは個人データを収集、送信、販売、共有しません。広告、解析、"
+                                          "アカウント、トラッキング、サードパーティの SDK は含まれておらず、インターネットにも接続しません。"]),
+            ("デバイスに保存されるデータ", [
+                "ゲームの進行状況（現在の作業場、取り消し履歴付きの途中のゲーム、クリアした作業場、ベスト記録と星、今日の"
+                "作業場の結果、ヒントを使って解いた作業場、星で買ったアリや章を完璧にクリアしてもらったアリ、見つけた秘密と"
+                "そのヒントがどこまで開いたか、チュートリアルの状態）、このデバイスで追加したプレイヤーの名前、サウンド・"
+                "振動・読み上げの設定は、Apple 標準のアプリ用ストレージを使ってお使いのデバイスにローカルに保存されます。",
+                "プレイヤー名の入力は任意で、「プレイヤー2」などの初期名のままでもかまいません。本アプリがこれらのデータを"
+                "どこかに送ることはありません。Apple の規約に基づくお使いのデバイスのバックアップや、大人が保存したバックアップ"
+                "（「バックアップ」を参照）に含まれる場合があります。"]),
+            ("読み上げ", ["読み上げがオンのとき、本アプリはデバイス上の iOS 内蔵の音声合成でパズルの説明を読み上げます。"
+                          "テキストや音声がデバイスの外に出ることはなく、マイクを使うこともありません。"]),
+            ("モーションセンサー", ["クリアした作業場の結果が画面に表示されている間だけ、本アプリはデバイス上で iPhone の"
+                                    "モーションセンサーを読み取り、そっと振る、ひっくり返すといった、隠れた秘密を見つける遊びの"
+                                    "動きを検出します。読み取った値が保存・送信されることはありません。本アプリは位置情報、カメラ、"
+                                    "連絡先、写真を使いません。"]),
+            ("第三者", [
+                "本アプリは誰ともデータを共有しません。サードパーティのコードを含まず、どのサーバーとも通信しません。"
+                "ダウンロード、アップデート、デバイスのバックアップは、Apple が自社のプライバシーポリシーに基づいて取り扱います。",
+                "iOS の設定で App デベロッパとの解析データの共有を選んだ場合、Apple が当方に、匿名のクラッシュレポートと、"
+                "あなたを特定しない集計統計を提供することがあります。"]),
+            ("データの保管と削除", [
+                "データは削除するまでお使いの iPhone に残ります。あるプレイヤーの進行状況を消すには、設定 → プレイヤー を開き、"
+                "別のプレイヤーに切り替えてから、そのプレイヤーを削除します（大人が確認します）。いまプレイ中のプレイヤーは"
+                "削除できません。以前にバックアップを復元したことがある場合、その前から保管されている進行状況に、そのプレイヤーが"
+                "まだ含まれていることがあります（「バックアップ」を参照）。本アプリを削除すると、すべてのプレイヤーとすべての"
+                "データがデバイスから消去されます。",
+                "本アプリがあなたのデータを当方に送ることはないため、当方には、本アプリに由来する保管・照会・削除の対象となる"
+                "ものはありません。"]),
+            ("バックアップ", [
+                "設定 → バックアップ では、保護者確認を通過した大人が、全プレイヤーの進行状況、プレイヤーの名前、サウンド・"
+                "振動・読み上げの設定をひとつのファイルとして保存できます。ファイルは、大人が「ファイル」ウインドウで選んだ場所、"
+                "たとえばこの iPhone や、Apple の規約に基づく iCloud Drive に保存されます。本アプリがファイルをどこかに送ることは"
+                "なく、独自のコピーも保持せず、当方がそれを受け取ることもありません。",
+                "バックアップの復元も保護者確認の後で行い、デバイス上のすべてのプレイヤーとその進行状況を、ファイルの内容に"
+                "置き換えます。本アプリを削除しても、保存したバックアップは削除されません。不要になったら「ファイル」で"
+                "ファイルを削除してください。",
+                "復元によって何かが置き換わる前に、本アプリはデバイスにあった進行状況（すべてのプレイヤー、その名前、設定）を、"
+                "この iPhone 上の自身のストレージに保管します。大人は保護者確認の後、設定 → バックアップ → 以前の進行状況に戻す "
+                "で、それを元に戻せます。保管されるのはひとつの状態だけで、後の復元で置き換わることがあります。復元後に誰かが"
+                "遊んだかどうかを判断するため、本アプリは復元したファイルが書き込んだ内容も記憶します。どちらもデバイス上に"
+                "とどまり、送信されることはありません。本アプリを削除すると両方とも消えます。保管された進行状況は後から変わり"
+                "ません。プレイヤーを削除してもその中には残り、元に戻すと、そこに含まれるすべてのプレイヤーが戻ります。"]),
+            ("サポートへのメッセージ", [
+                "当方にご連絡いただくと、あなたのメールアドレスと、添付されたもの（スクリーンショットなど）を受け取ります。"
+                "これらは返信のためだけに使い、誰とも共有せず、お問い合わせが解決してから12か月以内に、またはご依頼があれば"
+                "それより早く、やり取りを削除します。メールは Apple の iCloud メールで配信されます。ご連絡は、お子さまではなく"
+                "大人の方からお願いします。"]),
+            ("このウェブサイト", ["このウェブサイトは Cookie も解析も使用しません。GitHub Pages でホストされており、GitHub は "
+                                  "GitHub プライバシーステートメントに基づき、セキュリティのために訪問者の IP アドレスを記録する"
+                                  "ことがあります。"]),
+            ("子ども", [
+                "このゲームは子どもと家族のために作られています。13歳未満の子どもを含め、誰からも意図して情報を収集することは"
+                "ありません。広告、現実のお金での購入、アカウント、チャット、ソーシャルメディアへのリンクはありません。アリの"
+                "お店で使えるのは、ゲーム内で獲得した星だけです。",
+                "このポリシーやサポートページなど、ゲームの外のページは、大人が保護者確認を通過した後にだけ開きます。"
+                "バックアップの保存と復元も同様です。本アプリは個人情報を収集しないため、保護者の同意が必要となるデータ収集は"
+                "ありません。"]),
+            ("あなたの権利", [f"EU 一般データ保護規則（GDPR）などのプライバシー法では、当方が保有するあなたの個人データに"
+                              f"ついて問い合わせ、その訂正や削除を求める権利が認められています。本アプリは当方にデータを一切"
+                              f"渡しません。当方が保有し得るのは、サポートへのメッセージだけです。その確認や削除をご希望の場合は、"
+                              f"{MAIL} までご連絡ください。お住まいの地域のデータ保護機関に苦情を申し立てることもできます。"]),
+            ("変更", ["将来のバージョンでデータの取り扱いが変わる場合、そのバージョンの公開前にこのページを更新し、上記の発効日を"
+                      "変更します。"]),
+            ("お問い合わせ", [f"exception games · {MAIL}"]),
+        ]),
+    "ko": dict(
+        effective="시행일",
+        intro="살아 있는 공장(이하 ‘앱’)은 개미 군락을 무대로 한 iPhone용 논리 퍼즐 게임입니다. exception games는 앱 개발자, "
+              "즉 App Store의 앱 페이지에 판매자로 표시되는 개인 또는 회사의 상호이며, 이 방침에 대한 책임을 집니다(이하 ‘당사’). "
+              "이 방침은 앱, 이 웹사이트, 지원팀에 보내는 메시지에서 정보가 어떻게 처리되는지 설명합니다.",
+        summary="요약하면, 앱은 어떤 데이터도 수집하지 않습니다. 앱이 저장하는 모든 것은 사용자의 iPhone에 남습니다. 단, 어른이 백업을 다른 곳에 저장하는 경우는 예외입니다.",
+        sections=[
+            ("앱이 수집하는 데이터", ["없습니다. 앱은 개인 데이터를 수집, 전송, 판매 또는 공유하지 않습니다. 광고, 분석, 계정, "
+                                      "추적, 타사 SDK가 없으며 인터넷에 연결하지 않습니다."]),
+            ("기기에 저장되는 데이터", [
+                "게임 진행 상황(현재 작업장, 되돌리기 기록이 남아 있는 진행 중인 게임, 완료한 작업장, 최고 기록과 별, 오늘의 "
+                "작업장 결과, 힌트로 푼 작업장, 별로 산 개미나 장을 완벽하게 끝내고 받은 개미, 찾은 비밀과 그 힌트가 열린 정도, "
+                "튜토리얼 상태), 이 기기에서 추가한 플레이어 이름, 소리·진동·읽어 주기 설정은 Apple의 표준 앱 저장 공간을 사용해 "
+                "사용자의 기기에 로컬로 저장됩니다.",
+                "플레이어 이름은 선택 사항이며 ‘플레이어 2’ 같은 기본 이름을 그대로 써도 됩니다. 앱은 이 데이터를 어디에도 "
+                "보내지 않습니다. Apple 약관에 따른 사용자 기기의 백업과, 어른이 저장한 백업(‘백업’ 참조)에 포함될 수 있습니다."]),
+            ("읽어 주기", ["읽어 주기가 켜져 있으면 앱은 기기에 내장된 iOS 음성 합성으로 퍼즐 설명을 읽어 줍니다. 텍스트나 "
+                           "소리는 기기 밖으로 나가지 않으며, 앱은 마이크를 사용하지 않습니다."]),
+            ("동작 센서", ["푼 작업장의 결과가 화면에 표시되어 있는 동안에만 앱은 기기에서 iPhone의 동작 센서를 읽어, 살짝 "
+                           "흔들기나 휴대폰 뒤집기처럼 숨은 비밀을 여는 놀이 동작을 알아챕니다. 측정값은 저장되거나 전송되지 "
+                           "않습니다. 앱은 위치, 카메라, 연락처, 사진을 사용하지 않습니다."]),
+            ("제3자", [
+                "앱은 누구와도 데이터를 공유하지 않습니다. 타사 코드가 없으며 어떤 서버와도 통신하지 않습니다. 다운로드, "
+                "업데이트, 기기 백업은 Apple이 자체 개인정보 처리방침에 따라 처리합니다.",
+                "iOS 설정에서 앱 개발자와 분석 정보를 공유하기로 선택한 경우, Apple은 당사에 익명의 충돌 보고서와 사용자를 "
+                "식별할 수 없는 집계 통계를 제공할 수 있습니다."]),
+            ("데이터 보관 및 삭제", [
+                "데이터는 사용자가 삭제할 때까지 iPhone에 남아 있습니다. 한 플레이어의 진행 상황을 지우려면 설정 → 플레이어를 "
+                "열고 다른 플레이어로 바꾼 뒤 그 플레이어를 삭제하세요(어른이 확인합니다). 지금 플레이 중인 플레이어는 삭제할 "
+                "수 없습니다. 이전에 백업을 복원한 적이 있다면, 그 전부터 보관된 진행 상황에 그 플레이어가 아직 남아 있을 수 "
+                "있습니다(‘백업’ 참조). 앱을 삭제하면 모든 플레이어와 모든 데이터가 기기에서 지워집니다.",
+                "앱은 사용자의 데이터를 당사에 보내지 않으므로, 당사가 앱에서 받은 데이터를 보관하거나 조회하거나 삭제할 일은 "
+                "없습니다."]),
+            ("백업", [
+                "설정 → 백업에서 보호자 확인을 통과한 어른은 모든 플레이어의 진행 상황, 플레이어 이름, 소리·진동·읽어 주기 "
+                "설정을 하나의 파일로 저장할 수 있습니다. 파일은 어른이 ‘파일’ 창에서 고른 곳, 예를 들어 이 iPhone이나 Apple "
+                "약관에 따른 iCloud Drive에 저장됩니다. 앱은 파일을 어디에도 보내지 않고 자체 사본도 보관하지 않으며, 당사도 "
+                "파일을 받지 않습니다.",
+                "백업 복원도 보호자 확인을 거친 뒤에 할 수 있으며, 기기의 모든 플레이어와 그 진행 상황을 파일에 있는 것으로 "
+                "바꿉니다. 앱을 삭제해도 저장한 백업은 삭제되지 않습니다. 더 이상 필요 없으면 ‘파일’에서 파일을 삭제하세요.",
+                "복원으로 무언가가 바뀌기 전에, 앱은 기기에 있던 진행 상황(모든 플레이어, 이름, 설정)을 이 iPhone의 자체 저장 "
+                "공간에 보관합니다. 어른은 보호자 확인을 거친 뒤 설정 → 백업 → 이전 진행 상황으로 되돌리기로 그것을 되돌릴 수 "
+                "있습니다. 이런 상태는 하나만 보관되며, 나중의 복원이 그것을 대체할 수 있습니다. 복원 후 누군가 플레이했는지 "
+                "알기 위해, 앱은 복원한 파일이 기록한 내용도 기억합니다. 두 가지 모두 기기에만 남고 어디에도 전송되지 않으며, "
+                "앱을 삭제하면 함께 지워집니다. 보관된 진행 상황은 나중에 바뀌지 않습니다. 플레이어를 삭제해도 그 안에는 남아 "
+                "있고, 되돌리면 그 안의 모든 플레이어가 돌아옵니다."]),
+            ("지원팀에 보내는 메시지", [
+                "당사에 연락하시면 이메일 주소와 첨부하신 내용(예: 스크린샷)을 받게 됩니다. 이는 답변에만 사용하고 누구와도 "
+                "공유하지 않으며, 문의가 해결된 후 12개월 이내에, 또는 요청하시면 더 일찍 대화 내용을 삭제합니다. 이메일은 "
+                "Apple의 iCloud Mail로 전달됩니다. 아이가 아닌 어른이 연락해 주세요."]),
+            ("이 웹사이트", ["이 웹사이트는 쿠키나 분석 도구를 사용하지 않습니다. GitHub Pages에서 호스팅되며, GitHub는 GitHub "
+                             "개인정보 보호정책에 따라 보안을 위해 방문자의 IP 주소를 기록할 수 있습니다."]),
+            ("어린이", [
+                "이 게임은 어린이와 가족을 위해 만들어졌습니다. 13세 미만 어린이를 포함해 누구로부터도 고의로 정보를 수집하지 "
+                "않습니다. 광고, 실제 돈으로 하는 구매, 계정, 채팅, 소셜 미디어 링크가 없습니다. 개미 상점에서는 게임에서 얻은 "
+                "별만 사용합니다.",
+                "이 방침과 지원 페이지처럼 게임 밖의 페이지는 어른이 보호자 확인을 통과한 뒤에만 열리며, 백업 저장과 복원도 "
+                "마찬가지입니다. 앱은 개인정보를 수집하지 않으므로 부모가 동의해야 할 데이터 수집이 없습니다."]),
+            ("사용자의 권리", [f"EU 일반 개인정보 보호법(GDPR) 같은 개인정보 보호법은 당사가 보유한 사용자의 개인 데이터가 "
+                               f"무엇인지 문의하고, 이를 정정하거나 삭제하도록 요청할 권리를 보장합니다. 앱은 당사에 어떤 데이터도 "
+                               f"넘기지 않으며, 당사가 보유할 수 있는 데이터는 지원팀에 보낸 메시지뿐입니다. 이에 대해 문의하거나 "
+                               f"삭제를 원하시면 {MAIL}로 연락해 주세요. 거주 지역의 개인정보 보호 감독기관에 민원을 제기할 수도 "
+                               f"있습니다."]),
+            ("변경", ["향후 버전에서 데이터 처리 방식이 바뀌면, 해당 버전이 출시되기 전에 이 페이지를 업데이트하고 위의 시행일을 "
+                      "변경합니다."]),
+            ("연락처", [f"exception games · {MAIL}"]),
+        ]),
+    "zh-Hans": dict(
+        effective="生效日期",
+        intro="活力工厂（“本应用”）是一款关于蚁群的 iPhone 逻辑解谜游戏。exception games 是其开发者的商号，即在本应用 "
+              "App Store 页面上显示为销售方的个人或公司，并对本政策负责（“我们”）。本政策说明本应用、本网站以及发给支持团队的"
+              "消息中的信息会如何处理。",
+        summary="简而言之：本应用不收集任何数据。它保存的一切都留在您的 iPhone 上，除非有大人把备份保存到别处。",
+        sections=[
+            ("本应用收集的数据", ["无。本应用不收集、传输、出售或分享任何个人数据。它不含广告、分析、账户、跟踪或第三方 SDK，"
+                                  "也不连接互联网。"]),
+            ("保存在设备上的数据", [
+                "游戏进度（当前车间、带撤销记录的未完成游戏、已完成的车间、最佳成绩和星星、今日车间的结果、哪些车间是借助提示"
+                "解开的、用星星买的蚂蚁或因完美通关一章而获得的蚂蚁、找到的秘密及其提示已开启的程度、教程状态）、在此设备上"
+                "添加的玩家名字，以及声音、振动和朗读设置，都通过 Apple 标准的应用存储保存在您的设备本地。",
+                "玩家名字可以不填，保留“玩家 2”之类的默认名字即可。本应用绝不会把这些数据发送到任何地方。它们可能会依照 Apple "
+                "的条款包含在您自己的设备备份中，也可能包含在大人保存的备份里（见“备份”）。"]),
+            ("朗读", ["开启朗读后，本应用会在设备上使用 iOS 内置的语音合成朗读谜题说明。文字和声音不会离开设备，本应用也从不"
+                      "使用麦克风。"]),
+            ("运动传感器", ["只有在已解开车间的结果显示在屏幕上时，本应用才会在设备上读取 iPhone 的运动传感器，以发现能揭开"
+                            "隐藏秘密的趣味动作，例如轻轻摇晃或把手机翻过来。读数从不保存或发送。本应用不使用位置、相机、通讯录"
+                            "或照片。"]),
+            ("第三方", [
+                "本应用不与任何人分享数据：它不含第三方代码，也不与任何服务器通信。下载、更新和设备备份由 Apple 依照其自身的"
+                "隐私政策处理。",
+                "如果您在 iOS 设置中选择与应用开发者共享分析数据，Apple 可能会向我们提供匿名的崩溃报告和无法识别您身份的汇总"
+                "统计。"]),
+            ("数据的保留与删除", [
+                "数据会一直保留在您的 iPhone 上，直到您删除它。要删除某位玩家的进度，请打开 设置 → 玩家，切换到另一位玩家，"
+                "再删除该玩家（需由大人确认）。正在游戏的玩家无法删除。如果以前恢复过备份，恢复前保留的进度中可能仍包含该玩家"
+                "（见“备份”）。删除本应用会从您的设备上移除所有玩家和所有数据。",
+                "本应用从不向我们发送您的数据，因此我们这里没有任何来自本应用的数据需要保留、查询或删除。"]),
+            ("备份", [
+                "在 设置 → 备份 中，通过家长验证后，大人可以把所有玩家的进度、玩家名字以及声音、振动和朗读设置保存为一个文件。"
+                "文件会保存到大人在“文件”窗口中选择的位置，例如此 iPhone 上，或依照 Apple 条款保存在 iCloud 云盘中。本应用"
+                "不会把文件发送到任何地方，也不保留自己的副本，我们也从不会收到它。",
+                "恢复备份同样需要通过家长验证，它会用文件中的内容替换设备上的所有玩家及其进度。删除本应用不会删除已保存的备份："
+                "不再需要时，请在“文件”中删除该文件。",
+                "在恢复替换任何内容之前，本应用会把设备上原有的进度（所有玩家、他们的名字和设置）保存在此 iPhone 上本应用自己"
+                "的存储中。之后，大人可以在通过家长验证后，通过 设置 → 备份 → 恢复之前的进度 把它找回来。只保留一份这样的状态，"
+                "之后的恢复可能会替换它。为了判断恢复后是否有人玩过，本应用还会记住所恢复文件写入的内容。两者都只留在设备上，"
+                "绝不发送到任何地方；删除本应用会将它们一并移除。保留的进度之后不会改变：删除某位玩家后，他仍保留在其中，"
+                "找回进度时会恢复其中的所有玩家。"]),
+            ("发给支持团队的消息", [
+                "如果您给我们写信，我们会收到您的电子邮件地址以及您附上的任何内容（例如截图）。我们只用它来回复您，不与任何人"
+                "分享，并在问题解决后 12 个月内删除往来邮件；如您要求，也可更早删除。邮件通过 Apple 的 iCloud 邮件投递。请由"
+                "大人而不是孩子给我们写信。"]),
+            ("本网站", ["本网站不使用 Cookie 或分析工具。它托管在 GitHub Pages 上，GitHub 可能会依照 GitHub 隐私声明，为安全"
+                        "起见记录访问者的 IP 地址。"]),
+            ("儿童", [
+                "本游戏为儿童和家庭而设计。它不会有意收集任何人的信息，包括 13 岁以下的儿童。游戏中没有广告、没有真实货币购买、"
+                "没有账户、没有聊天，也没有社交媒体链接。蚂蚁商店只使用在游戏中赢得的星星。",
+                "游戏以外的页面，例如本政策和支持页面，只有在大人通过家长验证后才会打开；保存和恢复备份也是如此。由于本应用"
+                "不收集个人信息，因此不存在需要家长同意的数据收集。"]),
+            ("您的权利", [f"欧盟《通用数据保护条例》（GDPR）等隐私法律赋予您权利，询问我们持有哪些关于您的个人数据，并要求"
+                          f"更正或删除。本应用不向我们提供任何数据；我们可能持有的唯一数据是您发给支持团队的消息。如需查询或"
+                          f"删除，请写信至 {MAIL}。您也可以向当地的数据保护机构投诉。"]),
+            ("变更", ["如果未来的版本改变了数据的处理方式，本页面会在该版本发布之前更新，上方的生效日期也会随之更改。"]),
+            ("联系方式", [f"exception games · {MAIL}"]),
+        ]),
+    "zh-Hant": dict(
+        effective="生效日期",
+        intro="活力工廠（「本 App」）是一款以蟻群為主題的 iPhone 邏輯解謎遊戲。exception games 是其開發者的商號，即在本 App "
+              "的 App Store 頁面上標示為銷售者的個人或公司，並對本政策負責（「我們」）。本政策說明本 App、本網站以及寄給支援"
+              "團隊的訊息中的資訊會如何處理。",
+        summary="簡單來說：本 App 不收集任何資料。它儲存的一切都留在您的 iPhone 上，除非有大人把備份儲存到其他地方。",
+        sections=[
+            ("本 App 收集的資料", ["沒有。本 App 不收集、傳輸、販售或分享任何個人資料。它不含廣告、分析、帳號、追蹤或第三方 "
+                                   "SDK，也不連線到網際網路。"]),
+            ("儲存在裝置上的資料", [
+                "遊戲進度（目前的工坊、含復原紀錄的未完成遊戲、已完成的工坊、最佳成績與星星、今日工坊的結果、哪些工坊是靠提示"
+                "解開的、用星星買的螞蟻或因完美完成一章而獲得的螞蟻、找到的祕密與其提示已開啟的程度、教學狀態）、在此裝置上"
+                "新增的玩家名稱，以及音效、震動與朗讀設定，都透過 Apple 標準的 App 儲存空間保存在您的裝置本機上。",
+                "玩家名稱可以不填，保留「玩家 2」之類的預設名稱即可。本 App 絕不會把這些資料傳送到任何地方。它們可能會依照 "
+                "Apple 的條款包含在您自己的裝置備份中，也可能包含在大人儲存的備份裡（見「備份」）。"]),
+            ("朗讀", ["開啟朗讀時，本 App 會在裝置上使用 iOS 內建的語音合成朗讀謎題說明。文字與聲音不會離開裝置，本 App 也從不"
+                      "使用麥克風。"]),
+            ("動作感測器", ["只有在已解開工坊的結果顯示於螢幕上時，本 App 才會在裝置上讀取 iPhone 的動作感測器，以察覺能揭開"
+                            "隱藏祕密的有趣動作，例如輕輕搖晃或把手機翻過來。讀數從不儲存或傳送。本 App 不使用定位、相機、"
+                            "聯絡人或照片。"]),
+            ("第三方", [
+                "本 App 不與任何人分享資料：它不含第三方程式碼，也不與任何伺服器通訊。下載、更新與裝置備份由 Apple 依照其自身的"
+                "隱私權政策處理。",
+                "如果您在 iOS 設定中選擇與 App 開發者分享分析資料，Apple 可能會向我們提供匿名的當機報告，以及無法識別您身分的"
+                "彙總統計。"]),
+            ("資料的保留與刪除", [
+                "資料會一直保留在您的 iPhone 上，直到您刪除為止。若要刪除某位玩家的進度，請打開 設定 → 玩家，切換到另一位玩家，"
+                "再刪除該玩家（需由大人確認）。正在遊玩的玩家無法刪除。如果以前曾回復備份，回復前保留的進度中可能仍包含該玩家"
+                "（見「備份」）。刪除本 App 會從您的裝置移除所有玩家與所有資料。",
+                "本 App 從不把您的資料傳送給我們，因此我們這裡沒有任何來自本 App 的資料需要保留、查詢或刪除。"]),
+            ("備份", [
+                "在 設定 → 備份 中，通過家長驗證後，大人可以把所有玩家的進度、玩家名稱以及音效、震動與朗讀設定儲存成一個檔案。"
+                "檔案會存放在大人於「檔案」視窗中選擇的位置，例如此 iPhone 上，或依照 Apple 條款存放在 iCloud 雲碟中。本 App "
+                "不會把檔案傳送到任何地方，也不保留自己的副本，我們也從不會收到它。",
+                "回復備份同樣需要通過家長驗證，它會用檔案中的內容取代裝置上的所有玩家及其進度。刪除本 App 不會刪除已儲存的"
+                "備份：不再需要時，請在「檔案」中刪除該檔案。",
+                "在回復取代任何內容之前，本 App 會把裝置上原有的進度（所有玩家、他們的名稱與設定）保存在此 iPhone 上本 App "
+                "自己的儲存空間中。之後，大人可以在通過家長驗證後，透過 設定 → 備份 → 回復之前的進度 把它找回來。只會保留一份"
+                "這樣的狀態，之後的回復可能會取代它。為了判斷回復後是否有人玩過，本 App 也會記住所回復檔案寫入的內容。兩者都"
+                "只留在裝置上，絕不傳送到任何地方；刪除本 App 會將它們一併移除。保留的進度之後不會改變：刪除某位玩家後，他仍"
+                "保留在其中，找回進度時會回復其中的所有玩家。"]),
+            ("寄給支援團隊的訊息", [
+                "如果您寫信給我們，我們會收到您的電子郵件地址以及您附上的任何內容（例如螢幕截圖）。我們只用它來回覆您，不與"
+                "任何人分享，並在問題解決後 12 個月內刪除往來信件；如您要求，也可更早刪除。郵件透過 Apple 的 iCloud 郵件遞送。"
+                "請由大人而不是孩子寫信給我們。"]),
+            ("本網站", ["本網站不使用 Cookie 或分析工具。它託管於 GitHub Pages，GitHub 可能會依照 GitHub 隱私權聲明，基於安全"
+                        "考量記錄訪客的 IP 位址。"]),
+            ("兒童", [
+                "本遊戲為兒童與家庭而設計。它不會蓄意收集任何人的資訊，包括 13 歲以下的兒童。遊戲中沒有廣告、沒有真實金錢購買、"
+                "沒有帳號、沒有聊天，也沒有社群媒體連結。螞蟻商店只使用在遊戲中贏得的星星。",
+                "遊戲以外的頁面，例如本政策與支援頁面，只有在大人通過家長驗證後才會開啟；儲存與回復備份也是如此。由於本 App "
+                "不收集個人資訊，因此沒有需要家長同意的資料收集。"]),
+            ("您的權利", [f"歐盟《一般資料保護規則》（GDPR）等隱私法律賦予您權利，詢問我們持有哪些關於您的個人資料，並要求"
+                          f"更正或刪除。本 App 不提供我們任何資料；我們可能持有的唯一資料是您寄給支援團隊的訊息。如需查詢或"
+                          f"刪除，請寫信至 {MAIL}。您也可以向當地的資料保護主管機關提出申訴。"]),
+            ("變更", ["如果未來的版本改變了資料的處理方式，本頁面會在該版本發布前更新，上方的生效日期也會隨之變更。"]),
+            ("聯絡方式", [f"exception games · {MAIL}"]),
+        ]),
 }
 
 SUPPORT_TEXT = {
@@ -354,13 +795,88 @@ SUPPORT_TEXT = {
             ("Собирает ли игра данные?", "Нет: ни аналитики, ни аккаунтов, ни отслеживания. Подробнее — в <a href=\"{privacy}\">политике конфиденциальности</a>."),
             ("Какие устройства поддерживаются?", "iPhone с iOS 18 или новее. Игра работает без интернета."),
         ]),
+    "de": dict(
+        intro="Lebendige Fabrik ist ein Logikrätsel um eine Ameisenkolonie für das iPhone von exception games.",
+        contact_h="Kontakt", contact=f"Schreiben Sie an {MAIL}. Wir lesen jede Nachricht und antworten auf Englisch.",
+        bug="Sie melden einen Fehler? Nennen Sie bitte Ihr iPhone-Modell, die iOS-Version, die Nummer der Werkhalle und was passiert ist. Ein Screenshot hilft.",
+        faq_h="Fragen und Antworten",
+        faq=[
+            ("Wo wird mein Fortschritt gespeichert?", "Nur auf Ihrem iPhone. Das Spiel hat keine Konten und keine Cloud-Synchronisierung. Wenn Sie die App löschen, geht der gesamte Fortschritt verloren; aktualisieren Sie die App deshalb, ohne sie zu löschen."),
+            ("Wie beginne ich eine Werkhalle von vorn?", "Tippen Sie auf „Neustart“. Um die Einführung zu wiederholen, öffnen Sie Einstellungen → Einführung wiederholen."),
+            ("Ich komme nicht weiter. Was kann ich tun?", "Tippen Sie auf „Rückgängig“, um das letzte Signal zurückzunehmen, oder auf „Tipp“, um das nächste Signal zu sehen. Eine mit einem Tipp gelöste Werkhalle bringt einen Stern; tippen Sie auf „Neustart“ und lösen Sie sie selbst, um mehr zu bekommen. Die Werkhalle des Tages hat keinen Tipp."),
+            ("Können mehrere Personen auf einem iPhone spielen?", "Ja. Fügen Sie Spieler unter Einstellungen → Spieler hinzu. Jeder Spieler hat eigene Sterne, Rekorde und Ameisen."),
+            ("Wie sichere ich den Fortschritt oder bringe ihn auf ein anderes iPhone?", "Bitten Sie einen Erwachsenen, Einstellungen → Sicherungskopie → Kopie sichern zu öffnen und die Datei in „Dateien“ abzulegen, zum Beispiel in iCloud Drive. Auf dem anderen iPhone, oder falls das Spiel einmal von vorn beginnt, verwenden Sie „Aus Kopie wiederherstellen“. Das Wiederherstellen ersetzt den Fortschritt auf diesem iPhone. Hat ein Erwachsener die falsche Datei gewählt, bringt „Früheren Fortschritt zurückholen“ an derselben Stelle zurück, was vorher da war."),
+            ("Gibt es Werbung oder In-App-Käufe?", "Nein. Es gibt keine Werbung und keine Käufe mit echtem Geld. Ameisen im Laden werden mit Sternen gekauft, die im Spiel verdient wurden."),
+            ("Erfasst das Spiel Daten?", "Nein. Es gibt keine Analyse, keine Konten und kein Tracking. Siehe die <a href=\"{privacy}\">Datenschutzerklärung</a>."),
+            ("Welche Geräte werden unterstützt?", "iPhone mit iOS 18 oder neuer. Das Spiel funktioniert ohne Internet."),
+        ]),
+    "ja": dict(
+        intro="いきいき工場は、exception games による、アリのコロニーを舞台にした iPhone 向けロジックパズルゲームです。",
+        contact_h="お問い合わせ", contact=f"{MAIL} までご連絡ください。すべてのメッセージに目を通し、英語でお返事します。",
+        bug="不具合のご報告ですか？ iPhone の機種、iOS のバージョン、作業場の番号、起きたことをお書きください。スクリーンショットがあると助かります。",
+        faq_h="よくある質問",
+        faq=[
+            ("進行状況はどこに保存されますか？", "お使いの iPhone の中だけです。アカウントやクラウド同期はありません。App を削除するとすべての進行状況が消えるので、削除せずにアップデートしてください。"),
+            ("作業場を最初からやり直すには？", "「やり直す」をタップします。チュートリアルをもう一度見るには、設定 → チュートリアルを再プレイ を開きます。"),
+            ("行き詰まりました。どうすればいいですか？", "「元に戻す」をタップすると最後の合図を取り消せます。「ヒント」をタップすると次の合図がわかります。ヒントを使って解いた作業場は星1つです。「やり直す」をタップして自分で解けば、もっと星がもらえます。今日の作業場にはヒントがありません。"),
+            ("1台の iPhone で何人も遊べますか？", "はい。設定 → プレイヤー でプレイヤーを追加してください。プレイヤーごとに星、記録、アリが別々になります。"),
+            ("進行状況を守るには？ 別の iPhone に移すには？", "大人の人に 設定 → バックアップ → バックアップを保存 を開いてもらい、ファイルを「ファイル」（たとえば iCloud Drive）に保存してください。別の iPhone で、またはゲームが最初からになってしまったときは、「バックアップから復元」を使います。復元すると、その iPhone の進行状況は置き換わります。違うファイルを選んでしまった場合は、同じ場所の「以前の進行状況に戻す」で前の状態に戻せます。"),
+            ("広告や App 内課金はありますか？", "いいえ。広告も、現実のお金での購入もありません。お店のアリは、ゲーム内で獲得した星で買います。"),
+            ("ゲームはデータを収集しますか？", "いいえ。解析、アカウント、トラッキングはありません。詳しくは<a href=\"{privacy}\">プライバシーポリシー</a>をご覧ください。"),
+            ("対応機種は？", "iOS 18 以降を搭載した iPhone です。インターネットなしで遊べます。"),
+        ]),
+    "ko": dict(
+        intro="살아 있는 공장은 exception games가 만든, 개미 군락을 무대로 한 iPhone용 논리 퍼즐 게임입니다.",
+        contact_h="문의", contact=f"{MAIL}로 연락해 주세요. 모든 메시지를 읽고 영어로 답변드립니다.",
+        bug="버그를 신고하시나요? iPhone 모델, iOS 버전, 작업장 번호, 무슨 일이 있었는지 적어 주세요. 스크린샷이 있으면 도움이 됩니다.",
+        faq_h="자주 묻는 질문",
+        faq=[
+            ("진행 상황은 어디에 저장되나요?", "사용자의 iPhone에만 저장됩니다. 계정이나 클라우드 동기화는 없습니다. 앱을 삭제하면 모든 진행 상황이 지워지므로, 삭제하지 말고 업데이트하세요."),
+            ("작업장을 처음부터 다시 하려면 어떻게 하나요?", "‘다시 시작’을 누르세요. 튜토리얼을 다시 보려면 설정 → 튜토리얼 다시 하기를 여세요."),
+            ("막혔어요. 어떻게 해야 하나요?", "‘되돌리기’를 누르면 마지막 신호를 취소하고, ‘힌트’를 누르면 다음 신호를 볼 수 있습니다. 힌트로 푼 작업장은 별 하나를 받습니다. ‘다시 시작’을 누르고 직접 풀면 별을 더 받을 수 있습니다. 오늘의 작업장에는 힌트가 없습니다."),
+            ("iPhone 한 대로 여러 명이 플레이할 수 있나요?", "네. 설정 → 플레이어에서 플레이어를 추가하세요. 플레이어마다 별, 기록, 개미가 따로 있습니다."),
+            ("진행 상황을 안전하게 지키거나 다른 iPhone으로 옮기려면요?", "어른에게 설정 → 백업 → 백업 저장을 열어 파일을 ‘파일’(예: iCloud Drive)에 보관해 달라고 하세요. 다른 iPhone에서, 또는 게임이 처음부터 다시 시작되었다면 ‘백업에서 복원’을 사용하세요. 복원하면 그 iPhone의 진행 상황이 바뀝니다. 어른이 잘못된 파일을 골랐다면, 같은 곳의 ‘이전 진행 상황으로 되돌리기’로 이전 상태를 되찾을 수 있습니다."),
+            ("광고나 인앱 구매가 있나요?", "아니요. 광고도, 실제 돈으로 하는 구매도 없습니다. 상점의 개미는 게임에서 얻은 별로 삽니다."),
+            ("게임이 데이터를 수집하나요?", "아니요. 분석, 계정, 추적이 없습니다. <a href=\"{privacy}\">개인정보 처리방침</a>을 참고하세요."),
+            ("어떤 기기를 지원하나요?", "iOS 18 이상이 설치된 iPhone입니다. 인터넷 없이도 플레이할 수 있습니다."),
+        ]),
+    "zh-Hans": dict(
+        intro="活力工厂是 exception games 推出的一款关于蚁群的 iPhone 逻辑解谜游戏。",
+        contact_h="联系我们", contact=f"请写信至 {MAIL}。我们会阅读每一条消息，并用英语回复。",
+        bug="要报告问题？请写明您的 iPhone 型号、iOS 版本、车间编号以及发生了什么。附上截图会很有帮助。",
+        faq_h="常见问题",
+        faq=[
+            ("我的进度保存在哪里？", "只保存在您的 iPhone 上。游戏没有账户，也没有云同步。删除本应用会清除所有进度，所以请直接更新，不要删除。"),
+            ("如何重新开始一个车间？", "点击“重新开始”。要重玩教程，请打开 设置 → 重玩教程。"),
+            ("我卡住了，怎么办？", "点击“撤销”可以撤回上一个信号，点击“提示”可以看到下一个信号。借助提示解开的车间只得一颗星；点击“重新开始”自己解开，就能得到更多星星。今日车间没有提示。"),
+            ("一台 iPhone 能多人玩吗？", "可以。在 设置 → 玩家 中添加玩家。每位玩家都有自己的星星、记录和蚂蚁。"),
+            ("如何保护进度，或把它转移到另一台 iPhone？", "请大人打开 设置 → 备份 → 保存备份，并把文件保存在“文件”中，例如 iCloud 云盘。在另一台 iPhone 上，或者游戏意外从头开始时，请使用“从备份恢复”。恢复会替换那台 iPhone 上的进度。如果大人选错了文件，可以在同一位置点击“恢复之前的进度”，找回原来的内容。"),
+            ("有广告或 App 内购买吗？", "没有。没有广告，也没有真实货币购买。商店里的蚂蚁用游戏中赢得的星星购买。"),
+            ("游戏会收集数据吗？", "不会。没有分析、账户或跟踪。详见<a href=\"{privacy}\">隐私政策</a>。"),
+            ("支持哪些设备？", "搭载 iOS 18 或更高版本的 iPhone。游戏无需联网即可运行。"),
+        ]),
+    "zh-Hant": dict(
+        intro="活力工廠是 exception games 推出的一款以蟻群為主題的 iPhone 邏輯解謎遊戲。",
+        contact_h="聯絡我們", contact=f"請寫信至 {MAIL}。我們會閱讀每一則訊息，並以英文回覆。",
+        bug="要回報問題嗎？請寫明您的 iPhone 機型、iOS 版本、工坊編號以及發生了什麼事。附上螢幕截圖會很有幫助。",
+        faq_h="常見問題",
+        faq=[
+            ("我的進度儲存在哪裡？", "只儲存在您的 iPhone 上。遊戲沒有帳號，也沒有雲端同步。刪除本 App 會清除所有進度，所以請直接更新，不要刪除。"),
+            ("如何重新開始一個工坊？", "點一下「重新開始」。若要重玩教學，請打開 設定 → 重玩教學。"),
+            ("我卡住了，怎麼辦？", "點一下「復原」可以收回上一個訊號，點一下「提示」可以看到下一個訊號。靠提示解開的工坊只得一顆星；點一下「重新開始」自己解開，就能得到更多星星。今日工坊沒有提示。"),
+            ("一台 iPhone 可以多人玩嗎？", "可以。在 設定 → 玩家 中新增玩家。每位玩家都有自己的星星、紀錄與螞蟻。"),
+            ("如何保護進度，或把它轉移到另一台 iPhone？", "請大人打開 設定 → 備份 → 儲存備份，並把檔案存放在「檔案」中，例如 iCloud 雲碟。在另一台 iPhone 上，或遊戲意外從頭開始時，請使用「從備份回復」。回復會取代那台 iPhone 上的進度。如果大人選錯了檔案，可以在同一處點一下「回復之前的進度」，找回原本的內容。"),
+            ("有廣告或 App 內購買嗎？", "沒有。沒有廣告，也沒有真實金錢購買。商店裡的螞蟻是用遊戲中贏得的星星購買。"),
+            ("遊戲會收集資料嗎？", "不會。沒有分析、帳號或追蹤。詳見<a href=\"{privacy}\">隱私權政策</a>。"),
+            ("支援哪些裝置？", "搭載 iOS 18 或以上版本的 iPhone。遊戲不需連網即可執行。"),
+        ]),
 }
 
 # ---------------------------------------------------------------- rendering
 
 def url(page, lang):
-    """Site-root-relative path of a page in a language."""
-    return page + ("" if lang == "en" else lang + "/")
+    """Site-root-relative path of a page in a language; the folder is the language code in lower case."""
+    return page + ("" if lang == "en" else lang.lower() + "/")
 
 
 def rel(from_path, to_path):
@@ -381,6 +897,8 @@ def render(page, lang, title, desc, body):
         f'<span aria-current="true">{name}</span>' if code == lang
         else f'<a href="{rel(here, url(page, code))}" hreflang="{code}" lang="{code}">{name}</a>'
         for code, name in LANGS)
+    note = "" if lang == "en" else '\n    <p class="translation">' + TRANSLATION_NOTE[lang].format(
+        en=f'<a href="{rel(here, url(page, "en"))}" hreflang="en">{ENGLISH_VERSION[lang]}</a>') + "</p>"
     alternates = "\n".join(
         f'  <link rel="alternate" hreflang="{code}" href="https://exceptiongames.github.io/{url(page, code)}">'
         for code, _ in LANGS)
@@ -401,7 +919,7 @@ def render(page, lang, title, desc, body):
   <link rel="stylesheet" href="{up}assets/style.css">
 </head>
 <body>
-<a class="skip" href="#main">{ {"en": "Skip to content", "uk": "До змісту", "ru": "К содержанию"}[lang] }</a>
+<a class="skip" href="#main">{SKIP[lang]}</a>
 <header class="site">
   <div class="wrap">
     <a class="brand" href="{rel(here, url(HOME, lang))}"><picture>
@@ -420,7 +938,7 @@ def render(page, lang, title, desc, body):
 {body.strip()}
 </main>
 <footer class="site">
-  <div class="wrap">© 2026 {ui["footer"]}<span aria-hidden="true"> · </span><span class="nowrap">{MAIL}</span></div>
+  <div class="wrap">© 2026 {ui["footer"]}<span aria-hidden="true"> · </span><span class="nowrap">{MAIL}</span>{note}</div>
 </footer>
 </body>
 </html>
@@ -470,7 +988,7 @@ def build():
             f"<h2>{h}</h2>\n" + "\n".join(f"<p>{x}</p>" for x in xs) for h, xs in p["sections"])
         write(PRIVACY, lang, f'{ui["privacy"]} — {ui["game"]}', p["summary"], f'''
 <h1>{ui["privacy"]}<span class="sub">{ui["game"]}</span></h1>
-<p class="meta">{p["effective"]}: {UPDATED[lang]}</p>
+<p class="meta">{p["effective"]}{"：" if lang in ("ja", "zh-Hans", "zh-Hant") else ": "}{UPDATED[lang]}</p>
 <p>{p["intro"]}</p>
 <p class="summary">{p["summary"]}</p>
 {secs}''')
