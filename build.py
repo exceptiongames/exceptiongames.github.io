@@ -19,8 +19,8 @@ LANGS = [("en", "English"), ("uk", "Українська"), ("ru", "Русски
          ("ko", "한국어"), ("zh-Hans", "简体中文"), ("zh-Hant", "繁體中文")]
 EMAIL = "exceptiongames@icloud.com"
 MAIL = f'<a href="mailto:{EMAIL}">{EMAIL}</a>'
-UPDATED = {"en": "October 15, 2026", "uk": "15 жовтня 2026 р.", "ru": "15 октября 2026 г.", "de": "15. Oktober 2026",
-           "ja": "2026年10月15日", "ko": "2026년 10월 15일", "zh-Hans": "2026年10月15日", "zh-Hant": "2026 年 10 月 15 日"}
+UPDATED = {"en": "October 16, 2026", "uk": "16 жовтня 2026 р.", "ru": "16 октября 2026 г.", "de": "16. Oktober 2026",
+           "ja": "2026年10月16日", "ko": "2026년 10월 16일", "zh-Hans": "2026年10月16日", "zh-Hant": "2026 年 10 月 16 日"}
 
 # "Skip to content" and the translation note at the foot of every non-English page; {en} is the link to the
 # English version of the same page.
@@ -39,24 +39,27 @@ ENGLISH_VERSION = {"uk": "англійською версією", "ru": "анг�
                    "ja": "英語版", "ko": "영문판", "zh-Hans": "英文版", "zh-Hant": "英文版"}
 
 # Page paths, relative to the site root, without the language folder.
-HOME, GAME, PRIVACY, SUPPORT = "", "living-factory/", "living-factory/privacy-policy/", "living-factory/support/"
+HOME, GAME, PRIVACY, SUPPORT = "", "ant-foragers/", "ant-foragers/privacy-policy/", "ant-foragers/support/"
+# The game was called Living Factory until October 16, 2026. Its old addresses are compiled into early builds and may
+# be saved anywhere, so each one keeps a page that sends the visitor to the new address.
+OLD_PAGES = {"living-factory/": GAME, "living-factory/privacy-policy/": PRIVACY, "living-factory/support/": SUPPORT}
 
 UI = {
-    "en": dict(game="Living Factory", privacy="Privacy Policy", nav_privacy="Privacy", support="Support", nav="Main",
+    "en": dict(game="Ant Foragers", privacy="Privacy Policy", nav_privacy="Privacy", support="Support", nav="Main",
                lang="Language", footer="exception games"),
-    "uk": dict(game="Жива фабрика", privacy="Політика конфіденційності", nav_privacy="Конфіденційність", support="Підтримка", nav="Головне меню",
+    "uk": dict(game="Фуражири", privacy="Політика конфіденційності", nav_privacy="Конфіденційність", support="Підтримка", nav="Головне меню",
                lang="Мова", footer="exception games"),
-    "ru": dict(game="Живая фабрика", privacy="Политика конфиденциальности", nav_privacy="Конфиденциальность", support="Поддержка", nav="Главное меню",
+    "ru": dict(game="Фуражиры", privacy="Политика конфиденциальности", nav_privacy="Конфиденциальность", support="Поддержка", nav="Главное меню",
                lang="Язык", footer="exception games"),
-    "de": dict(game="Lebendige Fabrik", privacy="Datenschutzerklärung", nav_privacy="Datenschutz", support="Support", nav="Hauptnavigation",
+    "de": dict(game="Futtersucher", privacy="Datenschutzerklärung", nav_privacy="Datenschutz", support="Support", nav="Hauptnavigation",
                lang="Sprache", footer="exception games"),
-    "ja": dict(game="いきいき工場", privacy="プライバシーポリシー", nav_privacy="プライバシー", support="サポート", nav="メインメニュー",
+    "ja": dict(game="エサ運びアリ", privacy="プライバシーポリシー", nav_privacy="プライバシー", support="サポート", nav="メインメニュー",
                lang="言語", footer="exception games"),
-    "ko": dict(game="살아 있는 공장", privacy="개인정보 처리방침", nav_privacy="개인정보 보호", support="지원", nav="주 메뉴",
+    "ko": dict(game="먹이 찾는 개미", privacy="개인정보 처리방침", nav_privacy="개인정보 보호", support="지원", nav="주 메뉴",
                lang="언어", footer="exception games"),
-    "zh-Hans": dict(game="活力工厂", privacy="隐私政策", nav_privacy="隐私", support="支持", nav="主菜单",
+    "zh-Hans": dict(game="搬食物的蚂蚁", privacy="隐私政策", nav_privacy="隐私", support="支持", nav="主菜单",
                     lang="语言", footer="exception games"),
-    "zh-Hant": dict(game="活力工廠", privacy="隱私權政策", nav_privacy="隱私權", support="支援", nav="主選單",
+    "zh-Hant": dict(game="搬食物的螞蟻", privacy="隱私權政策", nav_privacy="隱私權", support="支援", nav="主選單",
                     lang="語言", footer="exception games"),
 }
 
@@ -193,7 +196,7 @@ GAME_TEXT = {
 PRIVACY_TEXT = {
     "en": dict(
         effective="Effective date",
-        intro="Living Factory (“the app”) is an ant-colony logic puzzle game for iPhone. exception games is the trade name "
+        intro="Ant Foragers (“the app”) is an ant-colony logic puzzle game for iPhone. exception games is the trade name "
               "of its developer, the person or company shown as the Seller (in some countries, the Provider) on the "
               "app’s App Store page, who is responsible for this policy (“we”). This policy explains what happens to "
               "information in the app, on this website and in messages to support.",
@@ -267,7 +270,7 @@ PRIVACY_TEXT = {
         ]),
     "uk": dict(
         effective="Дата набрання чинності",
-        intro="«Жива фабрика» (далі — «застосунок») — логічна головоломка про мурашину колонію для iPhone. exception games — "
+        intro="«Фуражири» (далі — «застосунок») — логічна головоломка про мурашину колонію для iPhone. exception games — "
               "торгова назва її розробника, тобто особи чи компанії, зазначеної на сторінці застосунку в App Store "
               "як «Постачальник» (продавець), "
               "яка відповідає за цю політику («ми»). Ця політика пояснює, що відбувається з інформацією в застосунку, на цьому "
@@ -342,7 +345,7 @@ PRIVACY_TEXT = {
         ]),
     "ru": dict(
         effective="Дата вступления в силу",
-        intro="«Живая фабрика» (далее — «приложение») — логическая головоломка про муравьиную колонию для iPhone. exception games — "
+        intro="«Фуражиры» (далее — «приложение») — логическая головоломка про муравьиную колонию для iPhone. exception games — "
               "торговое имя её разработчика, то есть человека или компании, указанных на странице приложения в App "
               "Store как «Провайдер» (продавец), "
               "которые отвечают за эту политику («мы»). Эта политика объясняет, что происходит с информацией в приложении, на этом "
@@ -420,7 +423,7 @@ PRIVACY_TEXT = {
         ]),
     "de": dict(
         effective="Gültig ab",
-        intro="Lebendige Fabrik („die App“) ist ein Logikrätsel rund um eine Ameisenkolonie für das iPhone. "
+        intro="Futtersucher („die App“) ist ein Logikrätsel rund um eine Ameisenkolonie für das iPhone. "
               "exception games ist "
               "der Handelsname ihres Entwicklers, also der Person oder des Unternehmens, die bzw. das auf der "
               "App-Store-Seite der App als „Anbieter“ angegeben ist. Dieser Entwickler ist für diese Erklärung "
@@ -523,7 +526,7 @@ PRIVACY_TEXT = {
         ]),
     "ja": dict(
         effective="発効日",
-        intro="いきいき工場（以下「本アプリ」といいます）は、アリのコロニーを舞台にした iPhone 向けのロジックパズル"
+        intro="エサ運びアリ（以下「本アプリ」といいます）は、アリのコロニーを舞台にした iPhone 向けのロジックパズル"
               "ゲームです。exception games は、本アプリの開発者（以下「当方」といいます）の屋号です。当方とは、App "
               "Store の本アプリのページに「販売元」として表示されている個人または法人であり、本ポリシーについて責任"
               "を負います。本ポリシーでは、本アプリ、このウェブサイト、および"
@@ -609,7 +612,7 @@ PRIVACY_TEXT = {
         ]),
     "ko": dict(
         effective="시행일",
-        intro="살아 있는 공장(이하 ‘앱’)은 개미 마을을 무대로 한 iPhone용 논리 퍼즐 게임입니다. exception games는 "
+        intro="먹이 찾는 개미(이하 ‘앱’)는 개미 마을을 무대로 한 iPhone용 논리 퍼즐 게임입니다. exception games는 "
               "앱 개발자(App Store의 앱 페이지에 ‘제공자’로 표시되는 개인 또는 회사, 이하 ‘당사’)의 상호이며, "
               "당사가 이 방침에 대한 책임을 집니다. 이 방침은 앱, 이 웹사이트, 지원 문의 메시지에서 정보가 어떻게 "
               "처리되는지 설명합니다.",
@@ -689,7 +692,7 @@ PRIVACY_TEXT = {
         ]),
     "zh-Hans": dict(
         effective="生效日期",
-        intro="《活力工厂》（以下简称“本应用”）是一款以蚁群为主题的 iPhone 逻辑解谜游戏。exception games 是本应用开"
+        intro="《搬食物的蚂蚁》（以下简称“本应用”）是一款以蚁群为主题的 iPhone 逻辑解谜游戏。exception games 是本应用开"
               "发者（以下简称“我们”）的商号。该开发者即在本应用 App Store 页面上列为“提供者”的个人或公司，并对本政策"
               "负责。本政策说明本应用、本网站以及发至支持邮箱的消息中的信息会如何处理。",
         summary="简而言之：本应用不收集任何数据。它保存的一切都留在您的 iPhone 上，除非有成年人把备份保存到别处。",
@@ -752,7 +755,7 @@ PRIVACY_TEXT = {
         ]),
     "zh-Hant": dict(
         effective="生效日期",
-        intro="活力工廠（以下稱「本 App」）是一款以蟻群為主題的 iPhone 邏輯解謎遊戲。exception games 是本 App 開發者"
+        intro="《搬食物的螞蟻》（以下稱「本 App」）是一款以蟻群為主題的 iPhone 邏輯解謎遊戲。exception games 是本 App 開發者"
               "的商號；該開發者即在本 App 的 App Store 頁面上標示為「供應商」的個人或公司，並對本政策負責（以下稱「"
               "我們」）。本政策說明在本 App 中、本網站上，以及您寄給支援團隊的訊息中，資訊會如何處理。",
         summary="簡單來說：本 App 不收集任何資料。它儲存的一切都留在您的 iPhone 上，除非有大人把備份儲存到其他地方。",
@@ -821,7 +824,7 @@ PRIVACY_TEXT = {
 
 SUPPORT_TEXT = {
     "en": dict(
-        intro="Living Factory is an ant-colony logic puzzle game for iPhone by exception games.",
+        intro="Ant Foragers is an ant-colony logic puzzle game for iPhone by exception games.",
         contact_h="Contact", contact=f"Write to {MAIL}. We read every message and answer in English, Ukrainian or Russian.",
         bug="Reporting a bug? Please include your iPhone model, iOS version, the workshop number and what happened. A screenshot helps.",
         faq_h="Questions and answers",
@@ -836,7 +839,7 @@ SUPPORT_TEXT = {
             ("Which devices are supported?", "iPhone with iOS 18 or later. The game works without the internet."),
         ]),
     "uk": dict(
-        intro="«Жива фабрика» — логічна головоломка про мурашину колонію для iPhone від exception games.",
+        intro="«Фуражири» — логічна головоломка про мурашину колонію для iPhone від exception games.",
         contact_h="Зв’язок", contact=f"Пишіть на {MAIL}. Ми читаємо кожен лист і відповідаємо українською, англійською або російською.",
         bug="Знайшли помилку? Вкажіть модель iPhone, версію iOS, номер цеху й опишіть, що сталося. Знімок екрана дуже допоможе.",
         faq_h="Запитання та відповіді",
@@ -851,7 +854,7 @@ SUPPORT_TEXT = {
             ("Які пристрої підтримуються?", "iPhone з iOS 18 або новішою. Гра працює без інтернету."),
         ]),
     "ru": dict(
-        intro="«Живая фабрика» — логическая головоломка про муравьиную колонию для iPhone от exception games.",
+        intro="«Фуражиры» — логическая головоломка про муравьиную колонию для iPhone от exception games.",
         contact_h="Связь", contact=f"Пишите на {MAIL}. Мы читаем каждое письмо и отвечаем на русском, украинском или английском.",
         bug="Нашли ошибку? Укажите модель iPhone, версию iOS, номер цеха и опишите, что произошло. Снимок экрана очень поможет.",
         faq_h="Вопросы и ответы",
@@ -866,7 +869,7 @@ SUPPORT_TEXT = {
             ("Какие устройства поддерживаются?", "iPhone с iOS 18 или новее. Игра работает без интернета."),
         ]),
     "de": dict(
-        intro="Lebendige Fabrik ist ein Logikrätsel rund um eine Ameisenkolonie für das iPhone, entwickelt von "
+        intro="Futtersucher ist ein Logikrätsel rund um eine Ameisenkolonie für das iPhone, entwickelt von "
               "exception games.",
         contact_h="Kontakt", contact=f"Schreiben Sie an {MAIL}. Wir lesen jede Nachricht und antworten auf Englisch.",
         bug="Möchten Sie einen Fehler melden? Nennen Sie bitte Ihr iPhone-Modell, die iOS-Version und die Nummer "
@@ -883,7 +886,7 @@ SUPPORT_TEXT = {
             ("Welche Geräte werden unterstützt?", "iPhone mit iOS 18 oder neuer. Das Spiel funktioniert ohne Internet."),
         ]),
     "ja": dict(
-        intro="いきいき工場は、exception games による、アリのコロニーを舞台にした iPhone 向けロジックパズルゲームです。",
+        intro="エサ運びアリは、exception games による、アリのコロニーを舞台にした iPhone 向けロジックパズルゲームです。",
         contact_h="お問い合わせ", contact=f"{MAIL} までご連絡ください。すべてのメッセージに目を通し、英語でお返事します。",
         bug="不具合をご報告いただく際は、iPhone の機種、iOS のバージョン、作業場の番号、何が起きたかをお書きくださ"
             "い。スクリーンショットがあると助かります。",
@@ -899,7 +902,7 @@ SUPPORT_TEXT = {
             ("対応機種は？", "iOS 18 以降を搭載した iPhone です。インターネットに接続しなくても遊べます。"),
         ]),
     "ko": dict(
-        intro="살아 있는 공장은 exception games가 만든 iPhone용 개미 마을 논리 퍼즐 게임입니다.",
+        intro="먹이 찾는 개미는 exception games가 만든 iPhone용 개미 마을 논리 퍼즐 게임입니다.",
         contact_h="문의", contact=f"{MAIL}으로 연락해 주세요. 모든 메시지를 읽고 영어로 답변드립니다.",
         bug="버그를 발견하셨나요? iPhone 모델, iOS 버전, 작업장 번호와 어떤 문제가 있었는지 적어 주세요. 스크린샷이 "
             "있으면 도움이 됩니다.",
@@ -915,7 +918,7 @@ SUPPORT_TEXT = {
             ("어떤 기기를 지원하나요?", "iOS 18 이상이 설치된 iPhone입니다. 인터넷 없이도 플레이할 수 있습니다."),
         ]),
     "zh-Hans": dict(
-        intro="《活力工厂》是 exception games 推出的一款以蚁群为主题的 iPhone 逻辑解谜游戏。",
+        intro="《搬食物的蚂蚁》是 exception games 推出的一款以蚁群为主题的 iPhone 逻辑解谜游戏。",
         contact_h="联系我们", contact=f"请写信至 {MAIL}。我们会阅读每一封邮件，并用英语回复。",
         bug="要报告问题吗？请写明您的 iPhone 型号、iOS 版本、车间编号以及发生了什么。附上截图会很有帮助。",
         faq_h="常见问题",
@@ -930,7 +933,7 @@ SUPPORT_TEXT = {
             ("支持哪些设备？", "搭载 iOS 18 或更高版本的 iPhone。游戏无需联网即可运行。"),
         ]),
     "zh-Hant": dict(
-        intro="活力工廠是 exception games 推出的一款以蟻群為主題的 iPhone 邏輯解謎遊戲。",
+        intro="《搬食物的螞蟻》是 exception games 推出的一款以蟻群為主題的 iPhone 邏輯解謎遊戲。",
         contact_h="聯絡我們", contact=f"請寫信至 {MAIL}。我們會閱讀每一則訊息，並以英文回覆。",
         bug="要回報問題嗎？請寫明您的 iPhone 機型、iOS 版本、工坊編號以及發生了什麼事。附上螢幕截圖會很有幫助。",
         faq_h="常見問題",
@@ -1026,7 +1029,32 @@ def write(page, lang, title, desc, body):
         f.write(render(page, lang, title, desc, body))
 
 
+def write_redirect(old, new, lang):
+    path, target = url(old, lang), url(new, lang)
+    os.makedirs(path, exist_ok=True)
+    link = rel(path, target)
+    with open(path + "index.html", "w", encoding="utf-8") as f:
+        f.write(f'''<!doctype html>
+<html lang="{lang}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>{html.escape(UI[lang]["game"])}</title>
+  <link rel="canonical" href="https://exceptiongames.github.io/{target}">
+  <meta http-equiv="refresh" content="0; url={link}">
+</head>
+<body>
+<p><a href="{link}">{html.escape(UI[lang]["game"])}</a></p>
+</body>
+</html>
+''')
+
+
 def build():
+    for old, new in OLD_PAGES.items():
+        for lang, _ in LANGS:
+            write_redirect(old, new, lang)
     for lang, _ in LANGS:
         ui, here = UI[lang], None
         # Home
@@ -1086,4 +1114,4 @@ def build():
 if __name__ == "__main__":
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
     build()
-    print("built", len(LANGS) * 4, "pages")
+    print("built", len(LANGS) * 4, "pages and", len(LANGS) * len(OLD_PAGES), "redirects")
