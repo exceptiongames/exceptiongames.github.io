@@ -105,7 +105,7 @@ GAME_TEXT = {
         lead="An ant-colony logic puzzle for iPhone by exception games.",
         body=[
             "Send signals along rows and columns, move across soil and leaves, and lead every ant to its nest. "
-            "Sixty handcrafted workshops in five chapters, a new workshop of the day every day, and a secret hidden in every workshop.",
+            "Sixty-four handcrafted workshops in five chapters, a new workshop of the day every day, and sixty secrets hidden among them.",
             "Made for the whole family: a hint for when you are stuck, a step-by-step introduction to every new tile, "
             "instructions read aloud for children who cannot read yet, and several players on one iPhone.",
             "No ads, no purchases for real money, no accounts, no timer. No internet needed.",
@@ -115,7 +115,7 @@ GAME_TEXT = {
         lead="Логічна головоломка про мурашину колонію для iPhone від exception games.",
         body=[
             "Надсилайте сигнали вздовж рядів і стовпців, пересувайтеся по землі й листках і приведіть кожну мурашку до нірки. "
-            "Шістдесят цехів у п’яти розділах, щодня новий цех дня і секрет у кожному цеху.",
+            "Шістдесят чотири цехи у п’яти розділах, щодня новий цех дня і шістдесят секретів, захованих у цехах.",
             "Для всієї родини: підказка, коли щось не виходить, покрокове знайомство з кожною новою клітинкою, "
             "озвучення завдань для дітей, які ще не вміють читати, і кілька гравців на одному iPhone.",
             "Без реклами, без покупок за справжні гроші, без облікових записів і без таймера. Інтернет не потрібен.",
@@ -125,7 +125,7 @@ GAME_TEXT = {
         lead="Логическая головоломка про муравьиную колонию для iPhone от exception games.",
         body=[
             "Отправляйте сигналы по рядам и столбцам, шагайте по земле и листьям и приведите каждого муравья в норку. "
-            "Шестьдесят цехов в пяти главах, каждый день новый цех дня и секрет в каждом цехе.",
+            "Шестьдесят четыре цеха в пяти главах, каждый день новый цех дня и шестьдесят секретов, спрятанных в цехах.",
             "Для всей семьи: подсказка, когда что-то не получается, пошаговое знакомство с каждой новой клеткой, "
             "озвучка заданий для детей, которые ещё не умеют читать, и несколько игроков на одном iPhone.",
             "Без рекламы, без покупок за реальные деньги, без аккаунтов и без таймера. Интернет не нужен.",
@@ -135,9 +135,9 @@ GAME_TEXT = {
         lead="Ein Logikrätsel rund um eine Ameisenkolonie für das iPhone, entwickelt von exception games.",
         body=[
             "Senden Sie Signale entlang der Zeilen und Spalten, schicken Sie die Ameisen über Erde und Blätter und "
-            "führen Sie jede zu ihrem Nest. Sechzig von Hand gestaltete Werkhallen in fünf Kapiteln, jeden Tag eine "
-            "neue Werkhalle des Tages "
-            "und in jeder Werkhalle ein verstecktes Geheimnis.",
+            "führen Sie jede zu ihrem Nest. Vierundsechzig von Hand gestaltete Werkhallen in fünf Kapiteln, jeden Tag "
+            "eine neue Werkhalle des Tages "
+            "und sechzig versteckte Geheimnisse.",
             "Für die ganze Familie gemacht: ein Tipp, wenn es nicht weitergeht, eine Schritt-für-Schritt-Einführung "
             "in jede neue Art von Feld, vorgelesene Aufgaben für Kinder, die noch nicht lesen können, und mehrere "
             "Spieler auf einem iPhone.",
@@ -148,7 +148,7 @@ GAME_TEXT = {
         lead="exception games による、アリのコロニーを舞台にした iPhone 向けロジックパズル。",
         body=[
             "行や列に沿って合図を送り、土や葉っぱの上を進むアリたちを、1匹残らず巣穴へ導きましょう。5つの章に、ひと"
-            "つずつ手作りした60の作業場。毎日新しい「今日の作業場」が登場し、どの作業場にもひみつがひとつ隠れていま"
+            "つずつ手作りした64の作業場。毎日新しい「今日の作業場」が登場し、作業場には60のひみつが隠れていま"
             "す。",
             "家族みんなのために作りました。行き詰まったときはヒントを使えます。新しい種類のマスが出てくると、一歩ず"
             "つ紹介します。まだ字が読めない子どものために説明を読み上げる機能もあり、1台の iPhone で何人ものプレイヤ"
@@ -160,8 +160,8 @@ GAME_TEXT = {
         lead="exception games가 만든 iPhone용 개미 마을 논리 퍼즐입니다.",
         body=[
             "행과 열을 따라 신호를 보내고, 흙과 나뭇잎 위를 지나 모든 개미를 개미굴로 이끄세요. "
-            "손수 만든 작업장 60개가 5개의 장에 담겨 있고, 매일 새로운 오늘의 작업장이 열리며, 작업장마다 비밀이 "
-            "하나씩 숨어 있습니다.",
+            "손수 만든 작업장 64개가 5개의 장에 담겨 있고, 매일 새로운 오늘의 작업장이 열리며, 작업장 곳곳에 비밀 "
+            "60개가 숨어 있습니다.",
             "온 가족을 위해 만들었습니다. 막혔을 때 쓸 수 있는 힌트, 새로운 타일이 나올 때마다 차근차근 알려 주는 "
             "안내, 아직 글을 읽지 못하는 아이를 위한 설명 읽어 주기 기능이 있고, iPhone 한 대로 여러 플레이어가 "
             "함께 플레이할 수 있습니다.",
@@ -172,7 +172,7 @@ GAME_TEXT = {
         lead="exception games 出品的一款以蚁群为主题的 iPhone 逻辑解谜游戏。",
         body=[
             "沿着行和列发出信号，让蚂蚁走过泥土和叶子，把每只蚂蚁带回蚁窝。"
-            "五章共六十个精心设计的车间，每天都有新的今日车间，每个车间里还藏着一个秘密。",
+            "五章共六十四个精心设计的车间，每天都有新的今日车间，车间里还藏着六十个秘密。",
             "为全家人设计：卡关时有提示，每种新格子都有循序渐进的介绍，为还不识字的孩子朗读说明，"
             "一台 iPhone 可供多位玩家使用。",
             "没有广告，没有真钱内购，没有账户，没有计时器。无需联网。",
@@ -182,7 +182,7 @@ GAME_TEXT = {
         lead="exception games 推出的一款以蟻群為主題的 iPhone 邏輯解謎遊戲。",
         body=[
             "沿著橫列和直行發出訊號，讓螞蟻走過泥土和葉子，把每隻螞蟻帶回蟻窩。"
-            "五章共六十個精心設計的工坊，每天都有新的今日工坊，每個工坊裡還藏著一個秘密。",
+            "五章共六十四個精心設計的工坊，每天都有新的今日工坊，工坊裡還藏著六十個秘密。",
             "為全家人設計：卡關時有提示，每種新格子都有循序漸進的介紹，為還不識字的孩子朗讀說明，"
             "一台 iPhone 可供多位玩家使用。",
             "沒有廣告，沒有用真錢購買的項目，沒有帳號，沒有計時器。不需要連網。",
