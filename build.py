@@ -19,8 +19,8 @@ LANGS = [("en", "English"), ("uk", "Українська"), ("ru", "Русски
          ("ko", "한국어"), ("zh-Hans", "简体中文"), ("zh-Hant", "繁體中文")]
 EMAIL = "exceptiongames@icloud.com"
 MAIL = f'<a href="mailto:{EMAIL}">{EMAIL}</a>'
-UPDATED = {"en": "October 16, 2026", "uk": "16 жовтня 2026 р.", "ru": "16 октября 2026 г.", "de": "16. Oktober 2026",
-           "ja": "2026年10月16日", "ko": "2026년 10월 16일", "zh-Hans": "2026年10月16日", "zh-Hant": "2026 年 10 月 16 日"}
+UPDATED = {"en": "October 24, 2026", "uk": "24 жовтня 2026 р.", "ru": "24 октября 2026 г.", "de": "24. Oktober 2026",
+           "ja": "2026年10月24日", "ko": "2026년 10월 24일", "zh-Hans": "2026年10月24日", "zh-Hant": "2026 年 10 月 24 日"}
 
 # "Skip to content" and the translation note at the foot of every non-English page; {en} is the link to the
 # English version of the same page.
@@ -107,8 +107,10 @@ GAME_TEXT = {
             "Send signals along rows and columns, move across soil and leaves, and lead every ant to its nest. "
             "Sixty-four handcrafted workshops in five chapters, a new workshop of the day every day, and sixty secrets hidden among them.",
             "Made for the whole family: a hint for when you are stuck, a step-by-step introduction to every new tile, "
-            "instructions read aloud for children who cannot read yet, and several players on one iPhone.",
-            "No ads, no purchases for real money, no accounts, no timer. No internet needed.",
+            "instructions read aloud for players who cannot read yet, and several players on one iPhone.",
+            "No ads, no accounts and no timer on the puzzles. From workshop 6 on, each new workshop sends out one of five "
+            "working ants, and they come back on their own; replays and the workshop of the day are free. Optional "
+            "purchases for grown-ups wait behind a parental gate. No internet needed to play.",
         ],
         facts="iPhone · iOS 18 or later · 43 languages"),
     "uk": dict(
@@ -117,8 +119,10 @@ GAME_TEXT = {
             "Надсилайте сигнали вздовж рядів і стовпців, пересувайтеся по землі й листках і приведіть кожну мурашку до нірки. "
             "Шістдесят чотири цехи у п’яти розділах, щодня новий цех дня і шістдесят секретів, захованих у цехах.",
             "Для всієї родини: підказка, коли щось не виходить, покрокове знайомство з кожною новою клітинкою, "
-            "озвучення завдань для дітей, які ще не вміють читати, і кілька гравців на одному iPhone.",
-            "Без реклами, без покупок за справжні гроші, без облікових записів і без таймера. Інтернет не потрібен.",
+            "озвучення завдань для гравців, які ще не вміють читати, і кілька гравців на одному iPhone.",
+            "Без реклами, без облікових записів і без таймера в головоломках. Починаючи з цеху 6, у кожен новий цех вирушає "
+            "одна з п’яти робочих мурах і згодом сама повертається; повторні проходження й цех дня безкоштовні. "
+            "Необов’язкові покупки для дорослих захищено батьківською перевіркою. Для гри інтернет не потрібен.",
         ],
         facts="iPhone · iOS 18 або новіша · 43 мови"),
     "ru": dict(
@@ -127,8 +131,10 @@ GAME_TEXT = {
             "Отправляйте сигналы по рядам и столбцам, шагайте по земле и листьям и приведите каждого муравья в норку. "
             "Шестьдесят четыре цеха в пяти главах, каждый день новый цех дня и шестьдесят секретов, спрятанных в цехах.",
             "Для всей семьи: подсказка, когда что-то не получается, пошаговое знакомство с каждой новой клеткой, "
-            "озвучка заданий для детей, которые ещё не умеют читать, и несколько игроков на одном iPhone.",
-            "Без рекламы, без покупок за реальные деньги, без аккаунтов и без таймера. Интернет не нужен.",
+            "озвучка заданий для игроков, которые ещё не умеют читать, и несколько игроков на одном iPhone.",
+            "Без рекламы, без аккаунтов и без таймера в головоломках. Начиная с цеха 6, в каждый новый цех отправляется "
+            "один из пяти рабочих муравьёв и потом сам возвращается; повторные прохождения и цех дня бесплатны. "
+            "Необязательные покупки для взрослых защищены родительской проверкой. Для игры интернет не нужен.",
         ],
         facts="iPhone · iOS 18 или новее · 43 языка"),
     "de": dict(
@@ -139,9 +145,12 @@ GAME_TEXT = {
             "eine neue Werkhalle des Tages "
             "und sechzig versteckte Geheimnisse.",
             "Für die ganze Familie gemacht: ein Tipp, wenn es nicht weitergeht, eine Schritt-für-Schritt-Einführung "
-            "in jede neue Art von Feld, vorgelesene Aufgaben für Kinder, die noch nicht lesen können, und mehrere "
+            "in jede neue Art von Feld, vorgelesene Aufgaben für Spieler, die noch nicht lesen können, und mehrere "
             "Spieler auf einem iPhone.",
-            "Keine Werbung, keine Käufe mit echtem Geld, keine Konten, kein Zeitlimit. Kein Internet nötig.",
+            "Keine Werbung, keine Konten und kein Zeitlimit bei den Rätseln. Ab Werkhalle 6 schickt jede neue Werkhalle "
+            "eine von fünf Arbeitsameisen los; die Ameisen kehren von selbst zurück; Wiederholungen und die Werkhalle des "
+            "Tages sind kostenlos. Optionale Käufe für Erwachsene liegen hinter einer Elternabfrage. Zum Spielen ist kein "
+            "Internet nötig.",
         ],
         facts="iPhone · iOS 18 oder neuer · 43 Sprachen"),
     "ja": dict(
@@ -151,9 +160,11 @@ GAME_TEXT = {
             "つずつ手作りした64の作業場。毎日新しい「今日の作業場」が登場し、作業場には60のひみつが隠れていま"
             "す。",
             "家族みんなのために作りました。行き詰まったときはヒントを使えます。新しい種類のマスが出てくると、一歩ず"
-            "つ紹介します。まだ字が読めない子どものために説明を読み上げる機能もあり、1台の iPhone で何人ものプレイヤ"
+            "つ紹介します。まだ字が読めないプレイヤーのために説明を読み上げる機能もあり、1台の iPhone で何人ものプレイヤ"
             "ーが遊べます。",
-            "広告なし、課金なし、アカウントなし、タイマーなし。インターネットは必要ありません。",
+            "広告なし、アカウントなし、パズルにタイマーなし。作業場6からは、新しい作業場ごとに5匹の働くアリのうち1匹が出かけ、"
+            "やがて自分で戻ってきます。再プレイと今日の作業場は無料です。大人向けの任意の購入は、保護者確認を通過した後でのみ利用できます。"
+            "遊ぶのにインターネットは必要ありません。",
         ],
         facts="iPhone · iOS 18 以降 · 43言語"),
     "ko": dict(
@@ -163,9 +174,11 @@ GAME_TEXT = {
             "손수 만든 작업장 64개가 5개의 장에 담겨 있고, 매일 새로운 오늘의 작업장이 열리며, 작업장 곳곳에 비밀 "
             "60개가 숨어 있습니다.",
             "온 가족을 위해 만들었습니다. 막혔을 때 쓸 수 있는 힌트, 새로운 타일이 나올 때마다 차근차근 알려 주는 "
-            "안내, 아직 글을 읽지 못하는 아이를 위한 설명 읽어 주기 기능이 있고, iPhone 한 대로 여러 플레이어가 "
+            "안내, 아직 글을 읽지 못하는 플레이어를 위한 설명 읽어 주기 기능이 있고, iPhone 한 대로 여러 플레이어가 "
             "함께 플레이할 수 있습니다.",
-            "광고, 유료 결제, 계정, 타이머가 없습니다. 인터넷도 필요 없습니다.",
+            "광고와 계정이 없고, 퍼즐에는 타이머가 없습니다. 작업장 6부터는 새 작업장마다 일하는 개미 다섯 마리 중 한 "
+            "마리가 나가고, 개미는 스스로 돌아옵니다. 다시 하기와 오늘의 작업장은 무료입니다. 어른을 위한 선택 구매는 "
+            "보호자 확인 뒤에 있습니다. 플레이하는 데 인터넷은 필요 없습니다.",
         ],
         facts="iPhone · iOS 18 이상 · 43개 언어"),
     "zh-Hans": dict(
@@ -173,9 +186,10 @@ GAME_TEXT = {
         body=[
             "沿着行和列发出信号，让蚂蚁走过泥土和叶子，把每只蚂蚁带回蚁窝。"
             "五章共六十四个精心设计的车间，每天都有新的今日车间，车间里还藏着六十个秘密。",
-            "为全家人设计：卡关时有提示，每种新格子都有循序渐进的介绍，为还不识字的孩子朗读说明，"
+            "为全家人设计：卡关时有提示，每种新格子都有循序渐进的介绍，为还不识字的玩家朗读说明，"
             "一台 iPhone 可供多位玩家使用。",
-            "没有广告，没有真钱内购，没有账户，没有计时器。无需联网。",
+            "没有广告，没有账户，谜题没有计时器。从车间 6 起，每个新车间会派出五只工蚁中的一只，它们会自己回来；"
+            "重玩和今日车间免费。面向大人的可选购买项目放在家长验证之后。玩游戏无需联网。",
         ],
         facts="iPhone · iOS 18 或更高版本 · 43 种语言"),
     "zh-Hant": dict(
@@ -183,9 +197,10 @@ GAME_TEXT = {
         body=[
             "沿著橫列和直行發出訊號，讓螞蟻走過泥土和葉子，把每隻螞蟻帶回蟻窩。"
             "五章共六十四個精心設計的工坊，每天都有新的今日工坊，工坊裡還藏著六十個秘密。",
-            "為全家人設計：卡關時有提示，每種新格子都有循序漸進的介紹，為還不識字的孩子朗讀說明，"
+            "為全家人設計：卡關時有提示，每種新格子都有循序漸進的介紹，為還不識字的玩家朗讀說明，"
             "一台 iPhone 可供多位玩家使用。",
-            "沒有廣告，沒有用真錢購買的項目，沒有帳號，沒有計時器。不需要連網。",
+            "沒有廣告，沒有帳號，謎題沒有計時器。從工坊 6 起，每個新工坊會派出五隻工蟻中的一隻，牠們會自己回來；"
+            "重玩和今日工坊免費。給大人的選購項目放在家長驗證之後。玩遊戲不需要連網。",
         ],
         facts="iPhone · iOS 18 或以上版本 · 43 種語言"),
 }
@@ -200,28 +215,53 @@ PRIVACY_TEXT = {
               "of its developer, the person or company shown as the Seller (in some countries, the Provider) on the "
               "app’s App Store page, who is responsible for this policy (“we”). This policy explains what happens to "
               "information in the app, on this website and in messages to support.",
-        summary="In short: the app collects no data. Everything it saves stays on your iPhone, unless a grown-up saves a backup copy somewhere else.",
+        summary="In short: the app collects no data. Everything it saves stays on your iPhone, unless a grown-up saves a backup copy "
+                "somewhere else. Apple handles the optional purchases, and we never see payment details.",
         sections=[
             ("Data the app collects", ["None. The app does not collect, transmit, sell or share any personal data. It contains no "
-                                       "advertising, analytics, accounts, tracking or third-party SDKs, and it does not connect "
-                                       "to the internet."]),
+                                       "advertising, analytics, accounts, tracking or third-party SDKs, and it never sends anything "
+                                       "to us. Ordinary play works without the internet; only the optional purchases go online, and "
+                                       "only to Apple’s App Store (see “Purchases”)."]),
             ("Data stored on your device", [
                 "Game progress (current workshop, unfinished games with undo history, completed workshops, best results and stars, "
-                "results of the Workshop of the day, which workshops were solved with a hint, ants bought with stars or won for a perfect chapter, found secrets "
-                "and how far their hints have opened, tutorial status), the names of players added on this device, and the sound, "
-                "haptics and read-aloud settings are stored locally on your device using Apple’s standard app storage.",
+                "results of the Workshop of the day, which workshops were solved with a hint, ants bought with stars or won for a "
+                "perfect chapter, which ants have arrived in the shop so far, food in the Pantry and the weeks for which it has "
+                "already been given, found secrets and how far their hints have opened, which secret hints were opened and where the free egg "
+                "hint went, tutorial status, and each player’s own settings, such as Explorer mode and the small Workshop of the "
+                "day), the names of players added on this device, the working ants shared by all players, and the sound, "
+                "haptics, read-aloud, appearance and “Buttons instead of phone motion” settings are stored locally on your "
+                "device using Apple’s standard app storage.",
                 "Player names are optional; you can keep the default “Player 2” and so on. The app never sends this data anywhere. "
                 "It may be included in your own device backups under Apple’s terms, and in a backup copy that a grown-up saves "
-                "(see “Backup copy”)."]),
+                "(see “Backup copy”).",
+                "Three more things stay on this iPhone only and never go into a backup copy: a few readings of the iPhone’s "
+                "clock, so that resting ants and the free refill follow real time; which purchase is waiting for a parent’s "
+                "approval (see “Purchases”); and whether the Anthill was owned the last time the app checked. The purchases "
+                "themselves are not stored as progress."]),
+            ("Purchases", [
+                "The app offers three optional purchases, each paid once: the Anthill (working ants never run out), the Secret "
+                "map: chapters 1–5 (the hints of every secret in chapters 1–5 for every player), and Anthill and Secret map "
+                "together. They are only in Settings → Purchases for grown-ups, behind the parental gate, and they are shared "
+                "by every player on the iPhone.",
+                "Apple processes every payment through Apple’s StoreKit, under its own terms and privacy policy. We never see "
+                "your name, Apple Account, payment details or address; Apple gives us only sales reports that do not identify "
+                "you. Loading prices, buying and Restore purchases connect to Apple’s App Store; the rest of the game works "
+                "offline.",
+                "Purchased content unlocks only for purchases that Apple’s StoreKit reports and verifies on the device for the "
+                "Apple Account in use, including purchases shared through Family Sharing. The app does not save them as progress or put them "
+                "in a backup copy. With Ask to Buy, the app remembers on this iPhone which purchase is waiting for a parent’s "
+                "approval and when it was asked for, so that it does not offer an overlapping one; this note is dropped after "
+                "two days and never goes into a backup copy."]),
             ("Reading aloud", ["When reading aloud is on, the app speaks the puzzle instructions with the speech synthesizer built "
                                "into iOS on the device. No text or audio leaves the device, and the app never uses the microphone."]),
             ("Motion sensor", ["Only while the result of a solved workshop is on the screen, the app reads the iPhone’s motion "
                                "sensor on the device to notice playful moves that reveal hidden secrets, such as a gentle shake or "
-                               "turning the phone over. The readings are never stored or sent. The app does not use location, "
+                               "turning the phone over. The readings are never stored or sent. With “Buttons instead of phone "
+                               "motion” turned on, the app does not use the motion sensor at all. The app does not use location, "
                                "the camera, contacts or photos."]),
             ("Third parties", [
-                "The app shares no data with anyone: it contains no third-party code and talks to no servers. Apple handles "
-                "downloads, updates and device backups under Apple’s own privacy policy.",
+                "The app contains no third-party code, and we run no servers: the app sends nothing to us or to anyone else. "
+                "Apple handles downloads, updates, device backups and the optional purchases under Apple’s own privacy policy.",
                 "If you chose in iOS settings to share analytics with app developers, Apple may give us anonymous crash reports "
                 "and aggregated statistics that do not identify you."]),
             ("Keeping and deleting data", [
@@ -229,11 +269,14 @@ PRIVACY_TEXT = {
                 "Players, switch to another player, then delete the player you want to remove (a grown-up confirms "
                 "it). The player who is playing now cannot be "
                 "deleted. If a backup copy was restored earlier, the progress kept from before it may still include that "
-                "player (see “Backup copy”). Deleting the app removes all players and all data from your device.",
+                "player (see “Backup copy”). Deleting the app removes all players and all data from your device. Purchases stay "
+                "with the Apple Account that made them: after reinstalling, Restore purchases brings them back.",
                 "The app never sends us your data, so there is nothing from the app for us to keep, look up or delete."]),
             ("Backup copy", [
                 "In Settings → Backup copy, after passing the parental gate, a grown-up can save every player’s progress, the "
-                "players’ names and the sound, haptics and read-aloud settings as one file. The file goes wherever the grown-up "
+                "players’ names, the working ants and the sound, haptics, read-aloud, appearance and “Buttons instead of phone "
+                "motion” settings as one file. Purchases, a request waiting for approval and the clock readings never go into "
+                "it. The file goes wherever the grown-up "
                 "chooses in the Files window, for example on this iPhone or in iCloud Drive under Apple’s terms. The app never "
                 "sends the file anywhere and keeps no copy of its own, and we never receive it.",
                 "Restoring a copy, also behind the parental gate, replaces all players and their progress on the device with the "
@@ -254,12 +297,14 @@ PRIVACY_TEXT = {
             ("This website", ["This website uses no cookies or analytics. It is hosted on GitHub Pages, which may log visitors’ "
                               "IP addresses for security under GitHub’s privacy statement."]),
             ("Children", [
-                "The game is made for children and families. It does not knowingly collect any information from anyone, "
-                "including children under 13. There are no ads, no purchases for real money, no accounts, no chat and no "
-                "social media links. The ant shop uses only stars earned in the game.",
-                "Pages outside the game, such as this policy and the support page, open only after a grown-up passes a "
-                "parental gate, and so do saving and restoring a backup copy. Because the app collects no personal information, there is no data collection for a parent "
-                "to consent to."]),
+                "The game is made for the whole family, and children play it too. It does not knowingly collect any information from anyone, "
+                "including children under 13. There are no ads, no accounts, no chat and no social media links. The ant shop "
+                "uses only stars earned in the game.",
+                "The optional purchases are for grown-ups only: prices, offers, buying and restoring are behind a parental gate, "
+                "and the game never shows a child a price or asks a child to buy something or to ask a parent. Pages outside "
+                "the game, such as this policy and the support page, also open only after a grown-up passes a parental gate, "
+                "and so do saving and restoring a backup copy. Because the app collects no personal information, there is no "
+                "data collection for a parent to consent to."]),
             ("Your rights", [f"Privacy laws such as the EU General Data Protection Regulation (GDPR) give you the right to ask what "
                              f"personal data we hold about you, and to have it corrected or deleted. The app gives us none; the "
                              f"only data we may hold is your messages to support. To ask about it or to have it deleted, write to "
@@ -275,40 +320,70 @@ PRIVACY_TEXT = {
               "як «Постачальник» (продавець), "
               "яка відповідає за цю політику («ми»). Ця політика пояснює, що відбувається з інформацією в застосунку, на цьому "
               "сайті та в листах до підтримки.",
-        summary="Коротко: застосунок не збирає жодних даних. Усе, що він зберігає, залишається на вашому iPhone, якщо тільки дорослий не збереже резервну копію деінде.",
+        summary="Коротко: застосунок не збирає жодних даних. Усе, що він зберігає, залишається на вашому iPhone, якщо тільки дорослий не "
+                "збереже резервну копію деінде. Необов’язкові покупки обробляє Apple, і ми ніколи не бачимо платіжних даних.",
         sections=[
             ("Які дані збирає застосунок", ["Жодних. Застосунок не збирає, не передає, не продає й не розкриває жодних персональних "
                                             "даних. У ньому немає реклами, аналітики, облікових записів, відстеження та сторонніх "
-                                            "SDK, і він не підключається до інтернету."]),
+                                            "SDK, і він нічого не надсилає нам. Звичайна гра працює без інтернету; до App Store "
+                                            "від Apple підключаються лише необов’язкові покупки (див. «Покупки»)."]),
             ("Що зберігається на пристрої", [
                 "Прогрес гри (поточний цех, незавершені партії з історією скасування, пройдені цехи, найкращі результати та зірки, "
-                "результати цеху дня, позначки про цехи, розв’язані з підказкою, мурашки, куплені за зірки або здобуті за ідеально пройдений розділ, знайдені секрети й "
-                "відкриті до них підказки, стан навчання), імена гравців, доданих на цьому пристрої, а також налаштування звуку, "
-                "вібрації та читання вголос зберігаються локально стандартними засобами iOS.",
+                "результати цеху дня, позначки про цехи, розв’язані з підказкою, мурашки, куплені за зірки або здобуті за "
+                "ідеально пройдений розділ, які мурашки вже привезли до крамниці, їжа в «Коморі» й тижні, за які її вже "
+                "подаровано, знайдені секрети й відкриті до них підказки, які підказки до секретів відкрито й куди пішла "
+                "безкоштовна підказка-яйце, стан навчання, а також власні налаштування кожного гравця, як-от режим дослідника "
+                "й малий цех дня), імена гравців, доданих на цьому пристрої, спільні для всіх гравців робочі мурахи, а також "
+                "налаштування звуку, вібрації, читання вголос, оформлення й «Кнопки замість рухів телефону» зберігаються "
+                "локально стандартними засобами iOS.",
                 "Імена вказувати не обов’язково: можна залишити «Гравець 2» тощо. Застосунок нікуди не надсилає ці дані. "
                 "Вони можуть потрапити до ваших резервних копій пристрою відповідно до умов Apple, а також до резервної копії, "
-                "яку збереже дорослий (див. «Резервна копія»)."]),
+                "яку збереже дорослий (див. «Резервна копія»).",
+                "Ще три речі залишаються лише на цьому iPhone і ніколи не потрапляють до резервної копії: кілька показів "
+                "годинника iPhone, щоб відпочинок мурах і безкоштовне поповнення йшли за реальним часом; яка покупка "
+                "чекає схвалення батьків (див. «Покупки»); і чи був «Мурашник» придбаний на момент останньої перевірки. Самі "
+                "покупки не зберігаються як прогрес."]),
+            ("Покупки", [
+                "Застосунок пропонує три необов’язкові покупки, за кожну з яких платять один раз: «Мурашник» (робочі мурахи не "
+                "закінчуються), «Карта секретів: розділи 1–5» (підказки до всіх секретів розділів 1–5 для всіх гравців) і "
+                "«Мурашник і Карта секретів» разом. Вони є лише в «Налаштування» → «Покупки для дорослих», після батьківської "
+                "перевірки, і спільні для всіх гравців на цьому iPhone.",
+                "Кожен платіж обробляє Apple через StoreKit від Apple відповідно до власних умов і політики конфіденційності. "
+                "Ми ніколи не бачимо вашого імені, облікового запису Apple, платіжних даних чи адреси; Apple надає нам лише "
+                "звіти про продажі, за якими вас неможливо ідентифікувати. Завантаження цін, купівля та «Відновити покупки» "
+                "підключаються до App Store від Apple; решта гри працює без інтернету.",
+                "Доступ дають лише покупки, про які StoreKit від Apple повідомляє на пристрої і які він перевіряє для облікового запису "
+                "Apple, що використовується, зокрема покупки, доступні через «Сімейний доступ». Застосунок не зберігає їх як "
+                "прогрес і не додає до резервної копії. Якщо ввімкнено функцію «Попросити купити», "
+                "застосунок пам’ятає на цьому iPhone, яка покупка чекає схвалення і коли надіслано запит, щоб не пропонувати "
+                "покупку, яка з нею перетинається; ця позначка зникає через два дні й ніколи не потрапляє до резервної копії."]),
             ("Читання вголос", ["Коли читання вголос увімкнено, застосунок озвучує завдання вбудованим синтезатором мовлення iOS на "
                                 "самому пристрої. Текст і звук не виходять за межі пристрою; мікрофон застосунок не використовує."]),
             ("Датчик руху", ["Лише поки на екрані результат розв’язаного цеху, застосунок зчитує дані датчика руху iPhone на самому "
                              "пристрої, щоб помітити ігрові рухи, які відкривають сховані секрети, наприклад легке струшування "
-                             "або перевертання телефона. Показання ніде не зберігаються й нікуди не передаються. Застосунок не "
+                             "або перевертання телефона. Показання ніде не зберігаються й нікуди не передаються. Якщо ввімкнено "
+                             "«Кнопки замість рухів телефону», застосунок зовсім не використовує датчик руху. Застосунок не "
                              "використовує геолокацію, камеру, контакти чи фото."]),
             ("Треті сторони", [
-                "Застосунок ні з ким не ділиться даними: у ньому немає стороннього коду, і він не звертається до жодних серверів. "
-                "Завантаження, оновлення та резервні копії пристрою обробляє Apple відповідно до власної політики конфіденційності.",
+                "У застосунку немає стороннього коду, а в нас немає жодних серверів: застосунок нічого не надсилає ні нам, ні "
+                "комусь іншому. Завантаження, оновлення, резервні копії пристрою та необов’язкові покупки обробляє Apple "
+                "відповідно до власної політики конфіденційності.",
                 "Якщо в налаштуваннях iOS ви дозволили ділитися аналітикою з розробниками, Apple може надавати нам анонімні звіти "
                 "про збої та узагальнену статистику, які не дають змоги вас ідентифікувати."]),
             ("Зберігання та видалення даних", [
                 "Дані залишаються на вашому iPhone, доки ви їх не видалите. Щоб видалити прогрес одного гравця, відкрийте "
                 "«Налаштування» → «Гравці», перейдіть на іншого гравця й видаліть потрібного (дорослий підтверджує дію). Гравця, "
                 "який зараз грає, видалити не можна. Якщо раніше відновлювали резервну копію, прогрес, збережений перед "
-                "відновленням, може й далі містити цього гравця (див. «Резервна копія»). Видалення застосунку стирає всіх гравців і всі дані з пристрою.",
+                "відновленням, може й далі містити цього гравця (див. «Резервна копія»). Видалення застосунку стирає всіх гравців і всі дані з пристрою. "
+                "Покупки залишаються в обліковому записі Apple, з якого їх зроблено: після перевстановлення «Відновити покупки» "
+                "поверне їх.",
                 "Застосунок ніколи не надсилає нам ваших даних, тому з застосунку на нашому боці немає чого зберігати, шукати чи "
                 "видаляти."]),
             ("Резервна копія", [
                 "У розділі «Налаштування» → «Резервна копія», після батьківської перевірки, дорослий може зберегти прогрес усіх "
-                "гравців, їхні імена та налаштування звуку, вібрації й читання вголос в одному файлі. Файл потрапляє туди, куди "
+                "гравців, їхні імена, робочих мурах і налаштування звуку, вібрації, читання вголос, оформлення й «Кнопки замість "
+                "рухів телефону» в одному файлі. Покупки, запит, що чекає схвалення, і покази годинника до файлу ніколи не "
+                "потрапляють. Файл потрапляє туди, куди "
                 "дорослий вибере у вікні «Файли», наприклад на цей iPhone або в iCloud Drive відповідно до умов Apple. Застосунок "
                 "нікуди не надсилає файл і не зберігає власної копії, а ми ніколи його не отримуємо.",
                 "Відновлення копії, теж після батьківської перевірки, замінює всіх гравців і їхній прогрес на пристрої тими, що є "
@@ -328,12 +403,14 @@ PRIVACY_TEXT = {
             ("Цей сайт", ["Цей сайт не використовує файли cookie й аналітику. Його розміщено на GitHub Pages, який може записувати "
                           "IP-адреси відвідувачів з міркувань безпеки відповідно до положення GitHub про конфіденційність."]),
             ("Діти", [
-                "Гра створена для дітей і родин. Вона свідомо не збирає жодної інформації ні про кого, зокрема про дітей до 13 "
-                "років. У ній немає реклами, покупок за справжні гроші, облікових записів, чату та посилань на соціальні мережі. "
-                "У крамниці мурашок можна платити лише зірками, заробленими в грі.",
-                "Сторінки поза грою, як-от ця політика та сторінка підтримки, відкриваються лише після того, як дорослий пройде "
-                "батьківську перевірку; так само захищені збереження й відновлення резервної копії. Застосунок не збирає персональної інформації, тож немає збору даних, на який батьки мали б "
-                "давати згоду."]),
+                "Гра створена для всієї родини, і діти теж у неї грають. Вона свідомо не збирає жодної інформації ні про кого, зокрема про дітей до 13 "
+                "років. У ній немає реклами, облікових записів, чату та посилань на соціальні мережі. У крамниці мурашок можна "
+                "платити лише зірками, заробленими в грі.",
+                "Необов’язкові покупки — лише для дорослих: ціни, пропозиції, купівля й відновлення покупок захищені "
+                "батьківською перевіркою, і гра ніколи не показує дитині ціну й не просить дитину щось купити чи попросити "
+                "батьків. Сторінки поза грою, як-от ця політика та сторінка підтримки, теж відкриваються лише після того, як "
+                "дорослий пройде батьківську перевірку; так само захищені збереження й відновлення резервної копії. Застосунок "
+                "не збирає персональної інформації, тож немає збору даних, на який батьки мали б давати згоду."]),
             ("Ваші права", [f"Законодавство про захист персональних даних, зокрема Загальний регламент ЄС про захист даних (GDPR), "
                             f"дає вам право дізнатися, які ваші персональні дані ми маємо, і вимагати їх виправлення чи видалення. "
                             f"Застосунок не передає нам жодних даних; єдине, що ми можемо мати, — ваші листи до підтримки. Щоб "
@@ -350,29 +427,56 @@ PRIVACY_TEXT = {
               "Store как «Провайдер» (продавец), "
               "которые отвечают за эту политику («мы»). Эта политика объясняет, что происходит с информацией в приложении, на этом "
               "сайте и в письмах в поддержку.",
-        summary="Коротко: приложение не собирает никаких данных. Всё, что оно сохраняет, остаётся на вашем iPhone, если только взрослый не сохранит резервную копию в другом месте.",
+        summary="Коротко: приложение не собирает никаких данных. Всё, что оно сохраняет, остаётся на вашем iPhone, если только взрослый не "
+                "сохранит резервную копию в другом месте. Необязательные покупки обрабатывает Apple, и мы никогда не видим "
+                "платёжных данных.",
         sections=[
             ("Какие данные собирает приложение", ["Никаких. Приложение не собирает, не передаёт, не продаёт и не раскрывает "
                                                   "персональные данные. В нём нет рекламы, аналитики, аккаунтов, отслеживания и "
-                                                  "сторонних SDK; приложение не подключается к интернету."]),
+                                                  "сторонних SDK, и оно ничего не отправляет нам. Обычная игра работает без "
+                                                  "интернета; к App Store от Apple подключаются только необязательные покупки "
+                                                  "(см. «Покупки»)."]),
             ("Что хранится на устройстве", [
                 "Прогресс игры (текущий цех, незавершённые партии с историей отмены, пройденные цеха, лучшие результаты и звёзды, "
-                "результаты цеха дня, отметки о цехах, решённых с подсказкой, муравьи, купленные за звёзды или полученные за идеально пройденную главу, найденные секреты и "
-                "открытые к ним подсказки, состояние обучения), имена игроков, добавленных на этом устройстве, и настройки звука, "
-                "вибрации и чтения вслух хранятся локально стандартными средствами iOS.",
+                "результаты цеха дня, отметки о цехах, решённых с подсказкой, муравьи, купленные за звёзды или полученные за "
+                "идеально пройденную главу, какие муравьи уже привезены в магазин, еда в «Кладовой» и недели, за которые она "
+                "уже подарена, найденные секреты и открытые к ним подсказки, какие подсказки к секретам открыты и куда ушла "
+                "бесплатная подсказка-яйцо, состояние обучения, а также собственные настройки каждого игрока, например режим "
+                "исследователя и маленький цех дня), имена игроков, добавленных на этом устройстве, общие для всех игроков "
+                "рабочие муравьи, а также настройки звука, вибрации, чтения вслух, оформления и «Кнопки вместо движений "
+                "телефона» хранятся локально стандартными средствами iOS.",
                 "Имена указывать не обязательно: можно оставить «Игрок 2» и т. д. Приложение никуда не отправляет эти данные. "
                 "Они могут попасть в ваши резервные копии устройства в соответствии с условиями Apple, а также в резервную копию, "
-                "которую сохранит взрослый (см. «Резервная копия»)."]),
+                "которую сохранит взрослый (см. «Резервная копия»).",
+                "Ещё три вещи остаются только на этом iPhone и никогда не попадают в резервную копию: несколько показаний "
+                "часов iPhone, чтобы отдых муравьёв и бесплатное пополнение шли по реальному времени; какая покупка "
+                "ждёт одобрения родителя (см. «Покупки»); и был ли «Муравейник» куплен на момент последней проверки. Сами покупки "
+                "не хранятся как прогресс."]),
+            ("Покупки", [
+                "Приложение предлагает три необязательные покупки, за каждую из них платят один раз: «Муравейник» (рабочие "
+                "муравьи не заканчиваются), «Карта секретов: главы 1–5» (подсказки ко всем секретам глав 1–5 для всех "
+                "игроков) и «Муравейник и Карта секретов» вместе. Они есть только в «Настройки» → «Покупки для взрослых», "
+                "после родительской проверки, и общие для всех игроков на этом iPhone.",
+                "Каждый платёж обрабатывает Apple через StoreKit от Apple по собственным условиям и политике "
+                "конфиденциальности. Мы никогда не видим вашего имени, Аккаунта Apple, платёжных данных и адреса; Apple "
+                "передаёт нам только отчёты о продажах, по которым вас нельзя идентифицировать. Загрузка цен, покупка и "
+                "«Восстановить покупки» подключаются к App Store от Apple; остальная игра работает без интернета.",
+                "Доступ дают только покупки, о которых StoreKit от Apple сообщает на устройстве и которые он проверяет для используемого "
+                "Аккаунта Apple, включая покупки, доступные через «Семейный доступ». Приложение не сохраняет их как прогресс и "
+                "не кладёт в резервную копию. Если включена функция «Попросить купить», приложение запоминает на этом iPhone, "
+                "какая покупка ждёт одобрения родителя и когда был отправлен запрос, чтобы не предлагать пересекающуюся с ней "
+                "покупку; эта отметка удаляется через два дня и никогда не попадает в резервную копию."]),
             ("Чтение вслух", ["Когда чтение вслух включено, приложение озвучивает задания встроенным синтезатором речи iOS на самом "
                               "устройстве. Текст и звук не покидают устройство; микрофон приложение не использует."]),
             ("Датчик движения", ["Только пока на экране результат решённого цеха, приложение считывает данные датчика движения iPhone "
                                  "на самом устройстве, чтобы заметить игровые движения, которые открывают спрятанные секреты, "
                                  "например лёгкое встряхивание или переворот телефона. Показания нигде не сохраняются и никуда не "
-                                 "передаются. Приложение не использует геолокацию, камеру, контакты и фото."]),
+                                 "передаются. Если включён параметр «Кнопки вместо движений телефона», приложение совсем не использует "
+                                 "датчик движения. Приложение не использует геолокацию, камеру, контакты и фото."]),
             ("Третьи стороны", [
-                "Приложение ни с кем не делится данными: в нём нет стороннего кода, и оно не обращается ни к каким серверам. "
-                "Загрузки, обновления и резервные копии устройства обрабатывает Apple в соответствии с собственной политикой "
-                "конфиденциальности.",
+                "В приложении нет стороннего кода, а у нас нет никаких серверов: приложение ничего не отправляет ни нам, ни "
+                "кому-либо ещё. Загрузки, обновления, резервные копии устройства и необязательные покупки обрабатывает Apple в "
+                "соответствии с собственной политикой конфиденциальности.",
                 "Если в настройках iOS вы разрешили делиться аналитикой с разработчиками, Apple может передавать нам анонимные "
                 "отчёты о сбоях и обобщённую статистику, которые не позволяют вас идентифицировать."]),
             ("Хранение и удаление данных", [
@@ -380,12 +484,15 @@ PRIVACY_TEXT = {
                 "«Настройки» → «Игроки», переключитесь на другого игрока и удалите нужного (взрослый подтверждает действие). "
                 "Игрока, который сейчас играет, удалить нельзя. Если раньше восстанавливали резервную копию, прогресс, "
                 "сохранённый перед восстановлением, может по-прежнему содержать этого игрока (см. «Резервная копия»). "
-                "Удаление приложения стирает всех игроков и все данные с устройства.",
+                "Удаление приложения стирает всех игроков и все данные с устройства. Покупки остаются в Аккаунте Apple, с "
+                "которого их сделали: после переустановки «Восстановить покупки» вернёт их.",
                 "Приложение никогда не отправляет нам ваши данные, поэтому из приложения на нашей стороне нечего хранить, искать "
                 "или удалять."]),
             ("Резервная копия", [
                 "В разделе «Настройки» → «Резервная копия», после родительской проверки, взрослый может сохранить прогресс всех "
-                "игроков, их имена и настройки звука, вибрации и чтения вслух в одном файле. Файл попадает туда, куда взрослый "
+                "игроков, их имена, рабочих муравьёв и настройки звука, вибрации, чтения вслух, оформления и «Кнопки вместо "
+                "движений телефона» в одном файле. Покупки, ожидающий одобрения запрос и показания часов в файл никогда не "
+                "попадают. Файл попадает туда, куда взрослый "
                 "выберет в окне «Файлы», например на этот iPhone или в iCloud Drive в соответствии с условиями Apple. Приложение "
                 "никуда не отправляет файл и не хранит собственной копии, а мы никогда его не получаем.",
                 "Восстановление копии, тоже после родительской проверки, заменяет всех игроков и их прогресс на устройстве теми, "
@@ -406,12 +513,15 @@ PRIVACY_TEXT = {
             ("Этот сайт", ["Этот сайт не использует файлы cookie и аналитику. Он размещён на GitHub Pages, который может записывать "
                            "IP-адреса посетителей в целях безопасности согласно положению GitHub о конфиденциальности."]),
             ("Дети", [
-                "Игра создана для детей и семей. Она сознательно не собирает никакой информации ни о ком, включая детей младше 13 "
-                "лет. В ней нет рекламы, покупок за реальные деньги, аккаунтов, чата и ссылок на соцсети. В магазине муравьёв "
-                "платят только звёздами, заработанными в игре.",
-                "Страницы вне игры, например эта политика и страница поддержки, открываются только после того, как взрослый "
-                "пройдёт родительскую проверку; так же защищены сохранение и восстановление резервной копии. Приложение не собирает персональную информацию, поэтому нет сбора данных, на "
-                "который родители должны были бы давать согласие."]),
+                "Игра создана для всей семьи, и дети тоже в неё играют. Она сознательно не собирает никакой информации ни о ком, включая детей младше 13 "
+                "лет. В ней нет рекламы, аккаунтов, чата и ссылок на соцсети. В магазине муравьёв платят только звёздами, "
+                "заработанными в игре.",
+                "Необязательные покупки — только для взрослых: цены, предложения, покупка и восстановление покупок защищены "
+                "родительской проверкой, и игра никогда не показывает ребёнку цену и не просит ребёнка что-то купить или "
+                "попросить родителей. Страницы вне игры, например эта политика и страница поддержки, тоже открываются только "
+                "после того, как взрослый пройдёт родительскую проверку; так же защищены сохранение и восстановление резервной "
+                "копии. Приложение не собирает персональную информацию, поэтому нет сбора данных, на который родители должны "
+                "были бы давать согласие."]),
             ("Ваши права", [f"Законодательство о защите персональных данных, например Общий регламент ЕС по защите данных (GDPR), "
                             f"даёт вам право узнать, какие ваши персональные данные у нас есть, и потребовать их исправления или "
                             f"удаления. Приложение не передаёт нам никаких данных; единственное, что у нас может быть, — ваши "
@@ -429,25 +539,51 @@ PRIVACY_TEXT = {
               "App-Store-Seite der App als „Anbieter“ angegeben ist. Dieser Entwickler ist für diese Erklärung "
               "verantwortlich („wir“). Diese Erklärung beschreibt, was "
               "mit Informationen in der App, auf dieser Website und in Nachrichten an den Support geschieht.",
-        summary="Kurz gesagt: Die App erfasst keine Daten. Alles, was sie speichert, bleibt auf Ihrem iPhone, es sei denn, ein Erwachsener speichert eine Sicherungskopie an einem anderen Ort.",
+        summary="Kurz gesagt: Die App erfasst keine Daten. Alles, was sie speichert, bleibt auf Ihrem iPhone, es sei denn, ein Erwachsener "
+                "speichert eine Sicherungskopie an einem anderen Ort. Die optionalen Käufe wickelt Apple ab, und wir sehen "
+                "nie Zahlungsdaten.",
         sections=[
             ("Welche Daten die App erfasst", ["Keine. Die App erfasst, überträgt, verkauft oder teilt keine personenbezogenen "
                                               "Daten. Sie enthält keine Werbung, keine Analysedienste, keine "
                                               "Konten, kein Tracking und keine SDKs von Drittanbietern, und sie "
-                                              "verbindet sich nicht mit dem Internet."]),
+                                              "sendet uns nie etwas. Das normale Spiel funktioniert ohne Internet; nur "
+                                              "die optionalen Käufe verbinden sich mit dem App Store von Apple (siehe "
+                                              "„Käufe“)."]),
             ("Auf dem Gerät gespeicherte Daten", [
                 "Der Spielfortschritt (aktuelle Werkhalle, angefangene Spiele mit ihrem Rückgängig-Verlauf, gelöste "
                 "Werkhallen, "
                 "Bestwerte und Sterne, Ergebnisse der Werkhalle des Tages, welche Werkhallen mit einem Tipp gelöst wurden, "
-                "Ameisen, die mit Sternen gekauft oder für ein perfektes Kapitel gewonnen wurden, gefundene "
-                "Geheimnisse und wie weit die Tipps dazu schon aufgedeckt sind, Stand der Einführung), die Namen "
-                "der auf diesem Gerät hinzugefügten Spieler "
-                "sowie die Einstellungen für Ton, Haptik und Vorlesen werden lokal auf Ihrem Gerät gespeichert, im üblichen "
-                "App-Speicher von Apple.",
+                "Ameisen, die mit Sternen gekauft oder für ein perfektes Kapitel gewonnen wurden, welche Ameisen schon im "
+                "Ameisenladen angekommen sind, Futter in der „Vorratskammer“ und die Wochen, für die es schon verschenkt "
+                "wurde, gefundene Geheimnisse und wie weit die Tipps dazu schon aufgedeckt sind, welche Geheimnistipps "
+                "geöffnet wurden und wofür der kostenlose Ei-Tipp verwendet wurde, Stand der Einführung sowie die eigenen "
+                "Einstellungen jedes Spielers, etwa der Erkundungsmodus und die kleine Werkhalle des Tages), die Namen "
+                "der auf diesem Gerät hinzugefügten Spieler, die gemeinsamen Arbeitsameisen aller Spieler "
+                "sowie die Einstellungen für Ton, Haptik, Vorlesen, Erscheinungsbild und „Tasten statt Handybewegungen“ "
+                "werden lokal auf Ihrem Gerät gespeichert, im üblichen App-Speicher von Apple.",
                 "Spielernamen sind freiwillig; Sie können die Vorgabe „Spieler 2“ usw. beibehalten. Die App sendet diese Daten "
                 "nirgendwohin. Diese Daten können nach den Bedingungen von Apple in Ihren eigenen Gerätebackups "
                 "enthalten sein, außerdem in einer Sicherungskopie, die ein Erwachsener speichert (siehe "
-                "„Sicherungskopie“)."]),
+                "„Sicherungskopie“).",
+                "Drei weitere Dinge bleiben nur auf diesem iPhone und kommen nie in eine Sicherungskopie: einige Zeitangaben der "
+                "iPhone-Uhr, damit ruhende Ameisen und das kostenlose Auffüllen der echten Zeit folgen; welcher Kauf auf die "
+                "Zustimmung eines Elternteils wartet (siehe „Käufe“); und ob der „Ameisenhügel“ bei der letzten Prüfung "
+                "gekauft war. Die Käufe selbst werden nicht als Fortschritt gespeichert."]),
+            ("Käufe", [
+                "Die App bietet drei optionale Käufe an, die jeweils einmal bezahlt werden: „Ameisenhügel“ (die "
+                "Arbeitsameisen gehen nie aus), „Geheimniskarte: Kapitel 1–5“ (die Tipps zu allen Geheimnissen in Kapitel "
+                "1–5 für alle Spieler) und „Ameisenhügel und Geheimniskarte“ zusammen. Es gibt sie nur unter Einstellungen → "
+                "Käufe für Erwachsene, nach der Elternabfrage, und sie gelten für alle Spieler auf diesem iPhone.",
+                "Jede Zahlung wickelt Apple über StoreKit von Apple nach seinen eigenen Bedingungen und seiner "
+                "Datenschutzrichtlinie ab. Wir sehen nie Ihren Namen, Ihren Apple Account, Ihre Zahlungsdaten oder Ihre "
+                "Adresse; Apple stellt uns nur Verkaufsberichte bereit, anhand derer Sie nicht identifiziert werden können. "
+                "Das Laden der Preise, das Kaufen und „Käufe wiederherstellen“ verbinden sich mit dem App Store von Apple; "
+                "der Rest des Spiels funktioniert ohne Internet.",
+                "Zugang gewähren nur Käufe, die StoreKit von Apple auf dem Gerät für den verwendeten Apple Account meldet und "
+                "prüft, auch Käufe über die Familienfreigabe. Die App speichert sie nicht als Fortschritt und legt sie nicht "
+                "in eine Sicherungskopie. Bei einer Kaufanfrage merkt sich die App auf diesem iPhone, welcher Kauf auf die "
+                "Zustimmung eines Elternteils wartet und wann er angefragt wurde, damit sie keinen Kauf anbietet, der sich "
+                "damit überschneidet; dieser Vermerk wird nach zwei Tagen gelöscht und kommt nie in eine Sicherungskopie."]),
             ("Vorlesen", ["Wenn das Vorlesen eingeschaltet ist, liest die App die Aufgaben mit der in iOS "
                           "integrierten Sprachausgabe direkt auf dem Gerät vor. Weder Texte noch Audiodaten "
                           "verlassen das Gerät, und die App verwendet nie das Mikrofon."]),
@@ -455,12 +591,13 @@ PRIVACY_TEXT = {
                                  "den Bewegungssensor des iPhone direkt auf dem Gerät aus, um spielerische "
                                  "Bewegungen zu erkennen, die versteckte "
                                  "Geheimnisse aufdecken, etwa ein sanftes Schütteln oder das Umdrehen des Telefons. Die Messwerte "
-                                 "werden weder gespeichert noch gesendet. Die App greift nicht auf Standort, "
-                                 "Kamera, Kontakte oder Fotos zu."]),
+                                 "werden weder gespeichert noch gesendet. Ist „Tasten statt Handybewegungen“ "
+                                 "eingeschaltet, verwendet die App den Bewegungssensor überhaupt nicht. Die App greift "
+                                 "nicht auf Standort, Kamera, Kontakte oder Fotos zu."]),
             ("Dritte", [
-                "Die App teilt mit niemandem Daten: Sie enthält keinen Code von Drittanbietern und verbindet sich "
-                "mit keinem Server. "
-                "Downloads, Updates und Gerätebackups wickelt Apple nach seiner eigenen Datenschutzrichtlinie ab.",
+                "Die App enthält keinen Code von Drittanbietern, und wir betreiben keine Server: Die App sendet weder uns "
+                "noch sonst jemandem etwas. Downloads, Updates, Gerätebackups und die optionalen Käufe wickelt Apple nach "
+                "seiner eigenen Datenschutzrichtlinie ab.",
                 "Wenn Sie in den iOS-Einstellungen das Teilen von Analysedaten mit App-Entwicklern aktiviert haben, "
                 "kann Apple uns anonyme Absturzberichte und zusammengefasste Statistiken bereitstellen, anhand "
                 "derer Sie nicht identifiziert werden können."]),
@@ -471,12 +608,15 @@ PRIVACY_TEXT = {
                 "Der Spieler, der gerade spielt, kann nicht gelöscht werden. Wurde zuvor eine Sicherungskopie "
                 "wiederhergestellt, kann der Fortschritt, den die App vor dieser Wiederherstellung aufbewahrt hat, "
                 "diesen Spieler noch enthalten (siehe „Sicherungskopie“). Wenn Sie die App "
-                "löschen, werden alle Spieler und alle Daten von Ihrem Gerät entfernt.",
+                "löschen, werden alle Spieler und alle Daten von Ihrem Gerät entfernt. Käufe bleiben beim Apple Account, mit "
+                "dem sie getätigt wurden: Nach einer Neuinstallation holt „Käufe wiederherstellen“ sie zurück.",
                 "Die App sendet uns nie Ihre Daten, daher gibt es bei uns aus der App nichts, was wir aufbewahren, "
                 "einsehen oder löschen könnten."]),
             ("Sicherungskopie", [
                 "Unter Einstellungen → Sicherungskopie kann ein Erwachsener nach der Elternabfrage den Fortschritt aller Spieler, "
-                "ihre Namen und die Einstellungen für Ton, Haptik und Vorlesen in einer Datei speichern. Die Datei "
+                "ihre Namen, die Arbeitsameisen und die Einstellungen für Ton, Haptik, Vorlesen, Erscheinungsbild und "
+                "„Tasten statt Handybewegungen“ in einer Datei speichern. Käufe, eine wartende Kaufanfrage und die "
+                "Zeitangaben der Uhr kommen nie in die Datei. Die Datei "
                 "wird an dem Ort gespeichert, den der Erwachsene im Fenster „Dateien“ auswählt, zum Beispiel auf "
                 "diesem iPhone oder nach den Bedingungen von Apple in iCloud Drive. Die App sendet die Datei "
                 "nirgendwohin und behält keine eigene Kopie, und wir erhalten sie nie.",
@@ -505,13 +645,15 @@ PRIVACY_TEXT = {
                                "GitHub kann die IP-Adressen der Besucher aus Sicherheitsgründen nach der GitHub-Datenschutzerklärung "
                                "protokollieren."]),
             ("Kinder", [
-                "Das Spiel ist für Kinder und Familien gemacht. Es erfasst wissentlich keine Informationen von irgendjemandem, auch "
-                "nicht von Kindern unter 13 Jahren. Es gibt keine Werbung, keine Käufe mit echtem Geld, keine Konten, keinen Chat "
-                "und keine Links zu sozialen Netzwerken. Im Ameisenladen bezahlt man nur mit Sternen, die im Spiel "
-                "verdient wurden.",
-                "Seiten außerhalb des Spiels, wie diese Erklärung und die Support-Seite, öffnen sich erst, nachdem ein Erwachsener "
-                "die Elternabfrage gelöst hat; dasselbe gilt für das Speichern und Wiederherstellen einer Sicherungskopie. Da die "
-                "App keine personenbezogenen Daten erfasst, gibt es keine Datenerhebung, in die Eltern einwilligen müssten."]),
+                "Das Spiel ist für die ganze Familie gemacht, und auch Kinder spielen es. Es erfasst wissentlich keine Informationen von irgendjemandem, auch "
+                "nicht von Kindern unter 13 Jahren. Es gibt keine Werbung, keine Konten, keinen Chat und keine Links zu "
+                "sozialen Netzwerken. Im Ameisenladen bezahlt man nur mit Sternen, die im Spiel verdient wurden.",
+                "Die optionalen Käufe sind nur für Erwachsene: Preise, Angebote, Kaufen und Wiederherstellen liegen hinter "
+                "einer Elternabfrage, und das Spiel zeigt einem Kind nie einen Preis und fordert es nie auf, etwas zu kaufen "
+                "oder die Eltern darum zu bitten. Seiten außerhalb des Spiels, wie diese Erklärung und die Support-Seite, öffnen "
+                "sich ebenfalls erst, nachdem ein Erwachsener die Elternabfrage gelöst hat; dasselbe gilt für das Speichern und "
+                "Wiederherstellen einer Sicherungskopie. Da die App keine personenbezogenen Daten erfasst, gibt es keine "
+                "Datenerhebung, in die Eltern einwilligen müssten."]),
             ("Ihre Rechte", [f"Datenschutzgesetze wie die Datenschutz-Grundverordnung der EU (DSGVO) geben Ihnen "
                              f"das Recht, Auskunft darüber zu verlangen, welche personenbezogenen Daten wir über "
                              f"Sie gespeichert haben, und diese berichtigen oder löschen zu lassen. Über die App "
@@ -532,30 +674,55 @@ PRIVACY_TEXT = {
               "を負います。本ポリシーでは、本アプリ、このウェブサイト、および"
               "サポートへのメッセージで、情報がどのように扱われるかを説明します。",
         summary="簡単にまとめると、本アプリはデータを一切収集しません。本アプリが保存するものはすべてお使いの "
-                "iPhone に残ります。ただし、大人がバックアップを別の場所に保存した場合を除きます。",
+                "iPhone に残ります。ただし、大人がバックアップを別の場所に保存した場合を除きます。任意の購入は Apple "
+                "が処理し、当方が支払い情報を目にすることはありません。",
         sections=[
             ("本アプリが収集するデータ", ["ありません。本アプリは個人データを収集、送信、販売、共有しません。広告、解析、"
-                                          "アカウント、トラッキング、サードパーティの SDK は含まれておらず、インターネットにも接続しません。"]),
+                                          "アカウント、トラッキング、サードパーティの SDK は含まれておらず、当方に何かを送る"
+                                          "こともありません。通常のプレイはインターネットなしで動作し、Apple の App Store "
+                                          "に接続するのは任意の購入だけです（「購入」を参照）。"]),
             ("デバイスに保存されるデータ", [
                 "ゲームの進行状況（現在の作業場、「元に戻す」の履歴を含む途中のゲーム、クリアした作業場、ベスト記録"
                 "と星、今日の作業場の結果、ヒントを使って解いた作業場、星で買ったアリ、章をパーフェクトでクリアして"
-                "もらったアリ、見つけたひみつ、ひみつのヒントがどこまで表示されたか、チュートリアルの状態）、このデ"
-                "バイスで追加したプレイヤーの名前、サウンド・"
-                "振動・読み上げの設定は、Apple 標準のアプリ用ストレージを使ってお使いのデバイスにローカルに保存されます。",
+                "もらったアリ、お店にこれまで届いたアリ、「食料庫」の食べ物と、すでに食べ物をもらった週、見つけたひ"
+                "みつ、ひみつのヒントがどこまで表示されたか、開いたひみつのヒントと無料のたまごヒントを使った場所、チ"
+                "ュートリアルの状態、探索モードや小さな今日の作業場など各プレイヤー自身の設定）、このデバイスで追加し"
+                "たプレイヤーの名前、全プレイヤー共通の働くアリ、サウンド・振動・読み上げ・外観・「端末を動かす代わり"
+                "にボタンを使う」の設定は、Apple 標準のアプリ用ストレージを使ってお使いのデバイスにローカルに保存されます。",
                 "プレイヤー名の入力は任意で、「プレイヤー2」などの初期名のままでもかまいません。本アプリがこれらのデータを"
                 "どこかに送ることはありません。お使いのデバイス自体のバックアップ（Apple の規約が適用されます）や、"
-                "大人が保存したバックアップファイル（「バックアップ」を参照）に含まれる場合があります。"]),
+                "大人が保存したバックアップファイル（「バックアップ」を参照）に含まれる場合があります。",
+                "さらに次の3つは、この iPhone にだけ保存され、バックアップには決して含まれません。休んでいるアリと無料の"
+                "補充が実際の時間どおりに進むようにするための、iPhone の時計から読み取ったいくつかの時刻。保護者の承認を待って"
+                "いる購入（「購入」を参照）。前回の確認時に「アリ塚」が購入済みだったかどうか。購入そのものは進行状況"
+                "として保存されません。"]),
+            ("購入", [
+                "本アプリには、それぞれ一度だけ支払う任意の購入が3つあります。「アリ塚」（働くアリが尽きません）、「ひ"
+                "みつの地図：第1–5章」（第1–5章のすべてのひみつのヒントを全プレイヤーに開放）、そして両方をまとめた"
+                "「アリ塚とひみつの地図」です。これらは保護者確認の後、「設定」→「大人向けの購入」にだけあり、この "
+                "iPhone のすべてのプレイヤーで共有されます。",
+                "支払いはすべて、Apple が Apple の StoreKit を通じて、自社の規約とプライバシーポリシーに基づいて処理しま"
+                "す。当方がお客様の名前、Apple Account、支払い情報、住所を目にすることはありません。Apple が当方に"
+                "提供するのは、お客様を特定しない販売レポートだけです。価格の読み込み、購入、「購入を復元」は Apple の "
+                "App Store に接続しますが、それ以外のゲームはインターネットなしで動作します。",
+                "購入した内容が使えるようになるのは、Apple の StoreKit が、使用中の Apple Account についてデバイス上で報告し検証した"
+                "購入だけで、ファミリー共有で共有された購入も含みます。本アプリは購入を進行状況として保存せず、バック"
+                "アップにも入れません。「承認と購入のリクエスト」を使う場合、重なる購入を表示しないように、本アプリは"
+                "どの購入が保護者の承認を待っているか、いつリクエストしたかをこの iPhone に記憶します。この記録は2日後"
+                "に消え、バックアップに含まれることはありません。"]),
             ("読み上げ", ["「説明を読み上げる」がオンのとき、本アプリはデバイス上の iOS 内蔵の音声合成でパズルの説明"
                       "を読み上げます。"
                           "テキストや音声がデバイスの外に出ることはなく、マイクを使うこともありません。"]),
             ("モーションセンサー", ["クリアした作業場の結果が画面に表示されている間だけ、本アプリはデバイス上で iPhone の"
                                     "モーションセンサーを読み取り、そっと振る、ひっくり返すといった、隠れたひみつを"
                                     "見つける遊びの"
-                                    "動きを検出します。読み取った値が保存・送信されることはありません。本アプリは位置情報、カメラ、"
-                                    "連絡先、写真を使いません。"]),
+                                    "動きを検出します。読み取った値が保存・送信されることはありません。「端末を動かす代"
+                                    "わりにボタンを使う」がオンのときは、本アプリはモーションセンサーをまったく使いま"
+                                    "せん。本アプリは位置情報、カメラ、連絡先、写真を使いません。"]),
             ("第三者", [
-                "本アプリは誰ともデータを共有しません。サードパーティのコードを含まず、どのサーバーとも通信しません。"
-                "ダウンロード、アップデート、デバイスのバックアップは、Apple が自社のプライバシーポリシーに基づいて取り扱います。",
+                "本アプリにはサードパーティのコードが含まれておらず、当方はサーバーを運営していません。本アプリが当方や"
+                "ほかの誰かに何かを送ることはありません。ダウンロード、アップデート、デバイスのバックアップ、任意の購入"
+                "は、Apple が自社のプライバシーポリシーに基づいて取り扱います。",
                 "iOS の設定で App デベロッパとの解析データの共有を選んだ場合、Apple が当方に、匿名のクラッシュレポートと、"
                 "お客様を特定しない集計統計を提供することがあります。"]),
             ("データの保管と削除", [
@@ -564,13 +731,15 @@ PRIVACY_TEXT = {
                 "す）。いまプレイ中のプレイヤーは"
                 "削除できません。以前にバックアップを復元したことがある場合、復元の前に保管された進行状況に、そのプレイヤーが"
                 "まだ含まれていることがあります（「バックアップ」を参照）。本アプリを削除すると、すべてのプレイヤーとすべての"
-                "データがデバイスから消去されます。",
+                "データがデバイスから消去されます。購入は、購入した Apple Account に残ります。再インストール後は「購入"
+                "を復元」で戻せます。",
                 "本アプリがお客様のデータを当方に送ることはないため、当方には、本アプリに由来する保管・照会・削除の対象となる"
                 "ものはありません。"]),
             ("バックアップ", [
                 "「設定」→「バックアップ」では、保護者確認を通過した大人が、全プレイヤーの進行状況、プレイヤーの名"
-                "前、サウンド・"
-                "振動・読み上げの設定をひとつのファイルとして保存できます。ファイルは、大人が「ファイル」の画面で選"
+                "前、働くアリ、サウンド・振動・読み上げ・外観・「端末を動かす代わりにボタンを使う」の設定をひとつのフ"
+                "ァイルとして保存できます。購入、承認待ちのリクエスト、時計の読み取り値がファイルに入ることはありませ"
+                "ん。ファイルは、大人が「ファイル」の画面で選"
                 "んだ場所、たとえばこの iPhone や iCloud Drive（Apple の規約が適用されます）に保存されます。本アプリ"
                 "がファイルをどこかに送ることは"
                 "なく、独自のコピーも保持せず、当方がそれを受け取ることもありません。",
@@ -596,10 +765,12 @@ PRIVACY_TEXT = {
                           "の IP アドレスを記録する"
                                   "ことがあります。"]),
             ("子ども", [
-                "このゲームは子どもと家族のために作られています。13歳未満の子どもを含め、誰からも意図して情報を収集することは"
-                "ありません。広告、課金、アカウント、チャット、ソーシャルメディアへのリンクはありません。アリの"
-                "お店で使えるのは、ゲーム内で獲得した星だけです。",
-                "本ポリシーやサポートページなど、ゲームの外のページは、大人が保護者確認を通過した後にだけ開きます。"
+                "このゲームは家族みんなのために作られており、子どもも遊びます。13歳未満の子どもを含め、誰からも意図して情報を収集することは"
+                "ありません。広告、アカウント、チャット、ソーシャルメディアへのリンクはありません。アリのお店で使える"
+                "のは、ゲーム内で獲得した星だけです。",
+                "任意の購入は大人だけのものです。価格、案内、購入、復元は保護者確認の先にあり、ゲームが子どもに価格を見"
+                "せたり、何かを買うよう、または保護者に頼むよう子どもに促したりすることはありません。"
+                "本ポリシーやサポートページなど、ゲームの外のページも、大人が保護者確認を通過した後にだけ開きます。"
                 "バックアップの保存と復元も同様です。本アプリは個人データを収集しないため、保護者の同意が必要となるデータ収集は"
                 "ありません。"]),
             ("お客様の権利", [f"EU 一般データ保護規則（GDPR）などのプライバシー法では、当方が保有するお客様の個人デ"
@@ -616,31 +787,53 @@ PRIVACY_TEXT = {
               "앱 개발자(App Store의 앱 페이지에 ‘제공자’로 표시되는 개인 또는 회사, 이하 ‘당사’)의 상호이며, "
               "당사가 이 방침에 대한 책임을 집니다. 이 방침은 앱, 이 웹사이트, 지원 문의 메시지에서 정보가 어떻게 "
               "처리되는지 설명합니다.",
-        summary="요약하면, 앱은 어떤 데이터도 수집하지 않습니다. 앱이 저장하는 모든 것은 사용자의 iPhone에 남습니다. 단, 어른이 백업을 다른 곳에 저장하는 경우는 예외입니다.",
+        summary="요약하면, 앱은 어떤 데이터도 수집하지 않습니다. 앱이 저장하는 모든 것은 사용자의 iPhone에 남습니다. 단, 어른이 "
+                "백업을 다른 곳에 저장하는 경우는 예외입니다. 선택 구매는 Apple이 처리하며, 당사는 결제 정보를 볼 수 "
+                "없습니다.",
         sections=[
             ("앱이 수집하는 데이터", ["없습니다. 앱은 어떠한 개인정보도 수집, 전송, 판매 또는 공유하지 않습니다. "
                              "광고, 분석, 계정, "
-                                      "추적, 타사 SDK가 없으며 인터넷에 연결하지 않습니다."]),
+                                      "추적, 타사 SDK가 없으며, 당사에 아무것도 보내지 않습니다. 일반 플레이는 "
+                                      "인터넷 없이 작동하며, Apple의 App Store에 연결하는 것은 선택 구매뿐입니다"
+                                      "(‘구매’ 참조)."]),
             ("기기에 저장되는 데이터", [
                 "게임 진행 상황(현재 작업장, 되돌리기 기록이 남아 있는 진행 중인 게임, 완료한 작업장, 최고 기록과 별, 오늘의 "
-                "작업장 결과, 힌트로 푼 작업장, 별을 써서 산 개미나 한 장을 완벽하게 끝내고 받은 개미, 찾은 비밀과 "
-                "그 힌트가 열린 정도, "
-                "튜토리얼 상태), 이 기기에서 추가한 플레이어 이름, 소리·진동·설명 읽어 주기 설정은 Apple의 표준 앱 "
-                "저장 공간을 사용해 "
-                "사용자의 기기에 로컬로 저장됩니다.",
+                "작업장 결과, 힌트로 푼 작업장, 별을 써서 산 개미나 한 장을 완벽하게 끝내고 받은 개미, 지금까지 상점에 "
+                "도착한 개미, ‘먹이 창고’의 먹이와 이미 먹이를 받은 주, 찾은 비밀과 그 힌트가 열린 정도, 연 비밀 "
+                "힌트와 무료 알 힌트를 쓴 곳, 튜토리얼 상태, 탐험 모드나 작은 오늘의 작업장 같은 플레이어별 설정), "
+                "이 기기에서 추가한 플레이어 이름, 모든 플레이어가 함께 쓰는 일하는 개미, 소리·진동·설명 읽어 주기·화면 "
+                "모드·‘휴대폰 움직임 대신 버튼 사용’ 설정은 Apple의 표준 앱 저장 공간을 사용해 사용자의 기기에 로컬로 "
+                "저장됩니다.",
                 "플레이어 이름은 선택 사항이며 ‘플레이어 2’ 같은 기본 이름을 그대로 써도 됩니다. 앱은 이 데이터를 어디에도 "
                 "보내지 않습니다. 다만 이 데이터는 Apple 약관에 따라 사용자 자신의 기기 백업에 포함될 수 있으며, "
-                "어른이 저장한 백업 파일(‘백업’ 참조)에도 포함될 수 있습니다."]),
+                "어른이 저장한 백업 파일(‘백업’ 참조)에도 포함될 수 있습니다.",
+                "다음 세 가지는 이 iPhone에만 남으며 백업에는 절대 들어가지 않습니다. 쉬는 개미와 무료 충전이 실제 시간에 "
+                "맞게 진행되도록 하는 iPhone 시계에서 읽은 시각 몇 개, 부모님의 승인을 기다리는 구매(‘구매’ 참조), 마지막으로 "
+                "확인했을 때 ‘개미탑’을 구매한 상태였는지 여부입니다. 구매 자체는 진행 상황으로 저장되지 않습니다."]),
+            ("구매", [
+                "앱에는 각각 한 번만 결제하는 선택 구매 세 가지가 있습니다. ‘개미탑’(일하는 개미가 바닥나지 않음), ‘비밀 "
+                "지도: 1–5장’(모든 플레이어에게 1–5장의 모든 비밀 힌트를 열어 줌), 그리고 둘을 묶은 ‘개미탑과 비밀 "
+                "지도’입니다. 이 구매는 보호자 확인을 통과한 뒤 설정 → 어른을 위한 구매에만 있으며, 이 iPhone의 모든 "
+                "플레이어가 함께 씁니다.",
+                "모든 결제는 Apple이 Apple의 StoreKit을 통해 자체 약관과 개인정보 처리방침에 따라 처리합니다. 당사는 "
+                "사용자의 이름, Apple 계정, 결제 정보, 주소를 볼 수 없으며, Apple은 사용자를 식별할 수 없는 판매 보고서만 "
+                "당사에 제공합니다. 가격 불러오기, 구매, ‘구매 복원’은 Apple의 App Store에 연결하며, 나머지 게임은 인터넷 "
+                "없이 작동합니다.",
+                "이용 권한은 Apple의 StoreKit이 사용 중인 Apple 계정에 대해 기기에서 알려 주고 확인한 구매로만 주어지며, "
+                "가족 공유로 공유된 구매도 포함됩니다. 앱은 구매를 진행 상황으로 저장하지 않고 백업에도 넣지 않습니다. "
+                "구입 요청을 사용하는 경우, 앱은 겹치는 구매를 보여 주지 않도록 어떤 구매가 부모님의 승인을 기다리는지와 "
+                "언제 요청했는지를 이 iPhone에 기억합니다. 이 기록은 이틀 뒤에 지워지며 백업에는 절대 들어가지 않습니다."]),
             ("설명 읽어 주기", ["‘설명 읽어 주기’가 켜져 있으면 앱은 기기에 내장된 iOS 음성 합성 기능으로 퍼즐 "
                           "설명을 읽어 줍니다. 텍스트나 음성은 기기 밖으로 나가지 않으며, 앱은 마이크를 "
                           "사용하지 않습니다."]),
             ("동작 센서", ["푼 작업장의 결과가 화면에 표시되어 있는 동안에만 앱은 기기 안에서 iPhone의 동작 센서 "
                        "값을 읽어, 살짝 "
                            "흔들기나 휴대폰 뒤집기처럼 숨은 비밀을 여는 놀이 동작을 감지합니다. 측정값은 저장되거나 전송되지 "
-                           "않습니다. 앱은 위치, 카메라, 연락처, 사진을 사용하지 않습니다."]),
+                           "않습니다. ‘휴대폰 움직임 대신 버튼 사용’을 켜면 앱은 동작 센서를 전혀 사용하지 않습니다. 앱은 "
+                           "위치, 카메라, 연락처, 사진을 사용하지 않습니다."]),
             ("제3자", [
-                "앱은 누구와도 데이터를 공유하지 않습니다. 타사 코드가 없으며 어떤 서버와도 통신하지 않습니다. 다운로드, "
-                "업데이트, 기기 백업은 Apple이 자체 개인정보 처리방침에 따라 처리합니다.",
+                "앱에는 타사 코드가 없고 당사는 서버를 운영하지 않습니다. 앱은 당사나 다른 누구에게도 아무것도 보내지 "
+                "않습니다. 다운로드, 업데이트, 기기 백업, 선택 구매는 Apple이 자체 개인정보 처리방침에 따라 처리합니다.",
                 "iOS 설정에서 앱 개발자와 분석 정보를 공유하기로 선택한 경우, Apple은 당사에 익명의 충돌 보고서와 사용자를 "
                 "식별할 수 없는 집계 통계를 제공할 수 있습니다."]),
             ("데이터 보관 및 삭제", [
@@ -648,11 +841,14 @@ PRIVACY_TEXT = {
                 "플레이어를 열고, 다른 플레이어로 바꾼 뒤 지우려는 플레이어를 삭제하세요(어른의 확인이 필요합니다). "
                 "지금 플레이 중인 플레이어는 삭제할 수 없습니다. 이전에 백업을 복원한 적이 있다면, 복원 전에 보관해 "
                 "둔 진행 상황에는 삭제한 플레이어가 아직 남아 있을 수 있습니다(‘백업’ 참조). 앱을 삭제하면 모든 "
-                "플레이어와 모든 데이터가 기기에서 지워집니다.",
+                "플레이어와 모든 데이터가 기기에서 지워집니다. 구매는 구매한 Apple 계정에 남아 있으며, 앱을 다시 설치한 "
+                "뒤 ‘구매 복원’으로 되찾을 수 있습니다.",
                 "앱은 사용자의 데이터를 당사에 보내지 않으므로, 당사가 보관·조회·삭제할 수 있는 앱 데이터는 없습니다."]),
             ("백업", [
-                "어른은 설정 → 백업에서 보호자 확인을 통과한 뒤 모든 플레이어의 진행 상황, 플레이어 이름, "
-                "소리·진동·설명 읽어 주기 설정을 하나의 파일로 저장할 수 있습니다. 파일은 어른이 ‘파일’ 창에서 고른 "
+                "어른은 설정 → 백업에서 보호자 확인을 통과한 뒤 모든 플레이어의 진행 상황, 플레이어 이름, 일하는 개미, "
+                "소리·진동·설명 읽어 주기·화면 모드·‘휴대폰 움직임 대신 버튼 사용’ 설정을 하나의 파일로 저장할 수 "
+                "있습니다. 구매, 승인을 기다리는 요청, 시계에서 읽은 시각은 파일에 절대 들어가지 않습니다. 파일은 어른이 ‘파일’ "
+                "창에서 고른 "
                 "곳, 예를 들어 이 iPhone이나 Apple "
                 "약관에 따른 iCloud Drive에 저장됩니다. 앱은 파일을 어디에도 보내지 않고 자체 사본도 보관하지 않으며, 당사도 "
                 "파일을 받지 않습니다.",
@@ -673,11 +869,12 @@ PRIVACY_TEXT = {
             ("이 웹사이트", ["이 웹사이트는 쿠키나 분석 도구를 사용하지 않습니다. GitHub Pages에서 호스팅되며, GitHub는 GitHub "
                              "개인정보 보호정책에 따라 보안을 위해 방문자의 IP 주소를 기록할 수 있습니다."]),
             ("어린이", [
-                "이 게임은 어린이와 가족을 위해 만들어졌습니다. 만 13세 미만 어린이를 포함해 누구로부터도 고의로 "
-                "정보를 수집하지 않습니다. 광고, 유료 결제, 계정, 채팅, 소셜 미디어 링크가 없습니다. 개미 "
-                "상점에서는 게임에서 얻은 "
+                "이 게임은 온 가족을 위해 만들어졌으며, 어린이도 플레이합니다. 만 13세 미만 어린이를 포함해 누구로부터도 고의로 "
+                "정보를 수집하지 않습니다. 광고, 계정, 채팅, 소셜 미디어 링크가 없습니다. 개미 상점에서는 게임에서 얻은 "
                 "별만 사용합니다.",
-                "이 방침과 지원 페이지처럼 게임 밖의 페이지는 어른이 보호자 확인을 통과한 뒤에만 열리며, 백업 저장과 복원도 "
+                "선택 구매는 어른만을 위한 것입니다. 가격, 안내, 구매, 복원은 보호자 확인 뒤에 있으며, 게임은 아이에게 "
+                "가격을 보여 주지 않고, 무언가를 사라고 하거나 부모님께 부탁하라고 권하지도 않습니다. "
+                "이 방침과 지원 페이지처럼 게임 밖의 페이지도 어른이 보호자 확인을 통과한 뒤에만 열리며, 백업 저장과 복원도 "
                 "마찬가지입니다. 앱은 개인정보를 수집하지 않으므로 부모가 동의해야 할 데이터 수집이 없습니다."]),
             ("사용자의 권리", [f"EU 일반 개인정보 보호법(GDPR) 같은 개인정보 보호법은 당사가 보유한 사용자의 "
                          f"개인정보가 무엇인지 문의하고, 이를 정정하거나 삭제하도록 요청할 권리를 보장합니다. "
@@ -695,37 +892,54 @@ PRIVACY_TEXT = {
         intro="《搬食物的蚂蚁》（以下简称“本应用”）是一款以蚁群为主题的 iPhone 逻辑解谜游戏。exception games 是本应用开"
               "发者（以下简称“我们”）的商号。该开发者即在本应用 App Store 页面上列为“提供者”的个人或公司，并对本政策"
               "负责。本政策说明本应用、本网站以及发至支持邮箱的消息中的信息会如何处理。",
-        summary="简而言之：本应用不收集任何数据。它保存的一切都留在您的 iPhone 上，除非有成年人把备份保存到别处。",
+        summary="简而言之：本应用不收集任何数据。它保存的一切都留在您的 iPhone 上，除非有成年人把备份保存到别处。可选购买项目由 "
+                "Apple 处理，我们绝不会看到付款信息。",
         sections=[
             ("本应用收集的数据", ["无。本应用不收集、传输、出售或分享任何个人信息。它没有广告、分析工具、账户或跟踪"
-                          "功能，不含第三方 SDK，也不连接互联网。"]),
+                          "功能，不含第三方 SDK，也从不向我们发送任何内容。日常游玩无需联网；只有可选购买项目会连接 "
+                          "Apple 的 App Store（见“购买项目”）。"]),
             ("保存在设备上的数据", [
                 "游戏进度（当前车间、带撤销记录的未完成游戏、已完成的车间、最佳成绩和星星、今日车间的结果、哪些车间是借助提示"
-                "解开的、用星星买的蚂蚁或因完美通关一章而获得的蚂蚁、找到的秘密及其提示已揭示到哪一步、教程状态）、在此设备上"
-                "添加的玩家名字，以及声音、振动和朗读设置，都通过 Apple 标准的应用存储保存在您的设备本地。",
+                "解开的、用星星买的蚂蚁或因完美通关一章而获得的蚂蚁、商店至今送到了哪些蚂蚁、“食物储藏室”里的食物以及已领过"
+                "食物的周、找到的秘密及其提示已揭示到哪一步、已打开的秘密提示以及免费蛋提示用在了哪里、教程状态，以及每位玩"
+                "家自己的设置，例如探索模式和小号今日车间）、在此设备上添加的玩家名字、所有玩家共用的工蚁，以及声音、振动、"
+                "朗读、外观和“用按钮代替手机动作”设置，都通过 Apple 标准的应用存储保存在您的设备本地。",
                 "玩家名字可以不填，保留“玩家 2”之类的默认名字即可。本应用绝不会把这些数据发送到任何地方。它们可能会依照 Apple "
-                "的条款包含在您自己的设备备份中，也可能包含在成年人保存的备份里（见“备份”）。"]),
+                "的条款包含在您自己的设备备份中，也可能包含在成年人保存的备份里（见“备份”）。",
+                "另有三项只留在这台 iPhone 上，绝不会放进备份：几次 iPhone 时钟读数，让休息的蚂蚁和免费补充按真实时间进行；"
+                "哪项购买正在等待家长批准（见“购买项目”）；以及上次检查时是否已拥有“蚁丘”。购买项目本身不会作为进度保存。"]),
+            ("购买项目", [
+                "本应用提供三项可选购买，每项只需付费一次：“蚁丘”（工蚁永不耗尽）、“秘密地图：第 1–5 章”（为所有玩家开启第 "
+                "1–5 章所有秘密的提示），以及两者合一的“蚁丘和秘密地图”。它们只在通过家长验证后的“设置”→“大人购买区”中"
+                "提供，并由这台 iPhone 上的所有玩家共享。",
+                "每笔付款都由 Apple 通过 Apple 的 StoreKit 依照其自身的条款和隐私政策处理。我们绝不会看到您的姓名、Apple "
+                "账户、付款信息或地址；Apple 只向我们提供无法识别您身份的销售报告。载入价格、购买和“恢复购买”会连接 Apple "
+                "的 App Store；游戏的其余部分无需联网。",
+                "只有 Apple 的 StoreKit 在设备上针对当前使用的 Apple 账户报告并验证过的购买，才能开启相应内容，包括通过家人"
+                "共享获得的购买。本应用不会把购买保存为进度，也不会放进备份。使用“购买前询问”时，本应用会在这台 iPhone 上"
+                "记住哪项购买正在等待家长批准以及何时提出的请求，以免提供与之重叠的购买；这条记录会在两天后删除，绝不会放进"
+                "备份。"]),
             ("朗读", ["开启“朗读说明”后，本应用会在设备上使用 iOS 内置的语音合成功能朗读谜题说明。任何文字或音频都不"
                     "会离开设备，本应用也从不"
                       "使用麦克风。"]),
             ("运动传感器", ["只有在已解开车间的结果显示在屏幕上时，本应用才会在设备上读取 iPhone 的运动传感器，以识"
                        "别能揭开隐藏秘密的趣味动作，例如轻轻摇晃或把手机翻过来。传感器读数既不会被保存，也不会"
-                       "被发送。本应用不使用位置、相机、通讯录"
+                       "被发送。开启“用按钮代替手机动作”后，本应用完全不使用运动传感器。本应用不使用位置、相机、通讯录"
                             "或照片。"]),
             ("第三方", [
-                "本应用不与任何人分享数据：它不含第三方代码，也不与任何服务器通信。下载、更新和设备备份由 Apple 依照其自身的"
-                "隐私政策处理。",
+                "本应用不含第三方代码，我们也不运营任何服务器：本应用不会向我们或其他任何人发送任何内容。下载、更新、设备备份"
+                "和可选购买项目由 Apple 依照其自身的隐私政策处理。",
                 "如果您在 iOS 设置中开启了“与 App 开发者共享”（共享分析数据），Apple 可能会向我们提供匿名的崩溃报告"
                 "和无法识别您身份的汇总统计数据。"]),
             ("数据的保留与删除", [
                 "数据会一直保留在您的 iPhone 上，直到您删除它。要删除某位玩家的进度，请打开“设置”→“玩家”，先切换到其"
                 "他玩家，再删除要移除的那位玩家（需由成年人确认）。当前正在玩的玩家无法删除。如果以前恢复过备份，恢"
                 "复前保留的进度中可能仍包含被删除的玩家（见“备份”）。删除本应用会从您的设备上移除所有玩家和所有数"
-                "据。",
+                "据。购买项目保留在购买时所用的 Apple 账户中：重新安装后，可用“恢复购买”找回。",
                 "本应用从不向我们发送您的数据，因此我们没有任何来自本应用的数据可供保留、查询或删除。"]),
             ("备份", [
-                "在“设置”→“备份”中，成年人通过家长验证后，可以把所有玩家的进度、玩家名字以及声音、振动和朗读设置保存"
-                "为一个文件。文件会保存到成年人在“文件”窗口中选择的位置，例如这台 iPhone 上，或依照 Apple 的条款保存"
+                "在“设置”→“备份”中，成年人通过家长验证后，可以把所有玩家的进度、玩家名字、工蚁以及声音、振动、朗读、外观和"
+                "“用按钮代替手机动作”设置保存为一个文件。购买项目、等待批准的请求和时钟读数绝不会放进文件。文件会保存到成年人在“文件”窗口中选择的位置，例如这台 iPhone 上，或依照 Apple 的条款保存"
                 "在 iCloud 云盘中。本应用不会把文件发送到任何地方，自身也不保留副本；我们也绝不会收到该文件。",
                 "恢复备份同样需要通过家长验证，它会用文件中的内容替换设备上的所有玩家及其进度。删除本应用不会删除已保存的备份："
                 "不再需要时，请在“文件” App 中删除该文件。",
@@ -741,10 +955,11 @@ PRIVACY_TEXT = {
             ("本网站", ["本网站不使用 Cookie 或分析工具。它托管在 GitHub Pages 上，GitHub 可能会依照其隐私声明，为安全"
                         "起见记录访问者的 IP 地址。"]),
             ("儿童", [
-                "本游戏为儿童和家庭而设计。它不会有意收集任何人（包括 13 岁以下儿童）的任何信息。游戏中没有广告、没"
-                "有需用真钱支付的 App 内购买项目、没有账户、没有聊天，也没有社交媒体链接。蚂蚁商店只接受在游戏中获得"
-                "的星星。",
-                "游戏以外的页面，例如本政策和支持页面，只有在成年人通过家长验证后才会打开；保存和恢复备份也是如此。由于本应用"
+                "本游戏为全家人而设计，儿童也会玩。它不会有意收集任何人（包括 13 岁以下儿童）的任何信息。游戏中没有广告、没"
+                "有账户、没有聊天，也没有社交媒体链接。蚂蚁商店只接受在游戏中获得的星星。",
+                "可选购买项目只面向成年人：价格、介绍、购买和恢复购买都在家长验证之后，游戏绝不会向孩子显示价格，也不会让孩子"
+                "购买或去请家长购买。"
+                "游戏以外的页面，例如本政策和支持页面，同样只有在成年人通过家长验证后才会打开；保存和恢复备份也是如此。由于本应用"
                 "不收集个人信息，因此不存在需要家长同意的数据收集。"]),
             ("您的权利", [f"欧盟《通用数据保护条例》（GDPR）等隐私保护法律赋予您以下权利：查询我们持有哪些关于您的个"
                       f"人信息，并要求更正或删除这些信息。本应用不向我们提供任何数据；我们可能持有的唯一数据是您"
@@ -758,37 +973,56 @@ PRIVACY_TEXT = {
         intro="《搬食物的螞蟻》（以下稱「本 App」）是一款以蟻群為主題的 iPhone 邏輯解謎遊戲。exception games 是本 App 開發者"
               "的商號；該開發者即在本 App 的 App Store 頁面上標示為「供應商」的個人或公司，並對本政策負責（以下稱「"
               "我們」）。本政策說明在本 App 中、本網站上，以及您寄給支援團隊的訊息中，資訊會如何處理。",
-        summary="簡單來說：本 App 不收集任何資料。它儲存的一切都留在您的 iPhone 上，除非有大人把備份儲存到其他地方。",
+        summary="簡單來說：本 App 不收集任何資料。它儲存的一切都留在您的 iPhone 上，除非有大人把備份儲存到其他地方。選購項目由 "
+                "Apple 處理，我們絕不會看到付款資料。",
         sections=[
             ("本 App 收集的資料", ["沒有。本 App 不收集、傳輸、販售或分享任何個人資料。它不含廣告、分析、帳號、追蹤或第三方 "
-                                   "SDK，也不連線到網際網路。"]),
+                                   "SDK，也從不傳送任何內容給我們。平常遊玩不需要連網；只有選購項目會連線到 Apple 的 "
+                                   "App Store（見「購買項目」）。"]),
             ("儲存在裝置上的資料", [
                 "遊戲進度（目前的工坊、含復原紀錄的未完成遊戲、已完成的工坊、最佳成績與星星、今日工坊的結果、哪些工坊是靠提示"
-                "解開的、用星星買的螞蟻或因完美完成一章而獲得的螞蟻、找到的秘密與其提示已開啟的程度、教學狀態）、在此裝置上"
-                "新增的玩家名稱，以及音效、震動與朗讀設定，都透過 Apple 標準的 App 儲存空間儲存在您的裝置上。",
+                "解開的、用星星買的螞蟻或因完美完成一章而獲得的螞蟻、商店至今送達了哪些螞蟻、「食物儲藏室」裡的食物以及已領"
+                "過食物的週、找到的秘密與其提示已開啟的程度、已開啟的秘密提示以及免費蛋提示用在哪裡、教學狀態，以及每位玩家"
+                "自己的設定，例如探索模式與小型今日工坊）、在此裝置上新增的玩家名稱、所有玩家共用的工蟻，以及音效、震動、朗"
+                "讀、外觀與「用按鈕代替手機動作」設定，都透過 Apple 標準的 App 儲存空間儲存在您的裝置上。",
                 "玩家名稱可以不填，保留「玩家 2」之類的預設名稱即可。本 App 絕不會把這些資料傳送到任何地方。它們可能會依照 "
-                "Apple 的條款包含在您自己的裝置備份中，也可能包含在大人儲存的備份裡（見「備份」）。"]),
+                "Apple 的條款包含在您自己的裝置備份中，也可能包含在大人儲存的備份裡（見「備份」）。",
+                "另有三項只留在這台 iPhone 上，絕不會放進備份：幾筆 iPhone 時鐘讀數，讓休息的螞蟻與免費補充依照真實時間進"
+                "行；哪一項購買正在等候家長核准（見「購買項目」）；以及上次檢查時是否已擁有「蟻丘」。購買項目本身不會當作進"
+                "度儲存。"]),
+            ("購買項目", [
+                "本 App 提供三項選購項目，每項只需付費一次：「蟻丘」（工蟻永不耗盡）、「秘密地圖：第 1–5 章」（為所有玩家開"
+                "啟第 1–5 章所有秘密的提示），以及兩者合一的「蟻丘和秘密地圖」。它們只在通過家長驗證後的「設定」→「大人購"
+                "買區」中提供，並由這台 iPhone 上的所有玩家共享。",
+                "每筆付款都由 Apple 透過 Apple 的 StoreKit 依照其自身的條款與隱私權政策處理。我們絕不會看到您的姓名、Apple "
+                "帳號、付款資料或地址；Apple 只會向我們提供無法識別您身分的銷售報告。載入價格、購買與「回復購買項目」會連線到 "
+                "Apple 的 App Store；遊戲的其餘部分不需要連網。",
+                "只有 Apple 的 StoreKit 在裝置上針對目前使用的 Apple 帳號回報並驗證過的購買，才會開啟對應內容，包括透過家人"
+                "共享取得的購買。本 App 不會把購買儲存為進度，也不會放進備份。使用「購買前詢問」時，本 App 會在這台 iPhone "
+                "上記下哪一項購買正在等候家長核准，以及何時提出請求，以免提供與之重疊的購買；這筆紀錄會在兩天後刪除，絕不會"
+                "放進備份。"]),
             ("朗讀", ["開啟「朗讀說明」時，本 App 會在裝置上使用 iOS 內建的語音合成朗讀謎題說明。文字與聲音不會離開"
                     "裝置，本 App 也從不"
                       "使用麥克風。"]),
             ("動作感測器", ["只有在已解開工坊的結果顯示於螢幕上時，本 App 才會在裝置上讀取 iPhone 的動作感測器，以察覺能揭開"
-                            "隱藏秘密的有趣動作，例如輕輕搖晃或把手機翻過來。這些讀數絕不會被儲存或傳送。本 App 不使"
-                            "用定位、相機、"
+                            "隱藏秘密的有趣動作，例如輕輕搖晃或把手機翻過來。這些讀數絕不會被儲存或傳送。開啟「用按鈕"
+                            "代替手機動作」後，本 App 完全不使用動作感測器。本 App 不使用定位、相機、"
                             "聯絡人或照片。"]),
             ("第三方", [
-                "本 App 不與任何人分享資料：它不含第三方程式碼，也不與任何伺服器通訊。下載、更新與裝置備份由 Apple 依照其自身的"
-                "隱私權政策處理。",
+                "本 App 不含第三方程式碼，我們也不經營任何伺服器：本 App 不會傳送任何內容給我們或其他任何人。下載、更新、裝置"
+                "備份與選購項目由 Apple 依照其自身的隱私權政策處理。",
                 "如果您在 iOS 設定中選擇與 App 開發者分享分析資料，Apple 可能會向我們提供匿名的當機報告，以及無法識別您身分的"
                 "彙總統計。"]),
             ("資料的保留與刪除", [
                 "資料會一直保留在您的 iPhone 上，直到您刪除為止。若要刪除某位玩家的進度，請打開「設定」→「玩家」，先"
                 "切換到另一位玩家，再刪除要移除的那位玩家（需由大人確認）。正在遊玩的玩家無法刪除。如果先前曾回復備"
                 "份，回復前保留的進度中可能仍包含被刪除的玩家"
-                "（見「備份」）。刪除本 App 會從您的裝置移除所有玩家與所有資料。",
+                "（見「備份」）。刪除本 App 會從您的裝置移除所有玩家與所有資料。購買項目會保留在購買時使用的 Apple 帳號中："
+                "重新安裝後，可用「回復購買項目」找回。",
                 "本 App 從不把您的資料傳送給我們，因此我們這裡沒有任何來自本 App 的資料需要保留、查詢或刪除。"]),
             ("備份", [
-                "在「設定」→「備份」中，通過家長驗證後，大人可以把所有玩家的進度、玩家名稱以及音效、震動與朗讀設定儲"
-                "存成一個檔案。"
+                "在「設定」→「備份」中，通過家長驗證後，大人可以把所有玩家的進度、玩家名稱、工蟻以及音效、震動、朗讀、外觀與"
+                "「用按鈕代替手機動作」設定儲存成一個檔案。購買項目、等候核准的請求與時鐘讀數絕不會放進檔案。"
                 "檔案會存放在大人於「檔案」視窗中選擇的位置，例如此 iPhone 上，或依照 Apple 條款存放在 iCloud 雲碟中。本 App "
                 "不會把檔案傳送到任何地方，也不保留自己的副本，我們也從不會收到它。",
                 "回復備份同樣需要通過家長驗證，它會用檔案中的內容取代裝置上的所有玩家及其進度。刪除本 App 不會刪除已儲存的"
@@ -808,10 +1042,11 @@ PRIVACY_TEXT = {
             ("本網站", ["本網站不使用 Cookie 或分析工具。它託管於 GitHub Pages，GitHub 可能會依照 GitHub 隱私權聲明，基於安全"
                         "考量記錄訪客的 IP 位址。"]),
             ("兒童", [
-                "本遊戲為兒童與家庭而設計。它不會在知情的情況下收集任何人的資訊，包括未滿 13 歲的兒童。遊戲中沒有廣"
-                "告、沒有用真錢購買的項目、沒有帳號、沒有聊天功能，也沒有社群媒體連結。螞蟻商店只使用在遊戲中贏得的"
-                "星星。",
-                "遊戲以外的頁面，例如本政策與支援頁面，只有在大人通過家長驗證後才會開啟；儲存與回復備份也是如此。由"
+                "本遊戲為全家人而設計，兒童也會玩。它不會在知情的情況下收集任何人的資訊，包括未滿 13 歲的兒童。遊戲中沒有廣"
+                "告、沒有帳號、沒有聊天功能，也沒有社群媒體連結。螞蟻商店只使用在遊戲中贏得的星星。",
+                "選購項目只給大人使用：價格、介紹、購買與回復購買都在家長驗證之後，遊戲絕不會向孩子顯示價格，也不會要孩子購"
+                "買或去請家長購買。"
+                "遊戲以外的頁面，例如本政策與支援頁面，同樣只有在大人通過家長驗證後才會開啟；儲存與回復備份也是如此。由"
                 "於本 App 不收集個人資料，因此沒有需要家長同意的資料收集。"]),
             ("您的權利", [f"歐盟《一般資料保護規則》（GDPR）等個人資料保護法規賦予您權利，可詢問我們持有哪些關於您的"
                       f"個人資料，並要求更正或刪除這些資料。本 App 不會向我們提供任何資料；我們可能持有的唯一資"
@@ -832,11 +1067,16 @@ SUPPORT_TEXT = {
             ("Where is my progress saved?", "Only on your iPhone. The game has no accounts and no cloud sync. Deleting the app erases all progress, so update the app without deleting it."),
             ("How do I start a workshop over?", "Tap Restart. To replay the tutorial, open Settings → Replay tutorial."),
             ("I’m stuck. What can I do?", "Tap Undo to take back the last signal, or tap Hint to see the next signal. A workshop solved with a hint earns one star; tap Restart and solve it on your own for more. The workshop of the day has no hint."),
-            ("Can several people play on one iPhone?", "Yes. Add players in Settings → Players. Each player has their own stars, records and ants."),
-            ("How do I keep progress safe or move it to another iPhone?", "Ask a grown-up to open Settings → Backup copy → Save a copy and keep the file in Files, for example in iCloud Drive. On the other iPhone, or if the game ever starts from scratch, use Restore from a copy. Restoring replaces the progress on that iPhone. If a grown-up picked the wrong file, Bring back the previous progress in the same place returns what was there before."),
-            ("Are there ads or in-app purchases?", "No. There are no ads and no purchases for real money. Ants in the shop are bought with stars earned in the game."),
-            ("Does the game collect data?", "No. There are no analytics, accounts or tracking. See the <a href=\"{privacy}\">Privacy Policy</a>."),
-            ("Which devices are supported?", "iPhone with iOS 18 or later. The game works without the internet."),
+            ("What are the working ants?", "From workshop 6 on, starting a new workshop sends out one of five working ants, shared by everyone on the iPhone. Undo, Restart and leaving the workshop never cost another ant, and a started workshop always stays playable. Solve it with ★★★ without a hint and the ant comes home; after any other win it rests, and resting ants come back one every 10 minutes. Workshops 1–5, replays and the workshop of the day are free. When no ants are left, Free refill in Working ants brings all five back once a day, at least eight hours after the previous refill. With the Anthill, working ants never run out."),
+            ("Can several people play on one iPhone?", "Yes. Add players in Settings → Players. Each player has their own stars, records and ants. The working ants and the purchases are shared by everyone on the iPhone."),
+            ("How do I keep progress safe or move it to another iPhone?", "Ask a grown-up to open Settings → Backup copy → Save a copy and keep the file in Files, for example in iCloud Drive. On the other iPhone, or if the game ever starts from scratch, use Restore from a copy. Restoring replaces the progress on that iPhone. If a grown-up picked the wrong file, Bring back the previous progress in the same place returns what was there before. Purchases are not in the copy: they belong to the Apple Account (see below)."),
+            ("Are there ads or in-app purchases?", "There are no ads. There are three optional purchases for grown-ups, each paid once and kept for good: the Anthill (working ants never run out), the Secret map: chapters 1–5 (the hints of every secret in chapters 1–5 for every player), and Anthill and Secret map together. They are only in Settings → Purchases for grown-ups, behind a parental gate; a child never sees a price or an offer. Apple handles the payment. The puzzles stay free, and ants in the shop are bought only with stars earned in the game."),
+            ("How do I restore purchases?", "Purchases belong to the Apple Account that made them, not to the game’s progress, so a backup copy does not carry them. They usually come back by themselves. If one is missing, for example on a new iPhone, a grown-up opens Settings → Purchases for grown-ups and taps Restore purchases. Prices, buying and restoring need the internet; everything else works offline."),
+            ("Does Family Sharing work?", "Yes. If your family shares purchases in Family Sharing, a purchase made by one family member works on the other family members’ iPhones too. If it does not appear, tap Restore purchases."),
+            ("A purchase says “Waiting for a parent’s approval.” What now?", "Ask to Buy sent the request to a parent in your family group. Nothing is unlocked until they approve it; then the purchase appears by itself. Apple does not tell the game when a request is declined, so the note goes away on its own within two days. To send a new request, a grown-up can tap Try again."),
+            ("It says “Purchases are turned off on this phone (Screen Time).” What does that mean?", "Screen Time on this iPhone does not allow in-app purchases. A parent can allow them in the iPhone’s Screen Time settings or leave them off: the game keeps working, and Free refill still works once a day."),
+            ("Does the game collect data?", "No. There are no analytics, accounts or tracking. Apple handles purchases, and we never see payment details. See the <a href=\"{privacy}\">Privacy Policy</a>."),
+            ("Which devices are supported?", "iPhone with iOS 18 or later. The game works without the internet; only prices, buying and restoring purchases need a connection."),
         ]),
     "uk": dict(
         intro="«Фуражири» — логічна головоломка про мурашину колонію для iPhone від exception games.",
@@ -847,11 +1087,16 @@ SUPPORT_TEXT = {
             ("Де зберігається прогрес?", "Лише на вашому iPhone: облікових записів і хмарної синхронізації немає. Видалення застосунку стирає весь прогрес, тому оновлюйте застосунок, не видаляючи його."),
             ("Як почати цех заново?", "Натисніть «Заново». Щоб повторити навчання, відкрийте «Налаштування» → «Повторити навчання»."),
             ("Не виходить розв’язати. Що робити?", "Натисніть «Скасувати», щоб скасувати останній сигнал, або «Підказка», щоб побачити наступний сигнал. За цех, розв’язаний із підказкою, нараховується лише одна зірка; натисніть «Заново» й розв’яжіть його самостійно, щоб отримати більше. У цеху дня підказки немає."),
-            ("Чи можуть грати кілька людей на одному iPhone?", "Так. Додайте гравців у «Налаштування» → «Гравці». У кожного свої зірки, рекорди й мурашки."),
-            ("Як зберегти прогрес або перенести його на інший iPhone?", "Попросіть дорослого відкрити «Налаштування» → «Резервна копія» → «Зберегти копію» й покласти файл у «Файли», наприклад в iCloud Drive. На іншому iPhone або якщо гра колись почнеться з нуля, натисніть «Відновити з копії». Відновлення замінює прогрес на тому iPhone. Якщо дорослий вибрав не той файл, «Повернути попередній прогрес» там само поверне те, що було раніше."),
-            ("Чи є реклама або покупки в застосунку?", "Ні. Реклами й покупок за справжні гроші немає. Мурашок у крамниці купують за зірки, зароблені в грі."),
-            ("Чи збирає гра дані?", "Ні: ні аналітики, ні облікових записів, ні відстеження. Докладніше — у <a href=\"{privacy}\">політиці конфіденційності</a>."),
-            ("Які пристрої підтримуються?", "iPhone з iOS 18 або новішою. Гра працює без інтернету."),
+            ("Що таке робочі мурахи?", "Починаючи з цеху 6, кожен новий цех забирає одну з п’яти робочих мурах, спільних для всіх на цьому iPhone. «Скасувати», «Заново» й вихід із цеху ніколи не забирають ще одну мураху, а розпочатий цех завжди можна дограти. Розв’яжіть цех на ★★★ без підказки — і мураха повернеться додому; після будь-якої іншої перемоги вона відпочиває, і мурахи, що відпочивають, повертаються по одній кожні 10 хвилин. Цехи 1–5, повторні проходження й цех дня безкоштовні. Коли мурах не залишилося, «Безкоштовне поповнення» в «Робочих мурахах» повертає всіх п’ятьох раз на день, щонайменше через вісім годин після попереднього. З «Мурашником» робочі мурахи не закінчуються."),
+            ("Чи можуть грати кілька людей на одному iPhone?", "Так. Додайте гравців у «Налаштування» → «Гравці». У кожного свої зірки, рекорди й мурашки. Робочі мурахи й покупки спільні для всіх на цьому iPhone."),
+            ("Як зберегти прогрес або перенести його на інший iPhone?", "Попросіть дорослого відкрити «Налаштування» → «Резервна копія» → «Зберегти копію» й покласти файл у «Файли», наприклад в iCloud Drive. На іншому iPhone або якщо гра колись почнеться з нуля, натисніть «Відновити з копії». Відновлення замінює прогрес на тому iPhone. Якщо дорослий вибрав не той файл, «Повернути попередній прогрес» там само поверне те, що було раніше. Покупок у копії немає: вони належать обліковому запису Apple (див. нижче)."),
+            ("Чи є реклама або покупки в застосунку?", "Реклами немає. Є три необов’язкові покупки для дорослих; за кожну платять один раз, і вона залишається назавжди: «Мурашник» (робочі мурахи не закінчуються), «Карта секретів: розділи 1–5» (підказки до всіх секретів розділів 1–5 для всіх гравців) і «Мурашник і Карта секретів» разом. Вони є лише в «Налаштування» → «Покупки для дорослих», після батьківської перевірки; дитина ніколи не бачить цін і пропозицій. Платіж обробляє Apple. Головоломки залишаються безкоштовними, а мурашок у крамниці купують лише за зірки, зароблені в грі."),
+            ("Як відновити покупки?", "Покупки належать обліковому запису Apple, з якого їх зроблено, а не прогресу гри, тому резервна копія їх не переносить. Зазвичай вони повертаються самі. Якщо якоїсь бракує, наприклад на новому iPhone, дорослий відкриває «Налаштування» → «Покупки для дорослих» і натискає «Відновити покупки». Ціни, купівля й відновлення потребують інтернету; усе інше працює без нього."),
+            ("Чи працює Сімейний доступ?", "Так. Якщо ваша родина ділиться покупками в «Сімейному доступі», покупка одного члена родини працює й на iPhone інших. Якщо вона не з’явилася, натисніть «Відновити покупки»."),
+            ("Біля покупки написано «Чекає схвалення батьків.» Що далі?", "Функція «Попросити купити» надіслала запит одному з батьків у вашій групі «Сімейного доступу». Нічого не відкриється, доки його не схвалять; після цього покупка з’явиться сама. Apple не повідомляє гру, коли запит відхилено, тому напис зникає сам протягом двох днів. Щоб надіслати новий запит, дорослий може натиснути «Спробувати ще раз»."),
+            ("Написано «Покупки на цьому телефоні вимкнено (Екранний час).» Що це означає?", "«Екранний час» на цьому iPhone не дозволяє покупок у застосунках. Батьки можуть дозволити їх у налаштуваннях «Екранного часу» на iPhone або залишити вимкненими: гра працює й так, а «Безкоштовне поповнення» й далі доступне раз на день."),
+            ("Чи збирає гра дані?", "Ні: ні аналітики, ні облікових записів, ні відстеження. Покупки обробляє Apple, і ми ніколи не бачимо платіжних даних. Докладніше — у <a href=\"{privacy}\">політиці конфіденційності</a>."),
+            ("Які пристрої підтримуються?", "iPhone з iOS 18 або новішою. Гра працює без інтернету; підключення потрібне лише для цін, купівлі та відновлення покупок."),
         ]),
     "ru": dict(
         intro="«Фуражиры» — логическая головоломка про муравьиную колонию для iPhone от exception games.",
@@ -862,11 +1107,16 @@ SUPPORT_TEXT = {
             ("Где хранится прогресс?", "Только на вашем iPhone: аккаунтов и облачной синхронизации нет. Удаление приложения стирает весь прогресс, поэтому обновляйте приложение, не удаляя его."),
             ("Как начать цех заново?", "Нажмите «Заново». Чтобы повторить обучение, откройте «Настройки» → «Повторить обучение»."),
             ("Не получается решить. Что делать?", "Нажмите «Отменить», чтобы отменить последний сигнал, или «Подсказка», чтобы увидеть следующий сигнал. За цех, решённый с подсказкой, даётся одна звезда; нажмите «Заново» и решите его сами, чтобы получить больше. В цехе дня подсказки нет."),
-            ("Могут ли играть несколько человек на одном iPhone?", "Да. Добавьте игроков в «Настройки» → «Игроки». У каждого свои звёзды, рекорды и муравьи."),
-            ("Как сберечь прогресс или перенести его на другой iPhone?", "Попросите взрослого открыть «Настройки» → «Резервная копия» → «Сохранить копию» и положить файл в «Файлы», например в iCloud Drive. На другом iPhone или если игра когда-нибудь начнётся с нуля, нажмите «Восстановить из копии». Восстановление заменяет прогресс на том iPhone. Если взрослый выбрал не тот файл, «Вернуть прежний прогресс» там же вернёт то, что было раньше."),
-            ("Есть ли реклама или покупки в приложении?", "Нет. Рекламы и покупок за реальные деньги нет. Муравьёв в магазине покупают за звёзды, заработанные в игре."),
-            ("Собирает ли игра данные?", "Нет: ни аналитики, ни аккаунтов, ни отслеживания. Подробнее — в <a href=\"{privacy}\">политике конфиденциальности</a>."),
-            ("Какие устройства поддерживаются?", "iPhone с iOS 18 или новее. Игра работает без интернета."),
+            ("Что такое рабочие муравьи?", "Начиная с цеха 6, каждый новый цех забирает одного из пяти рабочих муравьёв, общих для всех на этом iPhone. «Отменить», «Заново» и выход из цеха никогда не забирают ещё одного муравья, а начатый цех всегда можно доиграть. Решите цех на ★★★ без подсказки — и муравей вернётся домой; после любой другой победы он отдыхает, и отдыхающие муравьи возвращаются по одному каждые 10 минут. Цеха 1–5, повторные прохождения и цех дня бесплатны. Когда муравьёв не осталось, «Бесплатное пополнение» в «Рабочих муравьях» возвращает всех пятерых раз в день, не раньше чем через восемь часов после предыдущего. С «Муравейником» рабочие муравьи не заканчиваются."),
+            ("Могут ли играть несколько человек на одном iPhone?", "Да. Добавьте игроков в «Настройки» → «Игроки». У каждого свои звёзды, рекорды и муравьи. Рабочие муравьи и покупки общие для всех на этом iPhone."),
+            ("Как сберечь прогресс или перенести его на другой iPhone?", "Попросите взрослого открыть «Настройки» → «Резервная копия» → «Сохранить копию» и положить файл в «Файлы», например в iCloud Drive. На другом iPhone или если игра когда-нибудь начнётся с нуля, нажмите «Восстановить из копии». Восстановление заменяет прогресс на том iPhone. Если взрослый выбрал не тот файл, «Вернуть прежний прогресс» там же вернёт то, что было раньше. Покупок в копии нет: они принадлежат Аккаунту Apple (см. ниже)."),
+            ("Есть ли реклама или покупки в приложении?", "Рекламы нет. Есть три необязательные покупки для взрослых; за каждую платят один раз, и она остаётся навсегда: «Муравейник» (рабочие муравьи не заканчиваются), «Карта секретов: главы 1–5» (подсказки ко всем секретам глав 1–5 для всех игроков) и «Муравейник и Карта секретов» вместе. Они есть только в «Настройки» → «Покупки для взрослых», после родительской проверки; ребёнок никогда не видит цен и предложений. Платёж обрабатывает Apple. Головоломки остаются бесплатными, а муравьёв в магазине покупают только за звёзды, заработанные в игре."),
+            ("Как восстановить покупки?", "Покупки принадлежат Аккаунту Apple, с которого их сделали, а не прогрессу игры, поэтому резервная копия их не переносит. Обычно они возвращаются сами. Если какой-то не хватает, например на новом iPhone, взрослый открывает «Настройки» → «Покупки для взрослых» и нажимает «Восстановить покупки». Цены, покупка и восстановление требуют интернета; всё остальное работает без него."),
+            ("Работает ли Семейный доступ?", "Да. Если ваша семья делится покупками в «Семейном доступе», покупка одного члена семьи работает и на iPhone остальных. Если она не появилась, нажмите «Восстановить покупки»."),
+            ("У покупки написано «Ждёт одобрения родителя.» Что дальше?", "Функция «Попросить купить» отправила запрос родителю в вашей группе «Семейного доступа». Ничего не откроется, пока его не одобрят; после этого покупка появится сама. Apple не сообщает игре, что запрос отклонён, поэтому надпись исчезает сама в течение двух дней. Чтобы отправить новый запрос, взрослый может нажать «Повторить»."),
+            ("Написано «Покупки на этом телефоне отключены (Экранное время).» Что это значит?", "«Экранное время» на этом iPhone не разрешает покупки в приложениях. Родители могут разрешить их в настройках «Экранного времени» на iPhone или оставить выключенными: игра работает и так, а «Бесплатное пополнение» по-прежнему доступно раз в день."),
+            ("Собирает ли игра данные?", "Нет: ни аналитики, ни аккаунтов, ни отслеживания. Покупки обрабатывает Apple, и мы никогда не видим платёжных данных. Подробнее — в <a href=\"{privacy}\">политике конфиденциальности</a>."),
+            ("Какие устройства поддерживаются?", "iPhone с iOS 18 или новее. Игра работает без интернета; подключение нужно только для цен, покупки и восстановления покупок."),
         ]),
     "de": dict(
         intro="Futtersucher ist ein Logikrätsel rund um eine Ameisenkolonie für das iPhone, entwickelt von "
@@ -879,11 +1129,16 @@ SUPPORT_TEXT = {
             ("Wo wird mein Fortschritt gespeichert?", "Nur auf Ihrem iPhone. Das Spiel hat keine Konten und keine Cloud-Synchronisierung. Wenn Sie die App löschen, geht der gesamte Fortschritt verloren; aktualisieren Sie die App deshalb, ohne sie zu löschen."),
             ("Wie beginne ich eine Werkhalle von vorn?", "Tippen Sie auf „Neustart“. Um die Einführung zu wiederholen, öffnen Sie Einstellungen → Einführung wiederholen."),
             ("Ich komme nicht weiter. Was kann ich tun?", "Tippen Sie auf „Rückgängig“, um das letzte Signal zurückzunehmen, oder auf „Tipp“, um das nächste Signal zu sehen. Eine mit einem Tipp gelöste Werkhalle bringt einen Stern; tippen Sie auf „Neustart“ und lösen Sie sie selbst, um mehr Sterne zu bekommen. Die Werkhalle des Tages hat keinen Tipp."),
-            ("Können mehrere Personen auf einem iPhone spielen?", "Ja. Fügen Sie Spieler unter Einstellungen → Spieler hinzu. Jeder Spieler hat eigene Sterne, Rekorde und Ameisen."),
-            ("Wie sichere ich den Fortschritt oder bringe ihn auf ein anderes iPhone?", "Bitten Sie einen Erwachsenen, Einstellungen → Sicherungskopie → Kopie sichern zu öffnen und die Datei in „Dateien“ abzulegen, zum Beispiel in iCloud Drive. Auf dem anderen iPhone, oder falls das Spiel einmal von vorn beginnt, verwenden Sie „Aus Kopie wiederherstellen“. Das Wiederherstellen ersetzt den Fortschritt auf diesem iPhone. Hat ein Erwachsener die falsche Datei gewählt, bringt „Früheren Fortschritt zurückholen“ an derselben Stelle zurück, was vorher da war."),
-            ("Gibt es Werbung oder In-App-Käufe?", "Nein. Es gibt keine Werbung und keine Käufe mit echtem Geld. Im Ameisenladen werden Ameisen mit Sternen gekauft, die im Spiel verdient wurden."),
-            ("Erfasst das Spiel Daten?", "Nein. Es gibt keine Analysedienste, keine Konten und kein Tracking. Mehr dazu in der <a href=\"{privacy}\">Datenschutzerklärung</a>."),
-            ("Welche Geräte werden unterstützt?", "iPhone mit iOS 18 oder neuer. Das Spiel funktioniert ohne Internet."),
+            ("Was sind die Arbeitsameisen?", "Ab Werkhalle 6 schickt jede neue Werkhalle beim Start eine von fünf Arbeitsameisen los, die allen auf diesem iPhone gemeinsam gehören. „Rückgängig“, „Neustart“ und das Verlassen der Werkhalle kosten nie eine weitere Ameise, und eine begonnene Werkhalle bleibt immer spielbar. Lösen Sie sie mit ★★★ ohne Tipp, kommt die Ameise nach Hause; nach jedem anderen Sieg ruht sie, und ruhende Ameisen kehren alle 10 Minuten einzeln zurück. Die Werkhallen 1–5, Wiederholungen und die Werkhalle des Tages sind kostenlos. Sind keine Ameisen mehr da, holt „Kostenlos auffüllen“ unter „Arbeitsameisen“ einmal am Tag alle fünf zurück, frühestens acht Stunden nach dem letzten Auffüllen. Mit dem „Ameisenhügel“ gehen die Arbeitsameisen nie aus."),
+            ("Können mehrere Personen auf einem iPhone spielen?", "Ja. Fügen Sie Spieler unter Einstellungen → Spieler hinzu. Jeder Spieler hat eigene Sterne, Rekorde und Ameisen. Die Arbeitsameisen und die Käufe gelten für alle auf diesem iPhone."),
+            ("Wie sichere ich den Fortschritt oder bringe ihn auf ein anderes iPhone?", "Bitten Sie einen Erwachsenen, Einstellungen → Sicherungskopie → Kopie sichern zu öffnen und die Datei in „Dateien“ abzulegen, zum Beispiel in iCloud Drive. Auf dem anderen iPhone, oder falls das Spiel einmal von vorn beginnt, verwenden Sie „Aus Kopie wiederherstellen“. Das Wiederherstellen ersetzt den Fortschritt auf diesem iPhone. Hat ein Erwachsener die falsche Datei gewählt, bringt „Früheren Fortschritt zurückholen“ an derselben Stelle zurück, was vorher da war. Käufe sind nicht in der Kopie, denn sie gehören zum Apple Account (siehe unten)."),
+            ("Gibt es Werbung oder In-App-Käufe?", "Werbung gibt es nicht. Es gibt drei optionale Käufe für Erwachsene, die jeweils einmal bezahlt werden und dauerhaft gelten: „Ameisenhügel“ (die Arbeitsameisen gehen nie aus), „Geheimniskarte: Kapitel 1–5“ (die Tipps zu allen Geheimnissen in Kapitel 1–5 für alle Spieler) und „Ameisenhügel und Geheimniskarte“ zusammen. Es gibt sie nur unter Einstellungen → Käufe für Erwachsene, hinter einer Elternabfrage; ein Kind sieht nie einen Preis oder ein Angebot. Die Zahlung wickelt Apple ab. Die Rätsel bleiben kostenlos, und im Ameisenladen werden Ameisen nur mit Sternen gekauft, die im Spiel verdient wurden."),
+            ("Wie stelle ich Käufe wieder her?", "Käufe gehören zum Apple Account, mit dem sie getätigt wurden, nicht zum Spielfortschritt; deshalb nimmt eine Sicherungskopie sie nicht mit. Meist kommen sie von selbst zurück. Fehlt einer, etwa auf einem neuen iPhone, öffnet ein Erwachsener Einstellungen → Käufe für Erwachsene und tippt auf „Käufe wiederherstellen“. Preise, Kaufen und Wiederherstellen brauchen Internet; alles andere funktioniert ohne."),
+            ("Funktioniert die Familienfreigabe?", "Ja. Wenn Ihre Familie in der Familienfreigabe Käufe teilt, gilt ein Kauf eines Familienmitglieds auch auf den iPhones der anderen. Erscheint er nicht, tippen Sie auf „Käufe wiederherstellen“."),
+            ("Bei einem Kauf steht „Wartet auf die Zustimmung eines Elternteils.“ Was nun?", "Die Kaufanfrage ging an einen Elternteil in Ihrer Familienfreigabegruppe. Nichts wird freigeschaltet, bis sie genehmigt ist; danach erscheint der Kauf von selbst. Apple teilt dem Spiel nicht mit, wenn eine Anfrage abgelehnt wird; deshalb verschwindet der Hinweis innerhalb von zwei Tagen von selbst. Für eine neue Anfrage kann ein Erwachsener auf „Erneut versuchen“ tippen."),
+            ("Dort steht „Käufe sind auf diesem Handy deaktiviert (Bildschirmzeit).“ Was heißt das?", "Die Bildschirmzeit auf diesem iPhone erlaubt keine In-App-Käufe. Eltern können sie in den Bildschirmzeit-Einstellungen des iPhone erlauben oder ausgeschaltet lassen: Das Spiel funktioniert trotzdem, und das kostenlose Auffüllen gibt es weiterhin einmal am Tag."),
+            ("Erfasst das Spiel Daten?", "Nein. Es gibt keine Analysedienste, keine Konten und kein Tracking. Käufe wickelt Apple ab, und wir sehen nie Zahlungsdaten. Mehr dazu in der <a href=\"{privacy}\">Datenschutzerklärung</a>."),
+            ("Welche Geräte werden unterstützt?", "iPhone mit iOS 18 oder neuer. Das Spiel funktioniert ohne Internet; nur Preise, Kaufen und das Wiederherstellen von Käufen brauchen eine Verbindung."),
         ]),
     "ja": dict(
         intro="エサ運びアリは、exception games による、アリのコロニーを舞台にした iPhone 向けロジックパズルゲームです。",
@@ -895,11 +1150,16 @@ SUPPORT_TEXT = {
             ("進行状況はどこに保存されますか？", "お使いの iPhone の中だけです。アカウントやクラウド同期はありません。App を削除するとすべての進行状況が消えるので、削除せずにアップデートしてください。"),
             ("作業場を最初からやり直すには？", "「やり直す」をタップします。チュートリアルをもう一度遊ぶには、「設定」→「チュートリアルを再プレイ」をタップします。"),
             ("行き詰まりました。どうすればいいですか？", "「元に戻す」をタップすると直前の合図を元に戻せます。「ヒント」をタップすると次の合図がわかります。ヒントを使って解いた作業場は星1つです。「やり直す」をタップして自分で解けば、もっと星がもらえます。今日の作業場にはヒントがありません。"),
-            ("1台の iPhone で何人も遊べますか？", "はい。「設定」→「プレイヤー」でプレイヤーを追加してください。プレイヤーごとに星、記録、アリが別々になります。"),
-            ("進行状況を守ったり、別の iPhone に移したりするには？", "大人の人に「設定」→「バックアップ」→「バックアップを保存」をタップしてもらい、ファイルを「ファイル」（たとえば iCloud Drive）に保存してください。別の iPhone で、またはゲームが最初からになってしまったときは、「バックアップから復元」を使います。復元すると、その iPhone の進行状況は置き換わります。違うファイルを選んでしまった場合は、同じ場所の「以前の進行状況に戻す」で前の状態に戻せます。"),
-            ("広告や App 内課金はありますか？", "いいえ。広告も App 内課金もありません。「アリのお店」のアリは、ゲーム内で獲得した星で買います。"),
-            ("ゲームはデータを収集しますか？", "いいえ。解析、アカウント、トラッキングはありません。詳しくは<a href=\"{privacy}\">プライバシーポリシー</a>をご覧ください。"),
-            ("対応機種は？", "iOS 18 以降を搭載した iPhone です。インターネットに接続しなくても遊べます。"),
+            ("働くアリとは？", "作業場6からは、新しい作業場を始めるたびに、この iPhone のみんなで共有する5匹の働くアリのうち1匹が出かけます。「元に戻す」や「やり直す」を使っても、作業場を出ても、アリがさらに減ることはなく、始めた作業場はいつでも続けられます。ヒントなしで★★★で解くとアリは家に帰ってきます。それ以外の方法でクリアすると、アリは休み、休んでいるアリは10分ごとに1匹ずつ戻ってきます。作業場1–5、再プレイ、今日の作業場は無料です。アリがいなくなったら、「働くアリ」の「無料で補充」で、1日1回、前回の補充から8時間以上たっていれば、5匹全員が戻ります。「アリ塚」があれば、働くアリは尽きません。"),
+            ("1台の iPhone で何人も遊べますか？", "はい。「設定」→「プレイヤー」でプレイヤーを追加してください。プレイヤーごとに星、記録、アリが別々になります。働くアリと購入は、この iPhone のみんなで共有します。"),
+            ("進行状況を守ったり、別の iPhone に移したりするには？", "大人の人に「設定」→「バックアップ」→「バックアップを保存」をタップしてもらい、ファイルを「ファイル」（たとえば iCloud Drive）に保存してください。別の iPhone で、またはゲームが最初からになってしまったときは、「バックアップから復元」を使います。復元すると、その iPhone の進行状況は置き換わります。違うファイルを選んでしまった場合は、同じ場所の「以前の進行状況に戻す」で前の状態に戻せます。購入はバックアップに含まれません。購入は Apple Account に結びついています（下記を参照）。"),
+            ("広告や App 内課金はありますか？", "広告はありません。大人向けの任意の購入が3つあり、どれも一度支払えばずっと使えます。「アリ塚」（働くアリが尽きません）、「ひみつの地図：第1–5章」（第1–5章のすべてのひみつのヒントを全プレイヤーに開放）、両方をまとめた「アリ塚とひみつの地図」です。これらは保護者確認の先の「設定」→「大人向けの購入」にだけあり、子どもが価格や案内を目にすることはありません。支払いは Apple が処理します。パズルは無料のままで、「アリのお店」のアリはゲーム内で獲得した星だけで買います。"),
+            ("購入を復元するには？", "購入はゲームの進行状況ではなく、購入した Apple Account に結びついているため、バックアップでは移せません。たいていは自動で戻ります。新しい iPhone などで見当たらない場合は、大人が「設定」→「大人向けの購入」を開き、「購入を復元」をタップしてください。価格、購入、復元にはインターネットが必要ですが、それ以外はインターネットなしで動作します。"),
+            ("ファミリー共有は使えますか？", "はい。ファミリー共有で購入アイテムを共有している場合、家族の誰かが購入すると、ほかの家族の iPhone でも使えます。表示されないときは「購入を復元」をタップしてください。"),
+            ("購入に「保護者の承認を待っています。」と表示されています。どうすればいいですか？", "「承認と購入のリクエスト」で、ファミリー共有グループの保護者にリクエストが送られています。承認されるまでは何も開放されず、承認されると購入は自動で反映されます。リクエストが断られても Apple からゲームには知らされないため、この表示は2日以内に自然に消えます。もう一度リクエストするには、大人が「もう一度試す」をタップします。"),
+            ("「この端末では購入がオフになっています（スクリーンタイム）。」と表示されるのはなぜですか？", "この iPhone のスクリーンタイムで App 内課金が許可されていないためです。保護者は iPhone のスクリーンタイムの設定で許可することも、オフのままにすることもできます。オフのままでもゲームは遊べ、無料の補充も1日1回使えます。"),
+            ("ゲームはデータを収集しますか？", "いいえ。解析、アカウント、トラッキングはありません。購入は Apple が処理し、当方が支払い情報を目にすることはありません。詳しくは<a href=\"{privacy}\">プライバシーポリシー</a>をご覧ください。"),
+            ("対応機種は？", "iOS 18 以降を搭載した iPhone です。インターネットに接続しなくても遊べます。接続が必要なのは、購入の価格の表示、購入、復元だけです。"),
         ]),
     "ko": dict(
         intro="먹이 찾는 개미는 exception games가 만든 iPhone용 개미 마을 논리 퍼즐 게임입니다.",
@@ -911,11 +1171,16 @@ SUPPORT_TEXT = {
             ("진행 상황은 어디에 저장되나요?", "사용자의 iPhone에만 저장됩니다. 계정이나 클라우드 동기화는 없습니다. 앱을 삭제하면 모든 진행 상황이 지워지므로, 삭제하지 말고 업데이트하세요."),
             ("작업장을 처음부터 다시 하려면 어떻게 하나요?", "‘다시 시작’을 누르세요. 튜토리얼을 다시 하려면 설정 → 튜토리얼 다시 하기를 누르세요."),
             ("막혔어요. 어떻게 해야 하나요?", "‘되돌리기’를 누르면 마지막 신호를 되돌릴 수 있고, ‘힌트’를 누르면 다음 신호를 볼 수 있습니다. 힌트를 써서 풀면 별은 1개입니다. ‘다시 시작’을 누르고 혼자 풀면 별을 더 받을 수 있습니다. 오늘의 작업장에는 힌트가 없습니다."),
-            ("iPhone 한 대로 여러 명이 플레이할 수 있나요?", "네. 설정 → 플레이어에서 플레이어를 추가하세요. 플레이어마다 별, 기록, 개미가 따로 있습니다."),
-            ("진행 상황을 안전하게 지키거나 다른 iPhone으로 옮기려면 어떻게 하나요?", "어른에게 설정 → 백업 → 백업 저장을 눌러 파일을 ‘파일’(예: iCloud Drive)에 보관해 달라고 하세요. 다른 iPhone에서, 또는 게임이 처음부터 다시 시작되었다면 ‘백업에서 복원’을 사용하세요. 복원하면 그 iPhone의 진행 상황이 바뀝니다. 어른이 잘못된 파일을 골랐다면, 같은 곳의 ‘이전 진행 상황으로 되돌리기’를 누르면 복원 전 상태로 돌아갑니다."),
-            ("광고나 인앱 구매가 있나요?", "아니요. 광고도, 유료 결제도 없습니다. 개미 상점의 개미는 게임에서 모은 별로 삽니다."),
-            ("게임이 데이터를 수집하나요?", "아니요. 분석, 계정, 추적이 없습니다. <a href=\"{privacy}\">개인정보 처리방침</a>을 참고하세요."),
-            ("어떤 기기를 지원하나요?", "iOS 18 이상이 설치된 iPhone입니다. 인터넷 없이도 플레이할 수 있습니다."),
+            ("일하는 개미는 무엇인가요?", "작업장 6부터는 새 작업장을 시작할 때마다 이 iPhone의 모두가 함께 쓰는 일하는 개미 다섯 마리 중 한 마리가 나갑니다. ‘되돌리기’, ‘다시 시작’, 작업장에서 나가기로는 개미가 더 줄지 않으며, 시작한 작업장은 언제든 계속할 수 있습니다. 힌트 없이 ★★★로 풀면 개미가 집으로 돌아오고, 그 밖의 승리에서는 개미가 쉬며, 쉬는 개미는 10분마다 한 마리씩 돌아옵니다. 작업장 1–5, 다시 하기, 오늘의 작업장은 무료입니다. 개미가 한 마리도 남지 않으면 ‘일하는 개미’의 ‘무료 충전’으로 하루 한 번, 지난 충전 후 8시간이 지났다면 다섯 마리가 모두 돌아옵니다. ‘개미탑’이 있으면 일하는 개미가 바닥나지 않습니다."),
+            ("iPhone 한 대로 여러 명이 플레이할 수 있나요?", "네. 설정 → 플레이어에서 플레이어를 추가하세요. 플레이어마다 별, 기록, 개미가 따로 있습니다. 일하는 개미와 구매는 이 iPhone의 모두가 함께 씁니다."),
+            ("진행 상황을 안전하게 지키거나 다른 iPhone으로 옮기려면 어떻게 하나요?", "어른에게 설정 → 백업 → 백업 저장을 눌러 파일을 ‘파일’(예: iCloud Drive)에 보관해 달라고 하세요. 다른 iPhone에서, 또는 게임이 처음부터 다시 시작되었다면 ‘백업에서 복원’을 사용하세요. 복원하면 그 iPhone의 진행 상황이 바뀝니다. 어른이 잘못된 파일을 골랐다면, 같은 곳의 ‘이전 진행 상황으로 되돌리기’를 누르면 복원 전 상태로 돌아갑니다. 구매는 백업에 들어가지 않으며 Apple 계정에 연결되어 있습니다(아래 참조)."),
+            ("광고나 인앱 구매가 있나요?", "광고는 없습니다. 어른을 위한 선택 구매가 세 가지 있으며, 각각 한 번 결제하면 계속 쓸 수 있습니다. ‘개미탑’(일하는 개미가 바닥나지 않음), ‘비밀 지도: 1–5장’(모든 플레이어에게 1–5장의 모든 비밀 힌트를 열어 줌), 둘을 묶은 ‘개미탑과 비밀 지도’입니다. 이 구매는 보호자 확인 뒤의 설정 → 어른을 위한 구매에만 있으며, 아이에게는 가격이나 안내가 보이지 않습니다. 결제는 Apple이 처리합니다. 퍼즐은 계속 무료이며, 개미 상점의 개미는 게임에서 모은 별로만 삽니다."),
+            ("구매를 복원하려면 어떻게 하나요?", "구매는 게임 진행 상황이 아니라 구매한 Apple 계정에 연결되어 있어서 백업으로 옮겨지지 않습니다. 대부분 저절로 돌아옵니다. 예를 들어 새 iPhone에서 구매가 보이지 않으면 어른이 설정 → 어른을 위한 구매를 열고 ‘구매 복원’을 누르면 됩니다. 가격, 구매, 복원에는 인터넷이 필요하고, 나머지는 인터넷 없이 작동합니다."),
+            ("가족 공유가 되나요?", "네. 가족 공유에서 구입 항목을 공유하고 있다면, 한 가족 구성원의 구매를 다른 가족의 iPhone에서도 쓸 수 있습니다. 보이지 않으면 ‘구매 복원’을 누르세요."),
+            ("구매에 ‘부모님의 승인을 기다리는 중입니다.’라고 나와요. 어떻게 하나요?", "구입 요청이 가족 공유 그룹의 보호자에게 전송되었습니다. 승인될 때까지는 아무것도 열리지 않으며, 승인되면 구매가 저절로 반영됩니다. 요청이 거절되어도 Apple이 게임에 알려 주지 않으므로, 이 안내는 이틀 안에 저절로 사라집니다. 다시 요청하려면 어른이 ‘다시 시도’를 누르면 됩니다."),
+            ("‘이 휴대폰에서는 구매가 꺼져 있습니다(스크린 타임).’라고 나와요. 무슨 뜻인가요?", "이 iPhone의 스크린 타임에서 인앱 구매를 허용하지 않고 있다는 뜻입니다. 부모님은 iPhone의 스크린 타임 설정에서 허용하거나 그대로 꺼 둘 수 있습니다. 꺼 두어도 게임은 계속 즐길 수 있고, 무료 충전도 하루 한 번 쓸 수 있습니다."),
+            ("게임이 데이터를 수집하나요?", "아니요. 분석, 계정, 추적이 없습니다. 구매는 Apple이 처리하며, 당사는 결제 정보를 볼 수 없습니다. <a href=\"{privacy}\">개인정보 처리방침</a>을 참고하세요."),
+            ("어떤 기기를 지원하나요?", "iOS 18 이상이 설치된 iPhone입니다. 인터넷 없이도 플레이할 수 있으며, 가격 확인, 구매, 구매 복원에만 연결이 필요합니다."),
         ]),
     "zh-Hans": dict(
         intro="《搬食物的蚂蚁》是 exception games 推出的一款以蚁群为主题的 iPhone 逻辑解谜游戏。",
@@ -926,11 +1191,16 @@ SUPPORT_TEXT = {
             ("我的进度保存在哪里？", "只保存在您的 iPhone 上。游戏没有账户，也没有云同步。删除本应用会清除所有进度，所以请直接更新，不要删除。"),
             ("如何重新开始一个车间？", "点击“重新开始”。要重玩教程，请打开“设置”→“重玩教程”。"),
             ("我卡住了，怎么办？", "点击“撤销”可以撤回上一次信号，点击“提示”可以看到下一次信号。借助提示解开的车间只得一颗星；点击“重新开始”自己解开，就能得到更多星星。今日车间没有提示。"),
-            ("一台 iPhone 能多人玩吗？", "可以。在“设置”→“玩家”中添加玩家。每位玩家都有自己的星星、纪录和蚂蚁。"),
-            ("如何备份进度，或把它转移到另一台 iPhone？", "请大人打开“设置”→“备份”→“保存备份”，并把文件存放到“文件” App 中，例如 iCloud 云盘。在另一台 iPhone 上，或者游戏哪天从头开始时，请使用“从备份恢复”。恢复会替换那台 iPhone 上的进度。如果大人选错了文件，可以在同一位置点击“恢复之前的进度”，找回原来的内容。"),
-            ("有广告或 App 内购买吗？", "没有。没有广告，也没有需用真钱支付的购买项目。商店里的蚂蚁要用游戏中获得的星星购买。"),
-            ("游戏会收集数据吗？", "不会。没有分析、账户或跟踪。详见<a href=\"{privacy}\">隐私政策</a>。"),
-            ("支持哪些设备？", "搭载 iOS 18 或更高版本的 iPhone。游戏无需联网即可运行。"),
+            ("什么是工蚁？", "从车间 6 起，每开始一个新车间，就会派出五只工蚁中的一只，这五只工蚁由这台 iPhone 上的所有人共用。“撤销”“重新开始”或离开车间都不会再多用一只蚂蚁，已经开始的车间随时可以继续玩。不用提示以 ★★★ 解开，蚂蚁就会回家；以其他方式过关后它会休息，休息的蚂蚁每 10 分钟回来一只。车间 1–5、重玩和今日车间都免费。没有蚂蚁时，在“工蚁”中点击“免费补充”，每天一次、且距上次补充至少八小时，就能让五只蚂蚁全部回来。拥有“蚁丘”后，工蚁永不耗尽。"),
+            ("一台 iPhone 能多人玩吗？", "可以。在“设置”→“玩家”中添加玩家。每位玩家都有自己的星星、纪录和蚂蚁。工蚁和购买项目由这台 iPhone 上的所有人共享。"),
+            ("如何备份进度，或把它转移到另一台 iPhone？", "请大人打开“设置”→“备份”→“保存备份”，并把文件存放到“文件” App 中，例如 iCloud 云盘。在另一台 iPhone 上，或者游戏哪天从头开始时，请使用“从备份恢复”。恢复会替换那台 iPhone 上的进度。如果大人选错了文件，可以在同一位置点击“恢复之前的进度”，找回原来的内容。备份不包含购买项目：它们属于 Apple 账户（见下文）。"),
+            ("有广告或 App 内购买吗？", "没有广告。有三项面向大人的可选购买，每项付费一次即可永久使用：“蚁丘”（工蚁永不耗尽）、“秘密地图：第 1–5 章”（为所有玩家开启第 1–5 章所有秘密的提示），以及两者合一的“蚁丘和秘密地图”。它们只在家长验证之后的“设置”→“大人购买区”中提供；孩子绝不会看到价格或购买介绍。付款由 Apple 处理。谜题始终免费，商店里的蚂蚁只能用游戏中获得的星星购买。"),
+            ("如何恢复购买？", "购买项目属于购买时所用的 Apple 账户，而不属于游戏进度，所以备份不会带上它们。通常它们会自动恢复。如果缺少某项，例如在新 iPhone 上，请大人打开“设置”→“大人购买区”，点击“恢复购买”。价格、购买和恢复需要联网；其他一切都无需联网。"),
+            ("支持家人共享吗？", "支持。如果您的家庭在家人共享中共享购买项目，一位家庭成员的购买在其他成员的 iPhone 上也能使用。如果没有出现，请点击“恢复购买”。"),
+            ("购买项目显示“正在等待家长批准。”怎么办？", "“购买前询问”已把请求发给您家人共享群组中的家长。获得批准之前不会开启任何内容；批准后购买会自动生效。请求被拒绝时 Apple 不会通知游戏，所以这条提示会在两天内自动消失。如需重新发送请求，大人可以点击“重试”。"),
+            ("显示“此手机已关闭购买（屏幕使用时间）。”这是什么意思？", "这表示这台 iPhone 的屏幕使用时间不允许 App 内购买。家长可以在 iPhone 的屏幕使用时间设置中允许购买，也可以保持关闭：游戏照样可以玩，免费补充每天仍有一次。"),
+            ("游戏会收集数据吗？", "不会。没有分析、账户或跟踪。购买由 Apple 处理，我们绝不会看到付款信息。详见<a href=\"{privacy}\">隐私政策</a>。"),
+            ("支持哪些设备？", "搭载 iOS 18 或更高版本的 iPhone。游戏无需联网即可运行；只有载入价格、购买和恢复购买需要联网。"),
         ]),
     "zh-Hant": dict(
         intro="《搬食物的螞蟻》是 exception games 推出的一款以蟻群為主題的 iPhone 邏輯解謎遊戲。",
@@ -941,11 +1211,16 @@ SUPPORT_TEXT = {
             ("我的進度儲存在哪裡？", "只儲存在您的 iPhone 上。遊戲沒有帳號，也沒有雲端同步。刪除本 App 會清除所有進度，所以請直接更新，不要刪除。"),
             ("如何重新開始一個工坊？", "點一下「重新開始」。若要重玩教學，請打開「設定」→「重玩教學」。"),
             ("我卡住了，怎麼辦？", "點一下「復原」可以收回上一次訊號，點一下「提示」可以看到下一次訊號。靠提示解開的工坊只得一顆星；點一下「重新開始」自己解開，就能得到更多星星。今日工坊沒有提示。"),
-            ("一台 iPhone 可以多人玩嗎？", "可以。在「設定」→「玩家」中新增玩家。每位玩家都有自己的星星、紀錄與螞蟻。"),
-            ("如何備份進度，或把它轉移到另一台 iPhone？", "請大人打開「設定」→「備份」→「儲存備份」，並把檔案存放在「檔案」App 中，例如 iCloud 雲碟。在另一台 iPhone 上，或遊戲哪天從頭開始時，請使用「從備份回復」。回復會取代那台 iPhone 上的進度。如果大人選錯了檔案，可以在同一處點一下「回復之前的進度」，找回原本的內容。"),
-            ("有廣告或 App 內購買嗎？", "沒有。沒有廣告，也沒有用真錢購買的項目。「螞蟻商店」裡的螞蟻是用遊戲中贏得的星星購買。"),
-            ("遊戲會收集資料嗎？", "不會。沒有分析、帳號或追蹤。詳見<a href=\"{privacy}\">隱私權政策</a>。"),
-            ("支援哪些裝置？", "搭載 iOS 18 或以上版本的 iPhone。遊戲不需連網即可執行。"),
+            ("什麼是工蟻？", "從工坊 6 起，每開始一個新工坊，就會派出五隻工蟻中的一隻，這五隻工蟻由這台 iPhone 上的所有人共用。「復原」、「重新開始」或離開工坊都不會再多用一隻螞蟻，已經開始的工坊隨時可以繼續玩。不用提示以 ★★★ 解開，螞蟻就會回家；以其他方式過關後牠會休息，休息的螞蟻每 10 分鐘回來一隻。工坊 1–5、重玩與今日工坊都免費。沒有螞蟻時，在「工蟻」中點一下「免費補充」，每天一次、且距離上次補充至少八小時，就能讓五隻螞蟻全部回來。擁有「蟻丘」後，工蟻永不耗盡。"),
+            ("一台 iPhone 可以多人玩嗎？", "可以。在「設定」→「玩家」中新增玩家。每位玩家都有自己的星星、紀錄與螞蟻。工蟻與購買項目由這台 iPhone 上的所有人共享。"),
+            ("如何備份進度，或把它轉移到另一台 iPhone？", "請大人打開「設定」→「備份」→「儲存備份」，並把檔案存放在「檔案」App 中，例如 iCloud 雲碟。在另一台 iPhone 上，或遊戲哪天從頭開始時，請使用「從備份回復」。回復會取代那台 iPhone 上的進度。如果大人選錯了檔案，可以在同一處點一下「回復之前的進度」，找回原本的內容。備份不包含購買項目：它們屬於 Apple 帳號（見下文）。"),
+            ("有廣告或 App 內購買嗎？", "沒有廣告。有三項給大人的選購項目，每項付費一次即可永久使用：「蟻丘」（工蟻永不耗盡）、「秘密地圖：第 1–5 章」（為所有玩家開啟第 1–5 章所有秘密的提示），以及兩者合一的「蟻丘和秘密地圖」。它們只在家長驗證之後的「設定」→「大人購買區」中提供；孩子絕不會看到價格或購買介紹。付款由 Apple 處理。謎題始終免費，「螞蟻商店」裡的螞蟻只能用遊戲中贏得的星星購買。"),
+            ("如何回復購買項目？", "購買項目屬於購買時使用的 Apple 帳號，而不屬於遊戲進度，所以備份不會帶上它們。通常它們會自動回來。如果缺少某一項，例如在新的 iPhone 上，請大人打開「設定」→「大人購買區」，點一下「回復購買項目」。價格、購買與回復需要連網；其他一切都不需要連網。"),
+            ("支援家人共享嗎？", "支援。如果您的家庭在家人共享中分享購買項目，一位家庭成員的購買在其他成員的 iPhone 上也能使用。如果沒有出現，請點一下「回復購買項目」。"),
+            ("購買項目顯示「正在等候家長核准。」該怎麼辦？", "「購買前詢問」已把請求傳送給您家人共享群組中的家長。獲得核准之前不會開啟任何內容；核准後購買會自動生效。請求被拒絕時 Apple 不會通知遊戲，所以這則提示會在兩天內自動消失。若要重新傳送請求，大人可以點一下「再試一次」。"),
+            ("顯示「此手機已關閉購買（螢幕使用時間）。」這是什麼意思？", "這表示這台 iPhone 的螢幕使用時間不允許 App 內購買。家長可以在 iPhone 的螢幕使用時間設定中允許購買，也可以維持關閉：遊戲照樣可以玩，免費補充每天仍有一次。"),
+            ("遊戲會收集資料嗎？", "不會。沒有分析、帳號或追蹤。購買由 Apple 處理，我們絕不會看到付款資料。詳見<a href=\"{privacy}\">隱私權政策</a>。"),
+            ("支援哪些裝置？", "搭載 iOS 18 或以上版本的 iPhone。遊戲不需連網即可執行；只有載入價格、購買與回復購買項目需要連網。"),
         ]),
 }
 
