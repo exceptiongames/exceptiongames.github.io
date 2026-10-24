@@ -259,6 +259,11 @@ PRIVACY_TEXT = {
                                "turning the phone over. The readings are never stored or sent. With “Buttons instead of phone "
                                "motion” turned on, the app does not use the motion sensor at all. The app does not use location, "
                                "the camera, contacts or photos."]),
+            ("Age check", ["Where a law requires it (in some US states, such as Texas), the app asks iOS, through Apple’s age "
+                           "range feature, whether the player is under 18. It uses the answer only at that moment on the device: "
+                           "if a later update adds something new that the law treats as a significant change, Apple first asks a "
+                           "parent to approve it. The answer is never stored, put in a backup copy or sent to us or anyone else. "
+                           "Elsewhere the app asks nothing."]),
             ("Third parties", [
                 "The app contains no third-party code, and we run no servers: the app sends nothing to us or to anyone else. "
                 "Apple handles downloads, updates, device backups and the optional purchases under Apple’s own privacy policy.",
@@ -364,6 +369,12 @@ PRIVACY_TEXT = {
                              "або перевертання телефона. Показання ніде не зберігаються й нікуди не передаються. Якщо ввімкнено "
                              "«Кнопки замість рухів телефону», застосунок зовсім не використовує датчик руху. Застосунок не "
                              "використовує геолокацію, камеру, контакти чи фото."]),
+            ("Перевірка віку", ["Там, де цього вимагає закон (у деяких штатах США, наприклад у Техасі), застосунок через функцію "
+                                "Apple для вікового діапазону запитує в iOS, чи гравцеві менше 18 років. Відповідь використовується "
+                                "лише в цю мить на самому пристрої: якщо пізніше оновлення додасть щось нове, що закон вважає "
+                                "суттєвою зміною, Apple спершу попросить одного з батьків це схвалити. Відповідь ніде не "
+                                "зберігається, не потрапляє в резервну копію й не надсилається ні нам, ні комусь іншому. В інших "
+                                "місцях застосунок нічого не запитує."]),
             ("Треті сторони", [
                 "У застосунку немає стороннього коду, а в нас немає жодних серверів: застосунок нічого не надсилає ні нам, ні "
                 "комусь іншому. Завантаження, оновлення, резервні копії пристрою та необов’язкові покупки обробляє Apple "
@@ -473,6 +484,12 @@ PRIVACY_TEXT = {
                                  "например лёгкое встряхивание или переворот телефона. Показания нигде не сохраняются и никуда не "
                                  "передаются. Если включён параметр «Кнопки вместо движений телефона», приложение совсем не использует "
                                  "датчик движения. Приложение не использует геолокацию, камеру, контакты и фото."]),
+            ("Проверка возраста", ["Там, где этого требует закон (в некоторых штатах США, например в Техасе), приложение через функцию "
+                                   "Apple для возрастного диапазона спрашивает у iOS, младше ли игроку 18 лет. Ответ используется только "
+                                   "в этот момент на самом устройстве: если позже обновление добавит что-то новое, что закон считает "
+                                   "существенным изменением, Apple сначала попросит одного из родителей это одобрить. Ответ нигде не "
+                                   "сохраняется, не попадает в резервную копию и не отправляется ни нам, ни кому-либо ещё. В остальных "
+                                   "местах приложение ничего не спрашивает."]),
             ("Третьи стороны", [
                 "В приложении нет стороннего кода, а у нас нет никаких серверов: приложение ничего не отправляет ни нам, ни "
                 "кому-либо ещё. Загрузки, обновления, резервные копии устройства и необязательные покупки обрабатывает Apple в "
@@ -594,6 +611,12 @@ PRIVACY_TEXT = {
                                  "werden weder gespeichert noch gesendet. Ist „Tasten statt Handybewegungen“ "
                                  "eingeschaltet, verwendet die App den Bewegungssensor überhaupt nicht. Die App greift "
                                  "nicht auf Standort, Kamera, Kontakte oder Fotos zu."]),
+            ("Altersprüfung", ["Wo ein Gesetz es verlangt (in einigen US-Bundesstaaten, etwa in Texas), fragt die App iOS über "
+                               "Apples Funktion für Altersbereiche, ob die spielende Person unter 18 ist. Die Antwort wird nur in "
+                               "diesem Moment auf dem Gerät verwendet: Bringt ein späteres Update etwas Neues, das das Gesetz als "
+                               "wesentliche Änderung ansieht, bittet Apple zuerst einen Elternteil um Zustimmung. Die Antwort wird "
+                               "weder gespeichert noch in eine Sicherungskopie aufgenommen noch an uns oder andere gesendet. "
+                               "Anderswo fragt die App nichts."]),
             ("Dritte", [
                 "Die App enthält keinen Code von Drittanbietern, und wir betreiben keine Server: Die App sendet weder uns "
                 "noch sonst jemandem etwas. Downloads, Updates, Gerätebackups und die optionalen Käufe wickelt Apple nach "
@@ -719,6 +742,9 @@ PRIVACY_TEXT = {
                                     "動きを検出します。読み取った値が保存・送信されることはありません。「端末を動かす代"
                                     "わりにボタンを使う」がオンのときは、本アプリはモーションセンサーをまったく使いま"
                                     "せん。本アプリは位置情報、カメラ、連絡先、写真を使いません。"]),
+            ("年齢の確認", ["法律で求められる地域（テキサス州など米国の一部の州）では、本アプリは Apple の年齢層の機能を通じて、プレイヤーが 18 歳未満かどうかを iOS "
+                       "に問い合わせます。答えはその場でデバイス上でのみ使われます。のちのアップデートで、法律上の重要な変更にあたる新しい要素が加わる場合は、Apple "
+                       "が先に保護者に承認を求めます。答えが保存されたり、バックアップに含まれたり、当方やほかの誰かに送られたりすることはありません。それ以外の地域では、本アプリは何も問い合わせません。"]),
             ("第三者", [
                 "本アプリにはサードパーティのコードが含まれておらず、当方はサーバーを運営していません。本アプリが当方や"
                 "ほかの誰かに何かを送ることはありません。ダウンロード、アップデート、デバイスのバックアップ、任意の購入"
@@ -831,6 +857,9 @@ PRIVACY_TEXT = {
                            "흔들기나 휴대폰 뒤집기처럼 숨은 비밀을 여는 놀이 동작을 감지합니다. 측정값은 저장되거나 전송되지 "
                            "않습니다. ‘휴대폰 움직임 대신 버튼 사용’을 켜면 앱은 동작 센서를 전혀 사용하지 않습니다. 앱은 "
                            "위치, 카메라, 연락처, 사진을 사용하지 않습니다."]),
+            ("나이 확인", ["법률이 요구하는 곳(텍사스주 등 미국 일부 주)에서는 앱이 Apple의 연령대 기능을 통해 플레이어가 18세 미만인지 iOS에 확인합니다. 답은 그 순간 기기 안에서만 사용됩니다. "
+                       "나중에 업데이트가 법률상 중요한 변경에 해당하는 새로운 요소를 추가하면 Apple이 먼저 보호자에게 승인을 요청합니다. 답은 저장되거나 백업에 포함되거나 당사나 다른 누구에게도 "
+                       "전송되지 않습니다. 그 밖의 지역에서는 앱이 아무것도 묻지 않습니다."]),
             ("제3자", [
                 "앱에는 타사 코드가 없고 당사는 서버를 운영하지 않습니다. 앱은 당사나 다른 누구에게도 아무것도 보내지 "
                 "않습니다. 다운로드, 업데이트, 기기 백업, 선택 구매는 Apple이 자체 개인정보 처리방침에 따라 처리합니다.",
@@ -926,6 +955,9 @@ PRIVACY_TEXT = {
                        "别能揭开隐藏秘密的趣味动作，例如轻轻摇晃或把手机翻过来。传感器读数既不会被保存，也不会"
                        "被发送。开启“用按钮代替手机动作”后，本应用完全不使用运动传感器。本应用不使用位置、相机、通讯录"
                             "或照片。"]),
+            ("年龄确认", ["在法律要求的地方（例如得克萨斯州等美国部分州），本应用会通过 Apple 的年龄范围功能向 iOS 询问玩家是否未满 18 "
+                      "岁。这个答案只在当时于设备上使用：如果以后的更新加入了法律视为重大变更的新内容，Apple "
+                      "会先请家长批准。这个答案不会被保存，不会进入备份，也不会发送给我们或任何其他人。在其他地方，本应用不会询问任何内容。"]),
             ("第三方", [
                 "本应用不含第三方代码，我们也不运营任何服务器：本应用不会向我们或其他任何人发送任何内容。下载、更新、设备备份"
                 "和可选购买项目由 Apple 依照其自身的隐私政策处理。",
@@ -1008,6 +1040,9 @@ PRIVACY_TEXT = {
                             "隱藏秘密的有趣動作，例如輕輕搖晃或把手機翻過來。這些讀數絕不會被儲存或傳送。開啟「用按鈕"
                             "代替手機動作」後，本 App 完全不使用動作感測器。本 App 不使用定位、相機、"
                             "聯絡人或照片。"]),
+            ("年齡確認", ["在法律要求的地方（例如德州等美國部分州），本 App 會透過 Apple 的年齡範圍功能向 iOS 詢問玩家是否未滿 18 "
+                      "歲。這個答案只在當下於裝置上使用：如果之後的更新加入了法律視為重大變更的新內容，Apple 會先請家長核准。這個答案不會被儲存，不會放進備份，也不會傳送給我們或任何其他人。在其他地方，本 App "
+                      "不會詢問任何內容。"]),
             ("第三方", [
                 "本 App 不含第三方程式碼，我們也不經營任何伺服器：本 App 不會傳送任何內容給我們或其他任何人。下載、更新、裝置"
                 "備份與選購項目由 Apple 依照其自身的隱私權政策處理。",
