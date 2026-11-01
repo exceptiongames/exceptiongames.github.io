@@ -254,8 +254,8 @@ PRIVACY_TEXT = {
                 "two days and never goes into a backup copy."]),
             ("Reading aloud", ["When reading aloud is on, the app speaks the puzzle instructions with the speech synthesizer built "
                                "into iOS on the device. No text or audio leaves the device, and the app never uses the microphone."]),
-            ("Motion sensor", ["Only while the result of a solved workshop is on the screen, the app reads the device’s motion "
-                               "sensor on the device to notice playful moves that reveal hidden secrets, such as a gentle shake or "
+            ("Motion sensor", ["Only while the result of a solved workshop is on the screen, the app reads the motion sensor "
+                               "on the device to notice playful moves that reveal hidden secrets, such as a gentle shake or "
                                "turning the device over. The readings are never stored or sent. With “Buttons instead of device "
                                "motion” turned on, the app does not use the motion sensor at all. The app does not use location, "
                                "the camera, contacts or photos."]),
