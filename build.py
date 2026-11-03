@@ -19,8 +19,8 @@ LANGS = [("en", "English"), ("uk", "Українська"), ("ru", "Русски
          ("ko", "한국어"), ("zh-Hans", "简体中文"), ("zh-Hant", "繁體中文")]
 EMAIL = "exceptiongames@icloud.com"
 MAIL = f'<a href="mailto:{EMAIL}">{EMAIL}</a>'
-UPDATED = {"en": "November 1, 2026", "uk": "1 листопада 2026 р.", "ru": "1 ноября 2026 г.", "de": "1. November 2026",
-           "ja": "2026年11月1日", "ko": "2026년 11월 1일", "zh-Hans": "2026年11月1日", "zh-Hant": "2026 年 11 月 1 日"}
+UPDATED = {"en": "November 3, 2026", "uk": "3 листопада 2026 р.", "ru": "3 ноября 2026 г.", "de": "3. November 2026",
+           "ja": "2026年11月3日", "ko": "2026년 11월 3일", "zh-Hans": "2026年11月3日", "zh-Hant": "2026 年 11 月 3 日"}
 
 # "Skip to content" and the translation note at the foot of every non-English page; {en} is the link to the
 # English version of the same page.
@@ -224,17 +224,19 @@ PRIVACY_TEXT = {
                                        "only to Apple’s App Store (see “Purchases”)."]),
             ("Data stored on your device", [
                 "Game progress (current workshop, unfinished games with undo history, completed workshops, best results and stars, "
-                "results of the Workshop of the day, which workshops were solved with a hint, ants bought with stars or won for a "
-                "perfect chapter, which ants have arrived in the shop so far, food in the Pantry and the weeks for which it has "
-                "already been given, found secrets and how far their hints have opened, which secret hints were opened and where the free egg "
-                "hint went, tutorial status, and each player’s own settings, such as Explorer mode and the small Workshop of the "
-                "day), the names of players added on this device, the working ants shared by all players, and the sound, "
+                "results of the Workshop of the day and the day it was last opened, which workshops were solved with a hint, ants "
+                "bought with stars or won for a perfect chapter and the ant each player chose, which ants have arrived in the shop "
+                "so far, food in the Pantry and the weeks for which it has already been given, found secrets and how far their "
+                "hints have opened, which secret hints were opened and where the free egg hint went, whether the baby ant has "
+                "hatched, tutorial status, which one-time explanations and chapter title pages a player has already seen, and each "
+                "player’s own settings, such as Explorer mode and the small Workshop of the day), the names of players added on this device, the working ants shared by all players, and the sound, "
                 "haptics, read-aloud, appearance and “Buttons instead of device motion” settings are stored locally on your "
                 "device using Apple’s standard app storage.",
                 "Player names are optional; you can keep the default “Player 2” and so on. The app never sends this data anywhere. "
                 "It may be included in your own device backups under Apple’s terms, and in a backup copy that a grown-up saves "
                 "(see “Backup copy”).",
-                "Three more things stay on this device only and never go into a backup copy: a few readings of the device’s "
+                "Three more things stay in the app’s storage on this device (and so, like the rest, in your own device backups) "
+                "and never go into a backup copy: a few readings of the device’s "
                 "clock, so that resting ants and the free refill follow real time; which purchase is waiting for a parent’s "
                 "approval (see “Purchases”); and whether the Anthill was owned the last time the app checked. The purchases "
                 "themselves are not stored as progress."]),
@@ -252,15 +254,17 @@ PRIVACY_TEXT = {
                 "in a backup copy. With Ask to Buy, the app remembers on this device which purchase is waiting for a parent’s "
                 "approval and when it was asked for, so that it does not offer an overlapping one; this note is dropped after "
                 "two days and never goes into a backup copy."]),
-            ("Reading aloud", ["When reading aloud is on, the app speaks the puzzle instructions with the speech synthesizer built "
-                               "into iOS on the device. No text or audio leaves the device, and the app never uses the microphone."]),
+            ("Reading aloud", ["When reading aloud is on, the app speaks the game’s texts, such as the puzzle instructions and the "
+                               "results, with the speech synthesizer built into iOS on the device. No text or audio leaves the device, and the app never uses the microphone."]),
             ("Motion sensor", ["Only while the result of a solved workshop is on the screen, the app reads the motion sensor "
                                "on the device to notice playful moves that reveal hidden secrets, such as a gentle shake or "
                                "turning the device over. The readings are never stored or sent. With “Buttons instead of device "
                                "motion” turned on, the app does not use the motion sensor at all. The app does not use location, "
                                "the camera, contacts or photos."]),
             ("Age check", ["Where a law requires it (in some US states, such as Texas), the app asks iOS, through Apple’s age "
-                           "range feature, whether the player is under 18. It uses the answer only at that moment on the device: "
+                           "range feature, whether the person using the Apple Account on this device is under 18. This is the "
+                           "Apple Account’s age range, not the age of a player in the game. The app uses the answer only at that "
+                           "moment on the device: "
                            "if a later update adds something new that the law treats as a significant change, Apple first asks a "
                            "parent to approve it. The answer is never stored, put in a backup copy or sent to us or anyone else. "
                            "Elsewhere the app asks nothing."]),
@@ -334,17 +338,19 @@ PRIVACY_TEXT = {
                                             "від Apple підключаються лише необов’язкові покупки (див. «Покупки»)."]),
             ("Що зберігається на пристрої", [
                 "Прогрес гри (поточний цех, незавершені партії з історією скасування, пройдені цехи, найкращі результати та зірки, "
-                "результати цеху дня, позначки про цехи, розв’язані з підказкою, мурашки, куплені за зірки або здобуті за "
-                "ідеально пройдений розділ, які мурашки вже привезли до крамниці, їжа в «Коморі» й тижні, за які її вже "
-                "подаровано, знайдені секрети й відкриті до них підказки, які підказки до секретів відкрито й куди пішла "
-                "безкоштовна підказка-яйце, стан навчання, а також власні налаштування кожного гравця, як-от режим дослідника "
-                "й малий цех дня), імена гравців, доданих на цьому пристрої, спільні для всіх гравців робочі мурахи, а також "
+                "результати цеху дня й дата, коли його востаннє відкривали, позначки про цехи, розв’язані з підказкою, мурашки, "
+                "куплені за зірки або здобуті за ідеально пройдений розділ, і мурашка, яку вибрав кожен гравець, які мурашки "
+                "вже привезли до крамниці, їжа в «Коморі» й тижні, за які її вже подаровано, знайдені секрети й відкриті до них "
+                "підказки, які підказки до секретів відкрито й куди пішла безкоштовна підказка-яйце, чи вилупилося мурашеня, "
+                "стан навчання, які одноразові пояснення й титульні сторінки розділів гравець уже бачив, а також власні "
+                "налаштування кожного гравця, як-от режим дослідника й малий цех дня), імена гравців, доданих на цьому пристрої, спільні для всіх гравців робочі мурахи, а також "
                 "налаштування звуку, вібрації, читання вголос, оформлення й «Кнопки замість рухів пристрою» зберігаються "
                 "локально стандартними засобами iOS.",
                 "Імена вказувати не обов’язково: можна залишити «Гравець 2» тощо. Застосунок нікуди не надсилає ці дані. "
                 "Вони можуть потрапити до ваших резервних копій пристрою відповідно до умов Apple, а також до резервної копії, "
                 "яку збереже дорослий (див. «Резервна копія»).",
-                "Ще три речі залишаються лише на цьому пристрої й ніколи не потрапляють до резервної копії: кілька показів "
+                "Ще три речі залишаються у сховищі застосунку на цьому пристрої (а отже, як і решта, у ваших резервних копіях "
+                "пристрою) й ніколи не потрапляють до резервної копії: кілька показів "
                 "годинника пристрою, щоб відпочинок мурах і безкоштовне поповнення йшли за реальним часом; яка покупка "
                 "чекає схвалення батьків (див. «Покупки»); і чи був «Мурашник» придбаний на момент останньої перевірки. Самі "
                 "покупки не зберігаються як прогрес."]),
@@ -362,15 +368,17 @@ PRIVACY_TEXT = {
                 "прогрес і не додає до резервної копії. Якщо ввімкнено функцію «Попросити купити», "
                 "застосунок пам’ятає на цьому пристрої, яка покупка чекає схвалення і коли надіслано запит, щоб не пропонувати "
                 "покупку, яка з нею перетинається; ця позначка зникає через два дні й ніколи не потрапляє до резервної копії."]),
-            ("Читання вголос", ["Коли читання вголос увімкнено, застосунок озвучує завдання вбудованим синтезатором мовлення iOS на "
-                                "самому пристрої. Текст і звук не виходять за межі пристрою; мікрофон застосунок не використовує."]),
+            ("Читання вголос", ["Коли читання вголос увімкнено, застосунок озвучує тексти гри, як-от завдання й результати, "
+                                "вбудованим синтезатором мовлення iOS на самому пристрої. Текст і звук не виходять за межі пристрою; мікрофон застосунок не використовує."]),
             ("Датчик руху", ["Лише поки на екрані результат розв’язаного цеху, застосунок зчитує дані датчика руху на самому "
                              "пристрої, щоб помітити ігрові рухи, які відкривають сховані секрети, наприклад легке струшування "
                              "або перевертання пристрою. Показання ніде не зберігаються й нікуди не передаються. Якщо ввімкнено "
                              "«Кнопки замість рухів пристрою», застосунок зовсім не використовує датчик руху. Застосунок не "
                              "використовує геолокацію, камеру, контакти чи фото."]),
             ("Перевірка віку", ["Там, де цього вимагає закон (у деяких штатах США, наприклад у Техасі), застосунок через функцію "
-                                "Apple для вікового діапазону запитує в iOS, чи гравцеві менше 18 років. Відповідь використовується "
+                                "Apple для вікового діапазону запитує в iOS, чи менше 18 років тому, хто користується обліковим "
+                                "записом Apple на цьому пристрої. Це віковий діапазон облікового запису Apple, а не вік гравця в "
+                                "грі. Відповідь використовується "
                                 "лише в цю мить на самому пристрої: якщо пізніше оновлення додасть щось нове, що закон вважає "
                                 "суттєвою зміною, Apple спершу попросить одного з батьків це схвалити. Відповідь ніде не "
                                 "зберігається, не потрапляє в резервну копію й не надсилається ні нам, ні комусь іншому. В інших "
@@ -449,17 +457,20 @@ PRIVACY_TEXT = {
                                                   "(см. «Покупки»)."]),
             ("Что хранится на устройстве", [
                 "Прогресс игры (текущий цех, незавершённые партии с историей отмены, пройденные цеха, лучшие результаты и звёзды, "
-                "результаты цеха дня, отметки о цехах, решённых с подсказкой, муравьи, купленные за звёзды или полученные за "
-                "идеально пройденную главу, какие муравьи уже привезены в магазин, еда в «Кладовой» и недели, за которые она "
-                "уже подарена, найденные секреты и открытые к ним подсказки, какие подсказки к секретам открыты и куда ушла "
-                "бесплатная подсказка-яйцо, состояние обучения, а также собственные настройки каждого игрока, например режим "
-                "исследователя и маленький цех дня), имена игроков, добавленных на этом устройстве, общие для всех игроков "
+                "результаты цеха дня и дата, когда его в последний раз открывали, отметки о цехах, решённых с подсказкой, "
+                "муравьи, купленные за звёзды или полученные за идеально пройденную главу, и муравей, которого выбрал каждый "
+                "игрок, какие муравьи уже привезены в магазин, еда в «Кладовой» и недели, за которые она уже подарена, "
+                "найденные секреты и открытые к ним подсказки, какие подсказки к секретам открыты и куда ушла бесплатная "
+                "подсказка-яйцо, вылупился ли муравьёнок, состояние обучения, какие одноразовые пояснения и титульные страницы "
+                "глав игрок уже видел, а также собственные настройки каждого игрока, например режим исследователя и маленький "
+                "цех дня), имена игроков, добавленных на этом устройстве, общие для всех игроков "
                 "рабочие муравьи, а также настройки звука, вибрации, чтения вслух, оформления и «Кнопки вместо движений "
                 "устройства» хранятся локально стандартными средствами iOS.",
                 "Имена указывать не обязательно: можно оставить «Игрок 2» и т. д. Приложение никуда не отправляет эти данные. "
                 "Они могут попасть в ваши резервные копии устройства в соответствии с условиями Apple, а также в резервную копию, "
                 "которую сохранит взрослый (см. «Резервная копия»).",
-                "Ещё три вещи остаются только на этом устройстве и никогда не попадают в резервную копию: несколько показаний "
+                "Ещё три вещи остаются в хранилище приложения на этом устройстве (а значит, как и всё остальное, в ваших "
+                "резервных копиях устройства) и никогда не попадают в резервную копию: несколько показаний "
                 "часов устройства, чтобы отдых муравьёв и бесплатное пополнение шли по реальному времени; какая покупка "
                 "ждёт одобрения родителя (см. «Покупки»); и был ли «Муравейник» куплен на момент последней проверки. Сами покупки "
                 "не хранятся как прогресс."]),
@@ -477,15 +488,17 @@ PRIVACY_TEXT = {
                 "не кладёт в резервную копию. Если включена функция «Попросить купить», приложение запоминает на этом устройстве, "
                 "какая покупка ждёт одобрения родителя и когда был отправлен запрос, чтобы не предлагать пересекающуюся с ней "
                 "покупку; эта отметка удаляется через два дня и никогда не попадает в резервную копию."]),
-            ("Чтение вслух", ["Когда чтение вслух включено, приложение озвучивает задания встроенным синтезатором речи iOS на самом "
-                              "устройстве. Текст и звук не покидают устройство; микрофон приложение не использует."]),
+            ("Чтение вслух", ["Когда чтение вслух включено, приложение озвучивает тексты игры, например задания и результаты, "
+                              "встроенным синтезатором речи iOS на самом устройстве. Текст и звук не покидают устройство; микрофон приложение не использует."]),
             ("Датчик движения", ["Только пока на экране результат решённого цеха, приложение считывает данные датчика движения "
                                  "на самом устройстве, чтобы заметить игровые движения, которые открывают спрятанные секреты, "
                                  "например лёгкое встряхивание или переворот устройства. Показания нигде не сохраняются и никуда не "
                                  "передаются. Если включён параметр «Кнопки вместо движений устройства», приложение совсем не использует "
                                  "датчик движения. Приложение не использует геолокацию, камеру, контакты и фото."]),
             ("Проверка возраста", ["Там, где этого требует закон (в некоторых штатах США, например в Техасе), приложение через функцию "
-                                   "Apple для возрастного диапазона спрашивает у iOS, младше ли игроку 18 лет. Ответ используется только "
+                                   "Apple для возрастного диапазона спрашивает у iOS, младше ли 18 лет человек, который пользуется "
+                                   "Аккаунтом Apple на этом устройстве. Это возрастной диапазон Аккаунта Apple, а не возраст игрока "
+                                   "в игре. Ответ используется только "
                                    "в этот момент на самом устройстве: если позже обновление добавит что-то новое, что закон считает "
                                    "существенным изменением, Apple сначала попросит одного из родителей это одобрить. Ответ нигде не "
                                    "сохраняется, не попадает в резервную копию и не отправляется ни нам, ни кому-либо ещё. В остальных "
@@ -569,12 +582,14 @@ PRIVACY_TEXT = {
             ("Auf dem Gerät gespeicherte Daten", [
                 "Der Spielfortschritt (aktuelle Werkhalle, angefangene Spiele mit ihrem Rückgängig-Verlauf, gelöste "
                 "Werkhallen, "
-                "Bestwerte und Sterne, Ergebnisse der Werkhalle des Tages, welche Werkhallen mit einem Tipp gelöst wurden, "
-                "Ameisen, die mit Sternen gekauft oder für ein perfektes Kapitel gewonnen wurden, welche Ameisen schon im "
+                "Bestwerte und Sterne, Ergebnisse der Werkhalle des Tages und der Tag, an dem sie zuletzt geöffnet wurde, "
+                "welche Werkhallen mit einem Tipp gelöst wurden, Ameisen, die mit Sternen gekauft oder für ein perfektes "
+                "Kapitel gewonnen wurden, und die Ameise, die jeder Spieler gewählt hat, welche Ameisen schon im "
                 "Ameisenladen angekommen sind, Futter in der „Vorratskammer“ und die Wochen, für die es schon verschenkt "
                 "wurde, gefundene Geheimnisse und wie weit die Tipps dazu schon aufgedeckt sind, welche Geheimnistipps "
-                "geöffnet wurden und wofür der kostenlose Ei-Tipp verwendet wurde, Stand der Einführung sowie die eigenen "
-                "Einstellungen jedes Spielers, etwa der Erkundungsmodus und die kleine Werkhalle des Tages), die Namen "
+                "geöffnet wurden und wofür der kostenlose Ei-Tipp verwendet wurde, ob das Ameisenbaby geschlüpft ist, Stand "
+                "der Einführung, welche nur einmal gezeigten Erklärungen und Titelseiten der Kapitel ein Spieler schon "
+                "gesehen hat, sowie die eigenen Einstellungen jedes Spielers, etwa der Erkundungsmodus und die kleine Werkhalle des Tages), die Namen "
                 "der auf diesem Gerät hinzugefügten Spieler, die gemeinsamen Arbeitsameisen aller Spieler "
                 "sowie die Einstellungen für Ton, Haptik, Vorlesen, Erscheinungsbild und „Tasten statt Gerätebewegungen“ "
                 "werden lokal auf Ihrem Gerät gespeichert, im üblichen App-Speicher von Apple.",
@@ -582,7 +597,8 @@ PRIVACY_TEXT = {
                 "nirgendwohin. Diese Daten können nach den Bedingungen von Apple in Ihren eigenen Gerätebackups "
                 "enthalten sein, außerdem in einer Sicherungskopie, die ein Erwachsener speichert (siehe "
                 "„Sicherungskopie“).",
-                "Drei weitere Dinge bleiben nur auf diesem Gerät und kommen nie in eine Sicherungskopie: einige Zeitangaben der "
+                "Drei weitere Dinge bleiben im Speicher der App auf diesem Gerät (und damit, wie alles andere, in Ihren "
+                "eigenen Gerätebackups) und kommen nie in eine Sicherungskopie: einige Zeitangaben der "
                 "Uhr des Geräts, damit ruhende Ameisen und das kostenlose Auffüllen der echten Zeit folgen; welcher Kauf auf die "
                 "Zustimmung eines Elternteils wartet (siehe „Käufe“); und ob der „Ameisenhügel“ bei der letzten Prüfung "
                 "gekauft war. Die Käufe selbst werden nicht als Fortschritt gespeichert."]),
@@ -601,8 +617,8 @@ PRIVACY_TEXT = {
                 "in eine Sicherungskopie. Bei einer Kaufanfrage merkt sich die App auf diesem Gerät, welcher Kauf auf die "
                 "Zustimmung eines Elternteils wartet und wann er angefragt wurde, damit sie keinen Kauf anbietet, der sich "
                 "damit überschneidet; dieser Vermerk wird nach zwei Tagen gelöscht und kommt nie in eine Sicherungskopie."]),
-            ("Vorlesen", ["Wenn das Vorlesen eingeschaltet ist, liest die App die Aufgaben mit der in iOS "
-                          "integrierten Sprachausgabe direkt auf dem Gerät vor. Weder Texte noch Audiodaten "
+            ("Vorlesen", ["Wenn das Vorlesen eingeschaltet ist, liest die App die Texte des Spiels, etwa die Aufgaben und "
+                          "die Ergebnisse, mit der in iOS integrierten Sprachausgabe direkt auf dem Gerät vor. Weder Texte noch Audiodaten "
                           "verlassen das Gerät, und die App verwendet nie das Mikrofon."]),
             ("Bewegungssensor", ["Nur solange das Ergebnis einer gelösten Werkhalle angezeigt wird, liest die App "
                                  "den Bewegungssensor direkt auf dem Gerät aus, um spielerische "
@@ -612,7 +628,9 @@ PRIVACY_TEXT = {
                                  "eingeschaltet, verwendet die App den Bewegungssensor überhaupt nicht. Die App greift "
                                  "nicht auf Standort, Kamera, Kontakte oder Fotos zu."]),
             ("Altersprüfung", ["Wo ein Gesetz es verlangt (in einigen US-Bundesstaaten, etwa in Texas), fragt die App iOS über "
-                               "Apples Funktion für Altersbereiche, ob die spielende Person unter 18 ist. Die Antwort wird nur in "
+                               "Apples Funktion für Altersbereiche, ob die Person, die den Apple Account auf diesem Gerät "
+                               "verwendet, unter 18 ist. Das ist der Altersbereich des Apple Accounts, nicht das Alter eines "
+                               "Spielers im Spiel. Die Antwort wird nur in "
                                "diesem Moment auf dem Gerät verwendet: Bringt ein späteres Update etwas Neues, das das Gesetz als "
                                "wesentliche Änderung ansieht, bittet Apple zuerst einen Elternteil um Zustimmung. Die Antwort wird "
                                "weder gespeichert noch in eine Sicherungskopie aufgenommen noch an uns oder andere gesendet. "
@@ -706,16 +724,19 @@ PRIVACY_TEXT = {
                                           "に接続するのは任意の購入だけです（「購入」を参照）。"]),
             ("デバイスに保存されるデータ", [
                 "ゲームの進行状況（現在の作業場、「元に戻す」の履歴を含む途中のゲーム、クリアした作業場、ベスト記録"
-                "と星、今日の作業場の結果、ヒントを使って解いた作業場、星で買ったアリ、章をパーフェクトでクリアして"
-                "もらったアリ、お店にこれまで届いたアリ、「食料庫」の食べ物と、すでに食べ物をもらった週、見つけたひ"
-                "みつ、ひみつのヒントがどこまで表示されたか、開いたひみつのヒントと無料のたまごヒントを使った場所、チ"
-                "ュートリアルの状態、探索モードや小さな今日の作業場など各プレイヤー自身の設定）、このデバイスで追加し"
+                "と星、今日の作業場の結果と最後に開いた日、ヒントを使って解いた作業場、星で買ったアリ、章をパーフェクトで"
+                "クリアしてもらったアリ、各プレイヤーが選んだアリ、お店にこれまで届いたアリ、「食料庫」の食べ物と、すでに"
+                "食べ物をもらった週、見つけたひみつ、ひみつのヒントがどこまで表示されたか、開いたひみつのヒントと無料の"
+                "たまごヒントを使った場所、たまごからアリの赤ちゃんがかえったかどうか、チュートリアルの状態、一度だけ表示"
+                "される説明や章のタイトルページのうちすでに見たもの、探索モードや小さな今日の作業場など各プレイヤー自身の"
+                "設定）、このデバイスで追加し"
                 "たプレイヤーの名前、全プレイヤー共通の働くアリ、サウンド・振動・読み上げ・外観・「端末を動かす代わり"
                 "にボタンを使う」の設定は、Apple 標準のアプリ用ストレージを使ってお使いのデバイスにローカルに保存されます。",
                 "プレイヤー名の入力は任意で、「プレイヤー2」などの初期名のままでもかまいません。本アプリがこれらのデータを"
                 "どこかに送ることはありません。お使いのデバイス自体のバックアップ（Apple の規約が適用されます）や、"
                 "大人が保存したバックアップファイル（「バックアップ」を参照）に含まれる場合があります。",
-                "さらに次の3つは、この端末にだけ保存され、バックアップには決して含まれません。休んでいるアリと無料の"
+                "さらに次の3つは、この端末上の本アプリの保存領域に保存され（そのため、ほかのデータと同じく、お使いの"
+                "デバイス自体のバックアップには含まれます）、バックアップファイルには決して含まれません。休んでいるアリと無料の"
                 "補充が実際の時間どおりに進むようにするための、端末の時計から読み取ったいくつかの時刻。保護者の承認を待って"
                 "いる購入（「購入」を参照）。前回の確認時に「アリ塚」が購入済みだったかどうか。購入そのものは進行状況"
                 "として保存されません。"]),
@@ -733,8 +754,8 @@ PRIVACY_TEXT = {
                 "アップにも入れません。「承認と購入のリクエスト」を使う場合、重なる購入を表示しないように、本アプリは"
                 "どの購入が保護者の承認を待っているか、いつリクエストしたかをこの端末に記憶します。この記録は2日後"
                 "に消え、バックアップに含まれることはありません。"]),
-            ("読み上げ", ["「説明を読み上げる」がオンのとき、本アプリはデバイス上の iOS 内蔵の音声合成でパズルの説明"
-                      "を読み上げます。"
+            ("読み上げ", ["「説明を読み上げる」がオンのとき、本アプリはデバイス上の iOS 内蔵の音声合成で、パズルの説明"
+                      "や結果などゲームのテキストを読み上げます。"
                           "テキストや音声がデバイスの外に出ることはなく、マイクを使うこともありません。"]),
             ("モーションセンサー", ["クリアした作業場の結果が画面に表示されている間だけ、本アプリは端末の"
                                     "モーションセンサーを読み取り、そっと振る、ひっくり返すといった、隠れたひみつを"
@@ -742,8 +763,9 @@ PRIVACY_TEXT = {
                                     "動きを検出します。読み取った値が保存・送信されることはありません。「端末を動かす代"
                                     "わりにボタンを使う」がオンのときは、本アプリはモーションセンサーをまったく使いま"
                                     "せん。本アプリは位置情報、カメラ、連絡先、写真を使いません。"]),
-            ("年齢の確認", ["法律で求められる地域（テキサス州など米国の一部の州）では、本アプリは Apple の年齢層の機能を通じて、プレイヤーが 18 歳未満かどうかを iOS "
-                       "に問い合わせます。答えはその場でデバイス上でのみ使われます。のちのアップデートで、法律上の重要な変更にあたる新しい要素が加わる場合は、Apple "
+            ("年齢の確認", ["法律で求められる地域（テキサス州など米国の一部の州）では、本アプリは Apple の年齢層の機能を通じて、この端末で Apple Account を使っている人"
+                       "が 18 歳未満かどうかを iOS に問い合わせます。これは Apple Account の年齢層であり、ゲーム内のプレイヤーの"
+                       "年齢ではありません。答えはその場でデバイス上でのみ使われます。のちのアップデートで、法律上の重要な変更にあたる新しい要素が加わる場合は、Apple "
                        "が先に保護者に承認を求めます。答えが保存されたり、バックアップに含まれたり、当方やほかの誰かに送られたりすることはありません。それ以外の地域では、本アプリは何も問い合わせません。"]),
             ("第三者", [
                 "本アプリにはサードパーティのコードが含まれておらず、当方はサーバーを運営していません。本アプリが当方や"
@@ -824,16 +846,19 @@ PRIVACY_TEXT = {
                                       "(‘구매’ 참조)."]),
             ("기기에 저장되는 데이터", [
                 "게임 진행 상황(현재 작업장, 되돌리기 기록이 남아 있는 진행 중인 게임, 완료한 작업장, 최고 기록과 별, 오늘의 "
-                "작업장 결과, 힌트로 푼 작업장, 별을 써서 산 개미나 한 장을 완벽하게 끝내고 받은 개미, 지금까지 상점에 "
-                "도착한 개미, ‘먹이 창고’의 먹이와 이미 먹이를 받은 주, 찾은 비밀과 그 힌트가 열린 정도, 연 비밀 "
-                "힌트와 무료 알 힌트를 쓴 곳, 튜토리얼 상태, 탐험 모드나 작은 오늘의 작업장 같은 플레이어별 설정), "
+                "작업장 결과와 마지막으로 연 날짜, 힌트로 푼 작업장, 별을 써서 산 개미나 한 장을 완벽하게 끝내고 받은 개미와 "
+                "각 플레이어가 선택한 개미, 지금까지 상점에 도착한 개미, ‘먹이 창고’의 먹이와 이미 먹이를 받은 주, 찾은 "
+                "비밀과 그 힌트가 열린 정도, 연 비밀 힌트와 무료 알 힌트를 쓴 곳, 아기 개미가 부화했는지 여부, 튜토리얼 "
+                "상태, 한 번만 나오는 설명과 장 제목 페이지 중 이미 본 것, 탐험 모드나 작은 오늘의 작업장 같은 플레이어별 "
+                "설정), "
                 "이 기기에서 추가한 플레이어 이름, 모든 플레이어가 함께 쓰는 일하는 개미, 소리·진동·설명 읽어 주기·화면 "
                 "모드·‘기기 움직임 대신 버튼 사용’ 설정은 Apple의 표준 앱 저장 공간을 사용해 사용자의 기기에 로컬로 "
                 "저장됩니다.",
                 "플레이어 이름은 선택 사항이며 ‘플레이어 2’ 같은 기본 이름을 그대로 써도 됩니다. 앱은 이 데이터를 어디에도 "
                 "보내지 않습니다. 다만 이 데이터는 Apple 약관에 따라 사용자 자신의 기기 백업에 포함될 수 있으며, "
                 "어른이 저장한 백업 파일(‘백업’ 참조)에도 포함될 수 있습니다.",
-                "다음 세 가지는 이 기기에만 남으며 백업에는 절대 들어가지 않습니다. 쉬는 개미와 무료 충전이 실제 시간에 "
+                "다음 세 가지는 이 기기의 앱 저장 공간에 남으며(따라서 다른 데이터와 마찬가지로 사용자 자신의 기기 백업에는 "
+                "포함됩니다) 백업 파일에는 절대 들어가지 않습니다. 쉬는 개미와 무료 충전이 실제 시간에 "
                 "맞게 진행되도록 하는 기기 시계에서 읽은 시각 몇 개, 부모님의 승인을 기다리는 구매(‘구매’ 참조), 마지막으로 "
                 "확인했을 때 ‘개미탑’을 구매한 상태였는지 여부입니다. 구매 자체는 진행 상황으로 저장되지 않습니다."]),
             ("구매", [
@@ -850,14 +875,15 @@ PRIVACY_TEXT = {
                 "구입 요청을 사용하는 경우, 앱은 겹치는 구매를 보여 주지 않도록 어떤 구매가 부모님의 승인을 기다리는지와 "
                 "언제 요청했는지를 이 기기에 기억합니다. 이 기록은 이틀 뒤에 지워지며 백업에는 절대 들어가지 않습니다."]),
             ("설명 읽어 주기", ["‘설명 읽어 주기’가 켜져 있으면 앱은 기기에 내장된 iOS 음성 합성 기능으로 퍼즐 "
-                          "설명을 읽어 줍니다. 텍스트나 음성은 기기 밖으로 나가지 않으며, 앱은 마이크를 "
+                          "설명과 결과 같은 게임의 텍스트를 읽어 줍니다. 텍스트나 음성은 기기 밖으로 나가지 않으며, 앱은 마이크를 "
                           "사용하지 않습니다."]),
             ("동작 센서", ["푼 작업장의 결과가 화면에 표시되어 있는 동안에만 앱은 기기 안에서 동작 센서 "
                        "값을 읽어, 살짝 "
                            "흔들기나 기기 뒤집기처럼 숨은 비밀을 여는 놀이 동작을 감지합니다. 측정값은 저장되거나 전송되지 "
                            "않습니다. ‘기기 움직임 대신 버튼 사용’을 켜면 앱은 동작 센서를 전혀 사용하지 않습니다. 앱은 "
                            "위치, 카메라, 연락처, 사진을 사용하지 않습니다."]),
-            ("나이 확인", ["법률이 요구하는 곳(텍사스주 등 미국 일부 주)에서는 앱이 Apple의 연령대 기능을 통해 플레이어가 18세 미만인지 iOS에 확인합니다. 답은 그 순간 기기 안에서만 사용됩니다. "
+            ("나이 확인", ["법률이 요구하는 곳(텍사스주 등 미국 일부 주)에서는 앱이 Apple의 연령대 기능을 통해 이 기기에서 Apple 계정을 사용하는 사람이 18세 미만인지 iOS에 "
+                       "확인합니다. 이는 Apple 계정의 연령대이며, 게임 속 플레이어의 나이가 아닙니다. 답은 그 순간 기기 안에서만 사용됩니다. "
                        "나중에 업데이트가 법률상 중요한 변경에 해당하는 새로운 요소를 추가하면 Apple이 먼저 보호자에게 승인을 요청합니다. 답은 저장되거나 백업에 포함되거나 당사나 다른 누구에게도 "
                        "전송되지 않습니다. 그 밖의 지역에서는 앱이 아무것도 묻지 않습니다."]),
             ("제3자", [
@@ -928,14 +954,16 @@ PRIVACY_TEXT = {
                           "功能，不含第三方 SDK，也从不向我们发送任何内容。日常游玩无需联网；只有可选购买项目会连接 "
                           "Apple 的 App Store（见“购买项目”）。"]),
             ("保存在设备上的数据", [
-                "游戏进度（当前车间、带撤销记录的未完成游戏、已完成的车间、最佳成绩和星星、今日车间的结果、哪些车间是借助提示"
-                "解开的、用星星买的蚂蚁或因完美通关一章而获得的蚂蚁、商店至今送到了哪些蚂蚁、“食物储藏室”里的食物以及已领过"
-                "食物的周、找到的秘密及其提示已揭示到哪一步、已打开的秘密提示以及免费蛋提示用在了哪里、教程状态，以及每位玩"
+                "游戏进度（当前车间、带撤销记录的未完成游戏、已完成的车间、最佳成绩和星星、今日车间的结果及上次打开它的日期、"
+                "哪些车间是借助提示解开的、用星星买的蚂蚁或因完美通关一章而获得的蚂蚁、每位玩家选中的蚂蚁、商店至今送到了哪些"
+                "蚂蚁、“食物储藏室”里的食物以及已领过食物的周、找到的秘密及其提示已揭示到哪一步、已打开的秘密提示以及免费蛋"
+                "提示用在了哪里、蚂蚁宝宝是否已经孵化、教程状态、玩家已经看过哪些只显示一次的说明和章节标题页，以及每位玩"
                 "家自己的设置，例如探索模式和小号今日车间）、在此设备上添加的玩家名字、所有玩家共用的工蚁，以及声音、振动、"
                 "朗读、外观和“用按钮代替设备动作”设置，都通过 Apple 标准的应用存储保存在您的设备本地。",
                 "玩家名字可以不填，保留“玩家 2”之类的默认名字即可。本应用绝不会把这些数据发送到任何地方。它们可能会依照 Apple "
                 "的条款包含在您自己的设备备份中，也可能包含在成年人保存的备份里（见“备份”）。",
-                "另有三项只留在这台设备上，绝不会放进备份：几次设备时钟读数，让休息的蚂蚁和免费补充按真实时间进行；"
+                "另有三项留在这台设备上本应用的存储空间中（因此和其他数据一样，会包含在您自己的设备备份中），但绝不会放进"
+                "备份文件：几次设备时钟读数，让休息的蚂蚁和免费补充按真实时间进行；"
                 "哪项购买正在等待家长批准（见“购买项目”）；以及上次检查时是否已拥有“蚁丘”。购买项目本身不会作为进度保存。"]),
             ("购买项目", [
                 "本应用提供三项可选购买，每项只需付费一次：“蚁丘”（工蚁永不耗尽）、“秘密地图：第 1–5 章”（为所有玩家开启第 "
@@ -948,15 +976,15 @@ PRIVACY_TEXT = {
                 "共享获得的购买。本应用不会把购买保存为进度，也不会放进备份。使用“购买前询问”时，本应用会在这台设备上"
                 "记住哪项购买正在等待家长批准以及何时提出的请求，以免提供与之重叠的购买；这条记录会在两天后删除，绝不会放进"
                 "备份。"]),
-            ("朗读", ["开启“朗读说明”后，本应用会在设备上使用 iOS 内置的语音合成功能朗读谜题说明。任何文字或音频都不"
+            ("朗读", ["开启“朗读说明”后，本应用会在设备上使用 iOS 内置的语音合成功能朗读游戏中的文字，例如谜题说明和结果。任何文字或音频都不"
                     "会离开设备，本应用也从不"
                       "使用麦克风。"]),
             ("运动传感器", ["只有在已解开车间的结果显示在屏幕上时，本应用才会在设备上读取运动传感器，以识"
                        "别能揭开隐藏秘密的趣味动作，例如轻轻摇晃或把设备翻过来。传感器读数既不会被保存，也不会"
                        "被发送。开启“用按钮代替设备动作”后，本应用完全不使用运动传感器。本应用不使用位置、相机、通讯录"
                             "或照片。"]),
-            ("年龄确认", ["在法律要求的地方（例如得克萨斯州等美国部分州），本应用会通过 Apple 的年龄范围功能向 iOS 询问玩家是否未满 18 "
-                      "岁。这个答案只在当时于设备上使用：如果以后的更新加入了法律视为重大变更的新内容，Apple "
+            ("年龄确认", ["在法律要求的地方（例如得克萨斯州等美国部分州），本应用会通过 Apple 的年龄范围功能向 iOS 询问在这台设备上使用 Apple 账户的人"
+                      "是否未满 18 岁。这是 Apple 账户的年龄范围，而不是游戏中某位玩家的年龄。这个答案只在当时于设备上使用：如果以后的更新加入了法律视为重大变更的新内容，Apple "
                       "会先请家长批准。这个答案不会被保存，不会进入备份，也不会发送给我们或任何其他人。在其他地方，本应用不会询问任何内容。"]),
             ("第三方", [
                 "本应用不含第三方代码，我们也不运营任何服务器：本应用不会向我们或其他任何人发送任何内容。下载、更新、设备备份"
@@ -1012,14 +1040,16 @@ PRIVACY_TEXT = {
                                    "SDK，也從不傳送任何內容給我們。平常遊玩不需要連網；只有選購項目會連線到 Apple 的 "
                                    "App Store（見「購買項目」）。"]),
             ("儲存在裝置上的資料", [
-                "遊戲進度（目前的工坊、含復原紀錄的未完成遊戲、已完成的工坊、最佳成績與星星、今日工坊的結果、哪些工坊是靠提示"
-                "解開的、用星星買的螞蟻或因完美完成一章而獲得的螞蟻、商店至今送達了哪些螞蟻、「食物儲藏室」裡的食物以及已領"
-                "過食物的週、找到的秘密與其提示已開啟的程度、已開啟的秘密提示以及免費蛋提示用在哪裡、教學狀態，以及每位玩家"
+                "遊戲進度（目前的工坊、含復原紀錄的未完成遊戲、已完成的工坊、最佳成績與星星、今日工坊的結果及上次開啟它的日"
+                "期、哪些工坊是靠提示解開的、用星星買的螞蟻或因完美完成一章而獲得的螞蟻、每位玩家選中的螞蟻、商店至今送達了"
+                "哪些螞蟻、「食物儲藏室」裡的食物以及已領過食物的週、找到的秘密與其提示已開啟的程度、已開啟的秘密提示以及免費"
+                "蛋提示用在哪裡、螞蟻寶寶是否已經孵化、教學狀態、玩家已看過哪些只顯示一次的說明與章節標題頁，以及每位玩家"
                 "自己的設定，例如探索模式與小型今日工坊）、在此裝置上新增的玩家名稱、所有玩家共用的工蟻，以及音效、震動、朗"
                 "讀、外觀與「用按鈕代替裝置動作」設定，都透過 Apple 標準的 App 儲存空間儲存在您的裝置上。",
                 "玩家名稱可以不填，保留「玩家 2」之類的預設名稱即可。本 App 絕不會把這些資料傳送到任何地方。它們可能會依照 "
                 "Apple 的條款包含在您自己的裝置備份中，也可能包含在大人儲存的備份裡（見「備份」）。",
-                "另有三項只留在這台裝置上，絕不會放進備份：幾筆裝置時鐘讀數，讓休息的螞蟻與免費補充依照真實時間進"
+                "另有三項留在這台裝置上本 App 的儲存空間中（因此和其他資料一樣，會包含在您自己的裝置備份中），但絕不會放進"
+                "備份檔案：幾筆裝置時鐘讀數，讓休息的螞蟻與免費補充依照真實時間進"
                 "行；哪一項購買正在等候家長核准（見「購買項目」）；以及上次檢查時是否已擁有「蟻丘」。購買項目本身不會當作進"
                 "度儲存。"]),
             ("購買項目", [
@@ -1033,15 +1063,15 @@ PRIVACY_TEXT = {
                 "共享取得的購買。本 App 不會把購買儲存為進度，也不會放進備份。使用「購買前詢問」時，本 App 會在這台裝置"
                 "上記下哪一項購買正在等候家長核准，以及何時提出請求，以免提供與之重疊的購買；這筆紀錄會在兩天後刪除，絕不會"
                 "放進備份。"]),
-            ("朗讀", ["開啟「朗讀說明」時，本 App 會在裝置上使用 iOS 內建的語音合成朗讀謎題說明。文字與聲音不會離開"
+            ("朗讀", ["開啟「朗讀說明」時，本 App 會在裝置上使用 iOS 內建的語音合成朗讀遊戲中的文字，例如謎題說明和結果。文字與聲音不會離開"
                     "裝置，本 App 也從不"
                       "使用麥克風。"]),
             ("動作感測器", ["只有在已解開工坊的結果顯示於螢幕上時，本 App 才會在裝置上讀取動作感測器，以察覺能揭開"
                             "隱藏秘密的有趣動作，例如輕輕搖晃或把裝置翻過來。這些讀數絕不會被儲存或傳送。開啟「用按鈕"
                             "代替裝置動作」後，本 App 完全不使用動作感測器。本 App 不使用定位、相機、"
                             "聯絡人或照片。"]),
-            ("年齡確認", ["在法律要求的地方（例如德州等美國部分州），本 App 會透過 Apple 的年齡範圍功能向 iOS 詢問玩家是否未滿 18 "
-                      "歲。這個答案只在當下於裝置上使用：如果之後的更新加入了法律視為重大變更的新內容，Apple 會先請家長核准。這個答案不會被儲存，不會放進備份，也不會傳送給我們或任何其他人。在其他地方，本 App "
+            ("年齡確認", ["在法律要求的地方（例如德州等美國部分州），本 App 會透過 Apple 的年齡範圍功能向 iOS 詢問在這台裝置上使用 Apple 帳號的人"
+                      "是否未滿 18 歲。這是 Apple 帳號的年齡範圍，而不是遊戲中某位玩家的年齡。這個答案只在當下於裝置上使用：如果之後的更新加入了法律視為重大變更的新內容，Apple 會先請家長核准。這個答案不會被儲存，不會放進備份，也不會傳送給我們或任何其他人。在其他地方，本 App "
                       "不會詢問任何內容。"]),
             ("第三方", [
                 "本 App 不含第三方程式碼，我們也不經營任何伺服器：本 App 不會傳送任何內容給我們或其他任何人。下載、更新、裝置"
