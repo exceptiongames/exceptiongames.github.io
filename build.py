@@ -19,8 +19,8 @@ LANGS = [("en", "English"), ("uk", "Українська"), ("ru", "Русски
          ("ko", "한국어"), ("zh-Hans", "简体中文"), ("zh-Hant", "繁體中文")]
 EMAIL = "exceptiongames@icloud.com"
 MAIL = f'<a href="mailto:{EMAIL}">{EMAIL}</a>'
-UPDATED = {"en": "November 3, 2026", "uk": "3 листопада 2026 р.", "ru": "3 ноября 2026 г.", "de": "3. November 2026",
-           "ja": "2026年11月3日", "ko": "2026년 11월 3일", "zh-Hans": "2026年11月3日", "zh-Hant": "2026 年 11 月 3 日"}
+UPDATED = {"en": "November 4, 2026", "uk": "4 листопада 2026 р.", "ru": "4 ноября 2026 г.", "de": "4. November 2026",
+           "ja": "2026年11月4日", "ko": "2026년 11월 4일", "zh-Hans": "2026年11月4日", "zh-Hant": "2026 年 11 月 4 日"}
 
 # "Skip to content" and the translation note at the foot of every non-English page; {en} is the link to the
 # English version of the same page.
